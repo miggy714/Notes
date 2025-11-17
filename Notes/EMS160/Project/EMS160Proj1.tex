@@ -1,0 +1,259 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{hyperref}
+
+\title{
+UC Davis
+\\~\\EMS 160 Project 1
+\\~\\
+Prof. Scott McCormack}
+
+\author{Xiaokun Yang\\Miguel Cuaycong\\ Jonathan Mases}
+\date{\today}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Abstract}
+This project proposes a replacement to conventional walls and insulation with a new product called Kelvion that can maintain comfortable indoor
+temperatures without the use of conventional heating. 
+Kelvion is essentially a PCM wall that utilizes latent heat during phase change to prevent temperature from passing a certain
+threshold. 
+Phase change occurs on one material at 20 $C^{\circ}$, another at 27 $C^{\circ}$. This effectively maintains indoor temperature within those bounds without the use of heat pump devices, reducing
+daily energy consumption.
+In Arizona, high range of heat transfer can occur depending on both the
+time of day and the time of year. In order to maintain a comfortable indoor
+temperature, most houses make use of heat pump devices. These devices
+counteract environmental heat transfer via electrical work to initiate and
+maintain a thermal cycle that can transfer heat into or out of the house. Conventional means
+can be expensive.
+
+
+\section{Problem statement, aim, objectives}
+
+Conventional heat pumps utilize large amounts of energy to maintain comfortable indoor
+temperatures in Arizona. Kelvion relies on properties that absorb and release heat without conventional heating. 
+This project aims to show cost efficiency of the product compared to conventional means.
+ Cost difference will be compared by performing a first law energy balance of a household with and without Kelvion
+  in Phoenix, Arizona\\~\\
+
+The objectives/methodology:
+\begin{enumerate}
+    \item Calculate upper bound of $\Delta H_{Kelvion,high}$ (change in enthalpy from room temperature to 27 $C^{\circ}$.)
+    \item Calculate lower bound of $\Delta H_{Kelvion,low}$ (change in enthalpy from room temperature to 20 $C^{\circ}$.)
+    \item If $\Delta H_{Kelvion}$ in both cases are greater than the work needed to maintain household temperature using conventional means, 
+    then Kelvion is an effective alternative.
+\end{enumerate}
+\section{Literature review of Energy Storage materials}
+The growing demand and increasing reliance on renewable energy sources such as sunlight and wind has been concerning. But these two sources are unpredictable as their intensities different with time and location. To ensure continuous energy supply and efficiency, excess energy generated needs to be stored and released when demand rises.
+\\~\\
+Among various energy storage technologies, thermal energy storage (TES)  and electrochemical energy storage (EES)  are two of the most promising methods due to their adaptability to most applications. TES systems store energy in the form of heat, either sensible heat or latent heat. In contrast, EES systems store energy through reversible redox reactions, enabling efficient conversion between chemical and electrical energy. 
+\subsection{Latent Heat Energy Storage System (LHES)}
+Latent Heat Thermal Energy Storage Systems (LHTESS) rose up as a promising energy storage method in the mid-20th and gained huge attention during the energy crisis of the 1970s. Phase change materials(PCMs) store and release heat through solid-liquid phase transitions, where energy is absorbed or released as latent heat of fusion to break or form the bonding between atoms while maintaining nearly constant temperature. This mechanism enables PCMs with much higher energy density than the sensible heat system. Due to intermittentness of solar and waste heat, latent heat storage enables excess thermal energy collected during the day to be used at night. However, its application remains limited by low thermal conductivity, phase segregation, subcooling, and volume changes during phase transition. Commonly studied materials include paraffins, salt hydrates, and organic solid solutions such as pentaerythritol. Overall, latent-heat systems offer compact, high-density thermal storage for solar-energy and waste-heat-recovery applications when their heat-transfer limitations are effectively addressed. As a result, significant research efforts are put into improving PCMs’ charging and discharging rates through enhancing thermal conductivity. 
+\\~\\
+One of the strategies involves nanoparticle doping, where thermally conductive particles such as aluminum oxide, magnesium oxide and silicon dioxide are added into PCM structure. Experimental studies show that For $SiO_{2}$ doped samples, solidification time decreased by 22.6\%, 27.1\%, and 30.2\%at 0.1\%, 0.3\%, and 0.5\% volume concentrations, respectively. Comparative tests with $Al_{2}O_{3}$ and MgO(each at 0.1 vol\%) showed melting-time reductions of 16.4\%, 15.7\%, and 22.6\% relative to pure paraffin. The corresponding discharging-rate increases ranged from 15–23\% at low concentrations to nearly 30\% at higher loadings, indicating that nanoparticle addition significantly accelerates heat transfer. Among all compositions, $SiO_{2}$ based NEPCMs consistently achieved the fastest charging and discharging rates due to their smaller particle size and superior dispersion stability. Overall, moderate nanodoping—particularly with $SiO_{2}$ at approximately 0.3 vol\%—offers the optimal balance between improved thermal conductivity and preserved latent-heat capacity in paraffin-based LHTES systems. [1][2]
+
+\subsection{Electrochemical Energy Storage Systems (EES)}
+Electrical vehicles is one of the hot topics that has risen up from last decade and a tremendous amount of research has been put into electrochemical energy storage systems(EESS). EESS stores and releases energy through reversible redox reactions occurring at the electrode-electrolyte interface. Electrons flow through an external circuit during charging, while ions move across the electrolyte to maintain charge neutrality. Discharging, experienced a similar process but reversed, converting chemical potential into electrical energy. This mechanism enables electrochemical systems to achieve higher round-trip efficiency and energy density compared to thermal storage systems. However, their performance is constrained by limited cycle life, low ion transport rates, and newly brought up challenge–renewable material. To overcome these challenges, recent research has focused on developing bio-inspired and biomass derived electrode materials that replicate natural energy conversion processes. For instance, quinone-based organic molecules extracted from plant biomass exhibit reversible redox activity similar to biological electron shuttles. A juglone/reduced graphene oxide (rGO) hybrid electrode demonstrated a specific capacity of 305 mAh g$^{-1}$ and maintained 280 mAh g$^{-1}$ after 100 cycles in sodium-ion batteries. Similarly, flavin-based electrodes derived from riboflavin and other pteridine compounds achieved gravimetric energy densities up to 533 Wh kg$^{-1}$ with 96\% capacity retention after 500 cycles.
+\\~\\
+Beyond active materials, bio-inspired binders and separators have been employed to enhance system stability and ionic transport. Alginate binders derived from brown algae exhibit 
+mechanical stiffness approximately six times higher than traditional PVDF, effectively mitigating electrode cracking during cycling. In addition, polydopamine-coated separators significantly improve electrolyte wettability, reducing the contact angle from 108° to 39°, thereby enhancing ion conduction and suppressing lithium dendrite formation. [4][5]
+\subsection{Sensible Heat Energy Storage Systems (SHES)}
+Sensible heat thermal energy storage represents the fundamentally and widely used form of thermal storage– storing energy by raising the temperature of material without changing its phase. The amount of energy stored depends on materials’s specific heat capacity, mass and temperature difference. Typical materials for this storage system include liquid such as water and oils and solids such as concrete and metals. Water is considered one of the most effective storage media due to its high specific heat and accessibility. Metallic materials like aluminum and copper contain high thermal conductivity, which reduces charging and discharging time. However, due to their high density and high cost, the use in large scale is limited. Despite its simplicity, a sensible heat system suffers from lower energy density and larger volumes compared to latent heat systems. Nevertheless, they remain widely used in domestic hot water and industrial waste heat recovery applications. [3]
+\\~\\
+In this project, a thermal management system is designed to achieve self cooling and self heating houses under Arizona’s climate. The system utilizes two PCMs–
+n-Heptadecane $C_{17}H_{36}$ with melting point of 295.372K and n-Octadecane $C_{18}H_{38}$ with melting point of 300.928K to provide self temperature-regulating using LHES and SHES. This design will be compared to the most common way of active cooling– air conditioning, which uses EES. This comparison allows evaluation between passive and active energy storage, and determine if TES fits better in Arizona than EES[6]
+
+\newpage
+\section{Selected material system}
+\subsection{Kelvion (PCM wall)}
+Kelvion is a combination of n-Heptadecane $C_{17}H_{36}$ and n-Octadecane $C_{18}H_{38}$ distributed
+evenly in a wall structure with arbitrary supports for structural stability.
+\\
+IMPORTANT: 1 kg of Kelvion is made up of $0.5kg(C_{17}H_{36} + C_{18}H_{38})$.
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    - & n-Heptadecane $C_{17}H_{36}$ & n-Octadecane $C_{18}H_{38}$ \\
+    \hline
+    Melting point (K) & 295.372 & 300.928 \\
+    \hline
+    $\Delta H_{lat}$ (kJ/kg) & 220 & 244 \\
+    \hline
+    Cp (kJ/kgK) & 2.222 & 2.196\\
+    \hline
+\end{tabular}
+\end{center}
+\subsection{Enthalpy-Temperature Data}
+The energy absorbed and released due to latent properties can be visualized with a Temperature-Enthalpy plot
+\\~\\
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[width=\textwidth]{EMS160HvsT}
+
+\caption{Shows the Kelvion enthalpy in blue and the conventional wall(average Cp = 1.03 kJ/kgK) enthalpy in red dashed line}
+
+\end{figure}
+
+\newpage
+
+In this figure, Kelvion enthalpy is plotted as follows:
+\\
+$2\Delta H_{Kelvion}= \begin{cases}
+    \Delta H_{C_{17}H_{36}} + \Delta H_{C_{18}H_{38}}, \text{ if } T < T_{mp,C_{17}H_{36}}
+    \\
+    \Delta H_{C_{17}H_{36}} + \Delta H_{C_{18}H_{38}} + \Delta H_{lat,C_{17}H_{36}}, \text{ if } T_{mp,C_{17}H_{36}} < T < T_{mp, C_{18}H_{38}} 
+    \\
+    \Delta H_{C_{17}H_{36}} + \Delta H_{C_{18}H_{38}} + \Delta H_{lat,C_{17}H_{36}} + \Delta H_{lat,C_{18}H_{38}}, \text{ if }  T > T_{mp, C_{18}H_{38}} 
+\end{cases}$ 
+Exact calculations are coded in MATLAB in the references
+\\~\\
+Data summary: (upper temperature bound and lower temperature bound)
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        $2\Delta H_{Kelvion,ub}$ & 256.278 kJ/kg\\
+        \hline
+        $2\Delta H_{Kelvion,lb}$& -232.278 kJ/kg\\
+        \hline
+    \end{tabular}
+\end{center}
+The table shows the amount of energy absorbed/released by two kilograms of Kelvion. Evaluated using MATLAB code [11]
+
+\section{Thermodynamic calculations}
+As stated in the objective, to perform a cost saving analysis, heat transfer of four different
+conditions will be investigated. The varying values of $Q_{env}$
+are impractical to measure due to kinetic and transient properties. Instead, power consumption data in Phoenix, Arizona will be used as $W_{elec}$ and $Q_{env}$ will be left symbolically.
+\\
+Average heat pump usage in Phoenix, AZ consumes around 6082kWh per year or \textbf{59.98MJ/day}, 
+which represents energy required to heat up or cool down an average sized house to room temperature in this region.[9]
+
+
+\subsection{1st law Energy Balance in steady state}
+\[
+\Delta U = \delta Q - \delta W
+\]
+\subsubsection{Energy balance with Kelvion installed}
+\begin{align*}
+\Delta U &= \delta Q - \delta W\\
+\Delta U_{C_{17}H_{36}} + \Delta U_{C_{18}H_{38}} &= Q_{env} - (PdV_{C_{17}H_{36}} + PdV_{C_{18}H_{38}})\\
+Q_{env} &= \Delta U_{C_{17}H_{36}} + PdV_{C_{17}H_{36}} + \Delta U_{C_{18}H_{38}} + PdV_{C_{18}H_{38}}\\
+Q_{env} &= \Delta H_{C_{17}H_{36}} + \Delta H_{C_{18}H_{38}}\\
+Q_{env} &= 2\Delta H_{Kelvion, tot} \text{; note: } 2\Delta H_{Kelvion, tot} = \Delta H_{C_{17}H_{36}} + \Delta H_{C_{18}H_{38}}
+\end{align*}
+\newpage
+Using data from figure 1:
+\begin{itemize}
+    \item $\Delta H_{Kelvion, tot}$ = 237.549 kJ/kg\\
+    evaluated from $T_{1} = 295.372 K$ to $T_{2} = 300.928$ \\
+    (Melting point of $C_{17}H_{36}$ to the melting point of $C_{18}H_{38}$)
+    \item $\Delta H_{Kelvion, ub}$ = 128.14 kJ/kg\\
+    evaluated from $T_{room} = 298.15 K$ to $T_{2} = 300.928$ \\
+    (room temperature to the melting point of $C_{18}H_{38}$)
+    \item $\Delta H_{Kelvion, lb}$ = -116.139 kJ/kg\\
+    evaluated from $T_{room} = 298.15 K$ to $T_{2} = 295.372$ \\
+    (room temperature to the melting point of $C_{17}H_{36}$)
+    
+\end{itemize}
+
+
+
+\subsubsection{Energy balance using conventional heating}
+\begin{align*}
+\Delta U &= \delta Q - \delta W\\
+\Delta U_{wall} &= Q_{env} - (PdV)_{wall} + W_{elec}\\
+Q_{env} &= (\Delta U + PdV)_{wall} + W_{elec}\\
+Q_{env} &= \Delta H_{wall} + W_{elec}
+\end{align*}
+Where:
+\begin{itemize}
+    \item $W_{elec}$ = 59.98 MJ
+    \item $\Delta H_{wall}$ = 2.86 kJ/kg
+    \\(from Figure 1)\\
+    evaluated from $T_{room} = 298.15 K$ to any of the two bounds 
+    \\
+    
+\end{itemize} 
+
+\newpage
+
+\section{Conclusions}
+
+All the data will be compiled to answer the three objectives:
+\begin{enumerate}
+    \item Calculated $\Delta H_{Kelvion,ub}$ = 128.14 kJ/kg
+    \\$\Delta H_{Kelvion,ub}$ represents the amount of energy from the environment $Q_{env}$ to completely melt the heptadecane in 1 kg of Kelvion.
+    \item Calculated $\Delta H_{Kelvion,lb}$ = -116.139 kJ/kg
+    \\
+    $\Delta H_{Kelvion,ub}$ represents the amount of energy needed to completely freeze the octadecane in 1 kg of Kelvion.
+    \item In an average day in Arizona, the amount of energy transfer is 
+    $$\left| Q_{env} \right| = \left| \Delta H_{wall} + W_{elec} \right| = 59.98 \text{MJ} $$
+    note that because of the low Cp of conventional walls and the low difference between the upper and lower temperatures,
+    we can ignore the contribution of  $\Delta H_{wall}$. $\Delta H_{wall}$ only starts being significant when its mass reaches the order of Mg$(10^3kg)$.
+    \\~\\
+    The criteria for Kelvion to be effective now only depends on the mass:
+    \begin{enumerate}
+        \item Upper bound criteria:  
+        \\
+        $m\Delta H_{Kelvion,ub} = \left| Q_{env} \right|$
+        \\
+        $m = \frac{\left| Q_{env} \right|}{\Delta H_{Kelvion,ub}} = 468.1 kg$
+        \item Lower bound criteria:
+        \\
+        $m\Delta H_{Kelvion,lb} = \left| Q_{env} \right|$
+        \\
+        $m = \frac{\left| Q_{env} \right|}{\Delta H_{Kelvion,lb}}= 516.45 kg$
+        
+    \end{enumerate}
+
+    The amount of Kelvion to maintain comfortable indoor temperature is \textbf{516.45 kg}
+    \\
+    
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            - & Daily & Yearly
+            \\ \hline
+            $W_{elec}$ & \$2.67 & \$972.94
+            \\\hline
+        \end{tabular}
+        \\from references[9][10]
+    \end{center}
+    Installing Kelvion saves households an average of \textbf{\$992.94} yearly in electricity bills.
+       
+        
+
+
+\end{enumerate}    
+\newpage
+\section{References}
+\begin{enumerate}[{[}1{]}]
+   \item S. D. Sharma and K. Sagara, “Latent Heat Storage Materials and Systems: A Review,” International Journal of Green Energy, vol. 2, no. 1, pp. 1--56, Jan. 2005, doi: \href{https://doi.org/10.1081/ge-200051299}{10.1081/ge-200051299}.
+
+\item S. K. Singh, S. K. Verma, and R. Kumar, “Thermal performance and behavior analysis of SiO$_2$, Al$_2$O$_3$ and MgO based nano-enhanced phase-changing materials, latent heat thermal energy storage system,” Journal of Energy Storage, vol. 48, p. 103977, Apr. 2022, doi: \href{https://doi.org/10.1016/j.est.2022.103977}{10.1016/j.est.2022.103977}.
+
+\item A. Dinker, M. Agarwal, and G. D. Agarwal, “Heat storage materials, geometry and applications: A review,” Journal of the Energy Institute, vol. 90, no. 1, pp. 1--11, Feb. 2017, doi: \href{https://doi.org/10.1016/j.joei.2015.10.002}{10.1016/j.joei.2015.10.002}.
+
+\item H. Wang, Y. Yang, and L. Guo, “Nature-Inspired Electrochemical Energy-Storage Materials and Devices,” Advanced Energy Materials, vol. 7, no. 5, p. 1601709, Dec. 2016, doi: \href{https://doi.org/10.1002/aenm.201601709}{10.1002/aenm.201601709}.
+
+\item Rinaldo Raccichini and Ulderico Ulissi, Nanomaterials for Electrochemical Energy Storage. Elsevier, 2021.
+
+\item National Institute of Standards and Technology, “1-Butanol,” NIST Chemistry Webbook, vol. 69, 2023, doi: \href{https://doi.org/10.18434/T4D303}{10.18434/T4D303}.
+
+\item “Phoenix Summer Weather, Average Temperature (Arizona, United States) - Weather Spark,” Weatherspark.com, 2025. \url{https://weatherspark.com/s/2460/1/Average-Summer-Weather-in-Phoenix-Arizona-United-States#Figures-Temperature} (accessed Nov. 01, 2025).
+
+\item S. Topps, “How Many kWh per Day is Normal in Arizona?,” Solar Topps, Oct. 10, 2025. \url{https://www.solartopps.com/blog/how-many-kwh-per-day-is-normal/?utm_source=chatgpt.com} (accessed Nov. 01, 2025).
+\item “The Most Common Heating Systems in Arizona,” Shadrach Plumbing \& Cooling. [Online]. Available: \url{https://shadrachplumbingcooling.com/blog/the-most-common-heating-systems-in-arizona/}. [Accessed: Nov. 1, 2025].
+\item “Arizona Electricity Rates,” EnergySage. [Online]. Available: \url{https://www.energysage.com/local-data/electricity-cost/az/}. [Accessed: Nov. 1, 2025].
+\item MATLAB code for calculations (LLM used for displaying plot data starting at line 22): \url{https://docs.google.com/document/d/1ptEH0kctw2b-a_zzD6sGN1wHP3sVR1YOVJMPSvX245Y/edit?usp=sharing}
+\end{enumerate}
+\end{document}
+
+

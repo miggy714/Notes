@@ -1,0 +1,36 @@
+%This function takes inputs: node position x, node position y, Temperature
+%boundary condition, Width, and Height.
+
+%Outputs temperature at node position (x, y) from exact solution (Equation A)
+
+function exactsoln = eqnA(x, y, T, W, H)
+
+
+t = 99999;    
+summation = zeros(1,t);
+summation_finite = zeros(1, t);
+
+
+
+%% EQN (a) exact solution 
+
+ 
+for k = 1:t
+        summation(k) = ((-1)^(k+1)+1)/k * sin(k*pi*(x*0.1)/W) * sinh(k*pi*(y*0.1)/W)/sinh(k*pi*H/W);
+end
+    fsum = isfinite(summation);
+    for i = 1:t
+        
+        if (fsum(i) == 1)
+        summation_finite(i) = summation(i);
+        end
+    
+    end
+    
+exactsoln = T * 2/pi * sum(summation_finite);
+
+
+
+
+
+end

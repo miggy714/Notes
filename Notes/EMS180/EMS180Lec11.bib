@@ -1,0 +1,70 @@
+10/27
+Load: L_f (defined as 1/L in book)
+    fraction of time equipment is used for this part
+    if equipment is used 50% of time -> L_f = 0.5
+Write-off time: two
+    cost of borrowing $
+    time to pay off equipment
+    often 5-10 years
+Prodction rate n_dot (time derivative)
+    # of parts/hour
+C_3 = 1/n_dot * L_f * C_c/t_wo
+C_4: Overhead Cost
+    cost of owning manufacturing facility, paying for workers, electricity, etc.
+    we will use C_ohdot = $100/hr
+        C_4 = C_ohdot / ndot;
+    Combine terms
+        C = (m * C_m)/(1-f) + C_t/n * ceiling(n/nt) + 1/n_dot * [ (L_f * C_c/t_wo+C_ohdot) ] 
+
+plot(log(n), C)
+
+SLIDES
+    (1)Cost modeling: Injection molding of Legos Molding slide
+    (2)plot(log(n_, C) applied to lego cost model
+    (3)Case Study 14.2 from textbook (Aluminum connecting rod)
+    (4) plot(Relative cost per component, Number of components)
+        for project, just come up with cost
+
+CLASS Activity
+    manufacture flat-head screwdrivers such as the one shown in the image. The metal part of the screwdriver is made of steel and is a solid
+    component with given dimensions
+
+POLYMERS: Long chains of organic molecules
+    Classifications
+        (1) Polymer behavior
+            Thermpolastics
+                ex: Polyethylene, ABS
+                structure: linear
+                become soft/melt at high temp
+                Recyclable
+            Thermosets
+                ex: Polyesters, Epoxies
+                structure: rigid, cross-linked structure
+                temperature behavior:
+                    High melting point
+                    little softening
+                Higher strength + modulus
+            Elastomers
+                ex: Rubber
+                High elasticity(can sustain large elastic strains)
+                structure: Long chains of molecules that can coil and uncoil
+                Material properties can be controlled by: 
+                    cross-linking
+                    vulcanization of rubber
+                        add S?, which creates cross-links
+        (2) Polymerization Mechanism
+            covalently join monomers to each other
+                                H   H                                  H    H
+                                |   |                                  |    |
+            Vinyl Chloride      C = C    ====OH- initiator===>    HO - C -- C
+                                |   |                                  |    |
+                                H   Cl                                 H    Cl
+            need initiator to start reaction
+                typically forms OH- from dissolution of H2O2
+            reaction continues
+                chains get longer
+            reaction terminated by another OH- or another chain
+            molecular weight (chain weight) determined by amount of initiator/terminator that is present
+        (3) Polymer structures
+
+    

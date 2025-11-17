@@ -1,0 +1,77 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage[margin=1in]{geometry}
+\usetikzlibrary{arrows.meta, positioning}
+\begin{document}
+
+\section{review}
+Boltzmann probability: $$S = -k \sum p_i \ln p_i$$
+Entropy of mixing: $$S = R \sum x_i \ln x_i$$
+Standard Entropy: $$S^\circ = \int_{0}^{298}\frac{Cp}{T}dT$$ 
+
+\section{Section 4A - Gibbs and Auxillary functions}
+Gibbs: $$dG = dH - Tds$$
+\subsection{Gibbs derivation}
+All systems tend toward a lower "Energy state". This process acquires entropy (maximizes configuration).
+\\
+Consider the three laws applied to a reversible process:
+\begin{itemize}
+    \item 1st law: 
+    \\$dU = \delta q - \delta w$ 
+    \\ $dU = \delta q_{rev} - PdV$ (I)
+    \item 2nd law: 
+    \\$dS \ge \frac{\delta q}{T}$
+    \\$dS = \frac{\delta q_{rev}}{T}$
+    \\$\delta q_{rev} = T ds$ (II)
+    \item 3rd law:
+    \\$S = 0$ at 0K
+    \item Enthalpy:
+    \\ $H \equiv U + PV$
+    \\$dH = dU + PdV + vdP$ (III)
+\end{itemize}
+\subsection{cont.}
+(II) $\circ$ (I): $dU = Tds - PdV$ (IV)
+\\
+(IV) $\circ$ (III): $dH = (Tds - PdV) + PdV + VdP$
+\\$dH = TdS + VdP$ (IV)
+
+\subsection{For a process at constant T and P}
+(IV)$\Big|_{P,T}$: $dH = Tds$
+\\
+\begin{itemize}
+    \item This equation is a criteria for sponteneity
+    \item It displays an equilibrium which can be used to predict the direction of a reaction
+    \item This equation balances both:
+    \begin{itemize}
+        \item enthalpy (naturally lower energy state is preferred)
+        \item entropy (naturally tends towards a statistically favored state)
+    \end{itemize}
+\end{itemize}
+\subsection{Gibbs Free Energy}
+$$G \equiv H - TS$$
+$$ \Delta G = \Delta H - T \Delta S$$
+$$ dG = dU + VdP + PdV - S dT - T dS $$
+$$dG = \delta q - \delta w + VdP + PdV - S dT - T dS$$
+$$dG = TdS - PdV + VdP + PdV - SdT - TdS$$
+$$dG = VdP - SdT$$
+\\
+The final line indicates that the equilibrium criteria varies with 
+temperature and pressure
+\\~\\
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        $\frac{\delta G}{\delta T}\Big|_{P} = -S$ 
+        & $\frac{\delta G}{\delta P}\Big|_{T} = V$
+        & $\frac{\delta H}{\delta P}\Big|_{S} = V$
+        & $\frac{\delta H}{\delta S}\Big|_{P} =  T$
+        \\
+        \hline
+    
+    \end{tabular}  
+\end{center}
+
+
+\end{document}

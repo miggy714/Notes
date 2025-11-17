@@ -1,0 +1,127 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{pgfplots}
+\title{UC Davis
+\\~\\
+EMS 160 Homework 2
+\\~\\
+Enthalpy, Entropy and Gibbs
+\\~\\
+Prof. Scott McCormack}
+
+\author{Xiaokun Yang\\Miguel Cuaycong\\ Jonathan Mases}
+\date{\today}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{Question 4 (6pts)}
+\begin{enumerate}[i]
+    \item Rankine cycle
+    \\
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Rankine cycle},
+        xlabel={Entropy},
+        yticklabel=\empty,
+        xticklabel=\empty,
+    ]
+
+    \end{axis}
+    \end{tikzpicture}
+    \\
+    1-2: Isothermal heat addition: $Q = \int_{1}^{2} T dS, W = 0, Q \text{ is positive}$ 
+    \\
+    2-3: Isentropic expansion: $Q = 0, W = V(P_3 - P_2), W \text{ is negative}$
+    \\
+    3-4: Isothermal heat rejection: $Q = \int_{3}^{4} T dS, W = 0,Q \text{ is negative} $
+    \\
+    4-1: Isentropic compression: $Q = 0,  W = V(P_1-P_4), W \text{ is positive}$
+    \\~\\
+    Commonly used in power plants.
+    \newpage
+    \item Stirling cycle
+        \\
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Stirling cycle},
+        xlabel={Entropy},
+        yticklabel=\empty,
+        xticklabel=\empty,
+    ]
+    \end{axis}
+    \end{tikzpicture}
+    \\
+    1-2: Isothermal heat addition: $Q = \int_{1}^{2} T dS$
+    \\
+    2-3: Isochoric heat rejection: $Q = \int_{2}^{3} T dS$
+    \\
+    3-4: Isothermal heat rejection: $Q = \int_{3}^{4} T dS$
+    \\
+    4-1: Isochoric heat addition: $Q = \int_{4}^{1} T dS$
+    \\
+    net work in this cycle: $W_{net} = mR\ln{(\frac{V_2}{V_1})}\Delta T$
+    \\~\\
+     Invented in the early 1800. Aside from use in engines, it is also used as coolers
+    \newpage
+     \item Otto cycle
+        \\
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Otto cycle},
+        xlabel={Entropy},
+        yticklabel=\empty,
+        xticklabel=\empty,
+    ]
+    \end{axis}
+    \end{tikzpicture}
+    \\
+    Stroke 1
+    \\
+    1-2: Isentropic and Adiabatic compression: $Q = 0, W = U_2 - U_1$
+    \\
+    Stroke 2
+    \\
+    2-3: Isochoric heat addition: $Q = \int_{2}^{3} T dS$
+    \\
+    Stroke 3
+    \\
+    3-4: Isentropic and Adiabatic expansion: $Q = 0, W = U_4 - U_3$
+    \\
+    Stroke 4
+    \\
+    4-1: Isochoric heat rejection: $Q = \int_{4}^{1} T dS$
+    \\~\\
+    Used in most piston driven engines in automobiles
+    \\
+    \newpage
+    \item Brayton cycle
+        \\
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Brayton cycle},
+        xlabel={Entropy},
+        yticklabel=\empty,
+        xticklabel=\empty,
+    ]
+    \end{axis}
+    \end{tikzpicture} 
+    \\
+    1-2: Isentropic compression: $Q = 0, W = H_2-H_1$
+    \\
+    2-3: Isobaric heat addition: $Q = \int_{2}^{3} T dS, W = 0$
+    \\
+    3-4: Isentropic expansion: $Q = 0, W = H_2-H_1$
+    \\
+    4-1: Isobaric heat addition: $Q = \int_{4}^{1} T dS, W = 0$
+    \\~\\
+    Applications in power grids as gas turbines. Also used in aircraft jet engines
+\end{enumerate} 
+
+
+
+
+\end{document}

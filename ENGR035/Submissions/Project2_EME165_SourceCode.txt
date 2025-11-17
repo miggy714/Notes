@@ -1,0 +1,101 @@
+%% Source code for Project 2 | EME 165 | SQ 2021 | Miguel Cuaycong
+
+
+
+%%
+
+m = 4; n = 4;
+GridMat = zeros(m,n);
+GridTemp = zeros(m,n);
+GridArea_x = zeros(m,n);
+GridArea_y = zeros(m,n);
+
+%Area for nodes:
+A = 0.3^2; %meters
+A_xf = A/.3; %Area in the x-direction of heat flux
+A_yf = A/.3; %Area in the y-direction of heat flux
+
+%Area at the boundaries
+A_xf1 = A/.3*(1/2);
+A_xfm = A/.3*(1/2);
+A_yf1 = A/.3*(1/2);
+A_yfn = A/.3*(1/2);
+
+
+
+%Boundary Condition temperatures:
+T_BCy4 = 100; %Boundary condition Temp. at y = 4
+T_BCx4 = 200; %Boundary condition Temp. at x = 4
+T_BCx0 = 500; %Boundary condition Temp. at x = 0
+T_BCy0 = 300; %Boundary condition Temp. at y = 0
+
+
+
+%% Matrix form of the system of equations from second central difference equation
+
+A = [4  -1  -1  0;  
+    -1  4   0   -1; 
+    -1 0 4 -1;
+    0 -1 -1 4]; % matrix of relationships between nodes
+T1 = T_BCy4;
+T2 = T_BCx4;
+T3 = T_BCy0;
+T4 = T_BCx0;
+
+b = [T4+T3 T2+T3 T1+T4 T2+T1]'; %constant matrix of boundary conditions
+
+% Calculation of temperature at nodes
+T_nodes = rref([A b]);
+T_nodes = T_nodes(:,5);
+
+
+
+%% Populating the Temperature Matrix.
+
+i = 1;
+j = 1;
+
+
+for i = 1:m 
+    for j = 1:n
+      
+%     Area matrix not useful for this project
+%         GridArea_x(i, j) = A_xf;
+%         GridArea_y(i, j) = A_yf;
+%         
+%         GridArea_y(i,1) = A_yf1;
+%         GridArea_y(i,n) = A_yfn; 
+%         
+%         GridArea_x(1,j) = A_xf1;
+%         GridArea_x(m,j) = A_xfm;
+        
+%
+        GridTemp(1,j) = T_BCx0;
+        GridTemp(4,j) = T_BCx4;
+        GridTemp(i,1) = T_BCy0;
+        GridTemp(i,4) = T_BCy4;
+        GridTemp(2,2) = T_nodes(1);
+        GridTemp(3,2) = T_nodes(2);
+        GridTemp(2,3) = T_nodes(3);
+        GridTemp(3,3) = T_nodes(4);
+        
+    
+    end
+end
+
+%% Calculation of exact solutions for nodes 1 to 4. Calls function MATLAB function "eqnA"
+T_node1Exact = eqnA(1, 1, 100, A_xf, A_yf) + eqnA(2, 1, 200, A_xf, A_yf) + eqnA(2, 2, 300, A_xf, A_yf) + eqnA(1, 2, 500, A_xf, A_yf);
+T_node2Exact = eqnA(2, 1, 100, A_xf, A_yf) + eqnA(2, 2, 200, A_xf, A_yf) + eqnA(1, 2, 300, A_xf, A_yf) + eqnA(1, 1, 500, A_xf, A_yf);
+T_node3Exact = eqnA(1, 2, 100, A_xf, A_yf) + eqnA(1, 1, 200, A_xf, A_yf) + eqnA(2, 1, 300, A_xf, A_yf) + eqnA(2, 2, 500, A_xf, A_yf);
+T_node4Exact = eqnA(2, 2, 100, A_xf, A_yf) + eqnA(1, 2, 200, A_xf, A_yf) + eqnA(1, 1, 300, A_xf, A_yf) + eqnA(2, 1, 500, A_xf, A_yf);
+
+%% Populating exact Temperature matrix
+T_nodesExact = [T_node1Exact T_node2Exact T_node3Exact T_node4Exact]';
+
+GridTempExact = GridTemp;
+
+GridTempExact(2,2) = T_nodesExact(1);
+GridTempExact(3,2) = T_nodesExact(2);
+GridTempExact(2,3) = T_nodesExact(3);
+GridTempExact(3,3) = T_nodesExact(4);
+

@@ -1,0 +1,12 @@
+import numpy as np
+import matplotlib.pyplot as plt
+#Force matrices
+F_mat = np.empty((2,3)); # 3x2 matrices, [[Fx, Fy, Fz], [x,y,z]]
+M_mat = np.empty((2,3)); # 3x2 matrices, [[Mx, My, Mz], [x,y,z]]
+def add_forcevector(F):
+    #addidx = F_mat.shape[1];
+    np.vstack((F_mat, F));
+
+F1=np.array([[1,0,0],[0,0,0]]);
+add_forcevector(F1);
+print(F_mat);
