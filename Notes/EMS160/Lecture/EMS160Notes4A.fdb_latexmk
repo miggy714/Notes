@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1763340262.30373 "c:/Users/mcuay/OneDrive/Documents/codesC++/UCD/Notes/EMS160/Lecture/EMS160Notes4A.tex" "EMS160Notes4A.pdf" "EMS160Notes4A" 1763340263.36947 0
-  "C:/Users/mcuay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1763249209 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
-  "C:/Users/mcuay/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1761852003 11548 9b9dc1a1546c7df3b6225e98601df0bb ""
-  "C:/Users/mcuay/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1761801435 13321868 7ee76ebbd043f3419e7a6e0862a7d45b ""
+["pdflatex"] 1763431302.19732 "c:/Users/mcuay/OneDrive/Documents/codesC++/UCD/Notes/EMS160/Lecture/EMS160Notes4A.tex" "EMS160Notes4A.pdf" "EMS160Notes4A" 1763431303.90651 0
+  "C:/Users/mcuay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1763249209.61289 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+  "C:/Users/mcuay/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1761852003.02177 11548 9b9dc1a1546c7df3b6225e98601df0bb ""
+  "C:/Users/mcuay/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1761801435.16741 13321868 05603bfed44fad97de0db0f8e1608f18 ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -107,9 +107,8 @@
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1756451144 325 f9f16d12354225b7dd52a3321f085955 ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/tex/latex/tools/enumerate.sty" 1749468414 3468 f21ceb3448a22fec45299f924e7fc48b ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "EMS160Notes4A.aux" 1763340263 699 870b022c8283415ffca1964731c2d974 "pdflatex"
-  "EMS160Notes4A.tex" 1763340261 2392 e2f6d146cc55fc1d1026e5b5857a1b8e ""
-  "c:/Users/mcuay/OneDrive/Documents/codesC++/UCD/Notes/EMS160/Lecture/EMS160Notes4A.tex" 1763340261 2392 e2f6d146cc55fc1d1026e5b5857a1b8e ""
+  "EMS160Notes4A.aux" 1763431303.4872 1039 efaa300607477e7bc93e43d302650764 "pdflatex"
+  "c:/Users/mcuay/OneDrive/Documents/codesC++/UCD/Notes/EMS160/Lecture/EMS160Notes4A.tex" 1763431300.8766 2764 0314292ca83d8334a8a1c26da4e79c1c ""
   (generated)
   "EMS160Notes4A.aux"
   "EMS160Notes4A.log"
