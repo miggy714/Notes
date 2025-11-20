@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.29)  18 NOV 2025 13:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.29)  18 NOV 2025 13:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -162,38 +162,28 @@ Package pdftex.def Info: ../Screenshots/Screenshot 2025-11-18 125439.png  used o
 
 [3]
 
-c:/Users/mcuay/OneDrive/Documents/codesC++/UCD/Notes/EMS182/EMS182Notes.tex:121: LaTeX Error: Not allowed in LR mode.
+[4 <../Screenshots/Screenshot 2025-11-18 125439.png>]
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.121     \item I
-                 nexpensive
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+[5]
 
+[6] (EMS182Notes.aux)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-10-09>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 1894 strings out of 468080
+ 31772 string characters out of 5425771
+ 441722 words of memory out of 5000000
+ 30587 multiletter control sequences out of 15000+600000
+ 632319 words of font info for 55 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,5n,65p,280b,202s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\mcuay\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on EMS182Notes.pdf (6 pages, 529853 bytes).
+PDF statistics:
+ 61 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-c:/Users/mcuay/OneDrive/Documents/codesC++/UCD/Notes/EMS182/EMS182Notes.tex:121: LaTeX Error: Not allowed in LR mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.121     \item I
-                 nexpensive
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-c:/Users/mcuay/OneDrive/Documents/codesC++/UCD/Notes/EMS182/EMS182Notes.tex:121: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.121     \item I
-                 nexpensive
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/mcuay/OneDrive/Documents/codesC++/UCD/Notes/EMS182/EMS182Notes.tex:121
