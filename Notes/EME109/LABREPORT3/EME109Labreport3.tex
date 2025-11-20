@@ -1,6 +1,9 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\graphicspath{{../../Screenshots/}}
 
 \newcommand{\memoheader}[4]{
   \noindent
@@ -10,19 +13,34 @@
   \textbf{Subject:} #4\\[1ex]\hrule\vspace{1.5ex}
 }
 
+\newcommand{\atmT}{293.15}
+\newcommand{\atmP}{100880.52}
+\newcommand{\iP}{500000}
+\newcommand{\cPcritone}{216200}
+\newcommand{\cPcrittwo}{415000}
+\newcommand{\cPdestwo}{9300}
+
+
+
 \begin{document}
 \memoheader{Professor Benjamin Shaw}
             {Miguel Cuaycong}
             {\today}
             {EME 109 LAB 3 Report - Compressible Flow Nozzle Experiment}
+\section*{Equations}
+$$P_{\text{crit ratio}}=\frac{\text{Absolute chamber } P_c}{\text{Absolute inlet } P_I}$$
 
 \section*{Opening}
 \section*{Findings/Summary}
 \section*{Discussion}
 \section*{Results}
 \section*{Closing}
-hello 2
 \newpage
-\section{Notes}
+\section{Photos}
+\begin{center}
+    \includegraphics[width=\textwidth]{lab3devicediag}
+    \\
+    \includegraphics[width=300pt]{lab3actualdevice.jpg}
+\end{center}
 
 \end{document}
