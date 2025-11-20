@@ -1,0 +1,59 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{url}
+
+\newcommand{\memoheader}[4]{
+  \noindent
+  \textbf{From:} #2\\ 
+  \textbf{To:} #1\\
+  \textbf{Date:} #3\\
+  \textbf{Subject:} #4\\[1ex]\hrule\vspace{1.5ex}
+}
+
+\begin{document}
+\memoheader{Prof. Gentry}
+            {Miguel Cuaycong}
+            {\today}
+            {EMS 180: Starship Rocket Body (Thin Walled Pressure Vessel Assumption)}
+\noindent This document focuses on the manufacturing process selection of a Starship Rocket body.
+The body is assumed to be a thin walled pressure vessel made of one type of material which is 301 stainless steel. 
+This steel has desireable properties at cryogenic temperatures.
+Longitudinal seam welding will be assumed as the method of joining the steel sheets to create a cylindrical thin wall pressure vessel.
+\\~\\
+Since the part is large and only has a single material, other shaping methods are not suitable. This means composite forming, and additive manufacturing
+will not be effective nor necessary. The environmental use case is also important. Since the part is going to space, it needs to be pressurized.
+For this use case, joining methods such as fastening, riveting, snap fits are undesirable. An oxidized film is also needed to prevent cold welds in the vacuum of space.
+\\~\\
+The manufacturing process has four categories (Fig 6.2)[2]. Primary shaping, Secondary processes, Joining, and Finishing.
+One process from each category will be selected to create the part.
+\\~\\
+The material stock for 301 steel is produced by melting in an Arc furnace process. During this process, carbon is controlled to a desired level then Chromium is added to the bath after the steel is deoxidized.
+The material stock is now produced ready for Primary shaping process which in this case is Casting the steel to ingots. 
+The casting process can adversely affect the properties of liquid steel due to oxidation. 
+After the ingots are cast, the material is formed into steel sheets through rolling. During this process, the steel is at an annealed condition. 
+Cutting and machining can also be employed to cut the material into desired dimension. 
+To finish, a surface treatment process is conducted to remove scale during heat treatment and improve corrosion resistance.
+Surface treatment includes multiple bathes in solutions to remove oxidized scales then passivation to produce a stronger oxidized film.[1][3]
+\\~\\
+301 steel is austenitic which means its microstructure is primarily FCC austenite. 
+This microstructure gives the part high strength properties.
+However, chromium carbides can form along the austenite grain boundaries which is why great care is needed
+when the steel is exposed to elevated temperature(i.e welding). 
+These precipitates can adversely affect fracture toughness, ductility, and corrosion resistance. 
+Also, cold work can transform austenite to martensite since it is not thermodynamically stable at room temperature.
+Martensite is harder than austenite which makes it more brittle. This is also the reason 301 steel should be in an annealed condition during rolling.
+[1][3]
+\\~\\ 
+Process selection of a thin walled pressure vessel for a Starship rocket body can be summarized as follows:
+Casting to produce 301 steel and shape to ingots(Primary shaping), Steel sheets are formed through rolling and cutting(Secondary process).
+Surface treatment to remove carbon scales and improve oxide film(Finishing), Welding to seal the pressure vessel (Joining).
+\newpage
+\section*{References}
+
+\noindent[1] H. F. Rush, ``Cryogenic Materials Selection, Availability, and Cost Considerations,'' in \textit{Cryogenic Technology}, NASA Conference Publication CP-2122, NASA Langley Research Center, Hampton, VA, 1982. [Online]. Available: \url{https://ntrs.nasa.gov/citations/19830010491}
+\\~\\
+\noindent[2] M. F. Ashby, \textit{Materials Selection in Mechanical Design}, 5th ed. Oxford, U.K.: Butterworth-Heinemann (Elsevier), 2017. ISBN: 978-0-08-100599-6.
+\\~\\
+\noindent[3] Nickel Institute and International Molybdenum Association (IMOA), \textit{Practical Guidelines for the Fabrication of Austenitic Stainless Steels}, 2019. [Online]. Available: \url{https://www.imoa.info/download_files/stainless-steel/Austenitic_Stainless_Steel_Fabrication_Guidelines.pdf}. [Accessed: Nov. 18, 2025]
+\end{document}
