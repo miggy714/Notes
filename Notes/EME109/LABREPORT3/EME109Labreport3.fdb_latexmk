@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1763609679.17183 "c:/Users/mcuay/Documents/Notes/Notes/EME109/LABREPORT3/EME109Labreport3.tex" "EME109Labreport3.pdf" "EME109Labreport3" 1763609679.93265 0
+["pdflatex"] 1763621510.547 "c:/Users/mcuay/Documents/Notes/Notes/EME109/LABREPORT3/EME109Labreport3.tex" "EME109Labreport3.pdf" "EME109Labreport3" 1763621511.4576 0
   "../../Screenshots/lab3actualdevice.jpg" 1763604556.65883 607825 d1a4d7842fbc98c918d8326dcf5c50c1 ""
   "../../Screenshots/lab3devicediag.png" 1763601482.16632 114371 e179d6bfa58920fae7f3d50aa2f35cc3 ""
   "C:/Users/mcuay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1763605261.13374 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -21,10 +21,15 @@
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1247596666 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
+  "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1247596666 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
+  "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247596667 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
+  "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1247596667 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty" 1734114575 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty" 1734114575 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -54,8 +59,8 @@
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty" 1665066333 13815 760b0c02f691ea230f5359c4e1de23a7 ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1761202581 30662 bfd6e864f4ffc5018b0e2b6260c3181c ""
   "C:/Users/mcuay/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty" 1736608268 48766 87a17a4ef312a39cd43896e34a679a56 ""
-  "EME109Labreport3.aux" 1763609679.76766 126 103ec87ce0f476bf697598ca9a9c7399 "pdflatex"
-  "c:/Users/mcuay/Documents/Notes/Notes/EME109/LABREPORT3/EME109Labreport3.tex" 1763609678.4793 1132 e8af975e2ec142a90410fca5d4591e82 ""
+  "EME109Labreport3.aux" 1763621511.20328 126 103ec87ce0f476bf697598ca9a9c7399 "pdflatex"
+  "c:/Users/mcuay/Documents/Notes/Notes/EME109/LABREPORT3/EME109Labreport3.tex" 1763621509.90884 1243 c2a131579228580fb9877e70d2dd61af ""
   (generated)
   "EME109Labreport3.aux"
   "EME109Labreport3.log"

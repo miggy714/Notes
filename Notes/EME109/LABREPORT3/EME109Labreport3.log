@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.19)  19 NOV 2025 19:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.19)  19 NOV 2025 22:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -270,17 +270,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--29
 [1
 
 {C:/Users/mcuay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<../../Screenshots/lab3devicediag.png, id=11, 679.78969pt x 436.63126pt>
+<../../Screenshots/lab3devicediag.png, id=16, 679.78969pt x 436.63126pt>
 File: ../../Screenshots/lab3devicediag.png Graphic file (type png)
 <use ../../Screenshots/lab3devicediag.png>
 Package pdftex.def Info: ../../Screenshots/lab3devicediag.png  used on input li
-ne 41.
+ne 42.
 (pdftex.def)             Requested size: 469.75502pt x 301.72227pt.
-<../../Screenshots/lab3actualdevice.jpg, id=13, 2781.39125pt x 2940.9875pt>
+<../../Screenshots/lab3actualdevice.jpg, id=18, 2781.39125pt x 2940.9875pt>
 File: ../../Screenshots/lab3actualdevice.jpg Graphic file (type jpg)
 <use ../../Screenshots/lab3actualdevice.jpg>
 Package pdftex.def Info: ../../Screenshots/lab3actualdevice.jpg  used on input 
-line 43.
+line 44.
 (pdftex.def)             Requested size: 300.0pt x 317.18214pt.
  [2 <../../Screenshots/lab3devicediag.png> <../../Screenshots/lab3actualdevice.
 jpg>]
@@ -293,7 +293,7 @@ L3 programming layer <2025-10-24>
 Here is how much of TeX's memory you used:
  3407 strings out of 467870
  54723 string characters out of 5418354
- 465647 words of memory out of 5000000
+ 466647 words of memory out of 5000000
  32261 multiletter control sequences out of 15000+600000
  632047 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -301,13 +301,19 @@ Here is how much of TeX's memory you used:
 <C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mcuay/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mcuay/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on EME109Labreport3.pdf (2 pages, 782622 bytes).
+ublic/amsfonts/cm/cmex10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mcuay/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/mcuay/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mcuay/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mcuay/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/
+mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
+/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmsy6.pfb>
+Output written on EME109Labreport3.pdf (2 pages, 828090 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
