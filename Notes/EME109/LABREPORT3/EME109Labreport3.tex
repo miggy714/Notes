@@ -31,9 +31,106 @@
 $$P_{\text{crit ratio}}=\frac{\text{Absolute chamber } P_c}{\text{Absolute inlet } P_I}$$
 $$V_{\text{exit}}=\frac{F}{\dot{m}}$$
 $$V_{\text{exit}}=c_p*T_0\bigg[1-\frac{P_e}{P_0}^{\frac{k-1}{k}}\bigg]$$
+$$P_b \equiv \text{chamber pressure} $$
+$$P_0 \equiv \text{inlet pressure}$$
+$$\dot{m} = \rho A V$$
+$$\text{speed of sound }C = \sqrt{kRT}$$
+$$M_a=\frac{V}{C}$$
+$$\frac{T_0}{T}=1+\frac{k-1}{2}M_a^2$$
+$$\frac{P_0}{P}=\frac{T_0}{T}^{\frac{k}{k-1}} = (1+\frac{k-1}{2}M_a^2)^{\frac{k}{k-1}}$$
+$$\frac{\rho_0}{\rho}=\frac{T_0}{T}^{\frac{1}{k-1}}=(1+\frac{k-1}{2}M_a^2)^{\frac{1}{k-1}}$$
+Can assume ideal gas: $$P = \rho RT$$
+Choked flow occurs when: $$\frac{P}{P_{0}} = P_{\text{crit ratio}}$$
+
+\begin{center}
+$\frac{T^*}{T_0} = 0.833$
+\\
+$\frac{P^*}{P_0} = 0.528$
+\\
+$\frac{\rho^*}{\rho_0} = 0.634$
+
+\end{center}
 \section*{Opening}
 \section*{Findings/Summary}
 \section*{Discussion}
+\subsection{Requirements}
+\begin{center}
+  \begin{tabular}{|l|c|}
+    \hline
+    table of experimental and theoretical mass flow rate nozzle 1& y/n
+    \\
+    \hline
+    table of experimental and theoretical mass flow rate nozzle 3& y/n
+    \\
+    \hline
+    plot of experimental and theoretical mass flow rate nozzle 1& y/n
+    \\
+    \hline
+    plot of experimental and theoretical mass flow rate nozzle 3& y/n
+    \\
+    \hline
+    flow choked? & y/n
+    \\
+    \hline
+    table of force calibration data & y/n
+    \\
+    \hline
+    plot of force calibration data & y/n
+    \\
+    \hline
+    Hysterisis present & y/n
+    \\
+    \hline
+    polynomial fit if force cal. data using lm() & y/n
+    \\
+    \hline
+    table of the thrust force vs abs chamber pressure nozzle 1  & y/n
+    \\
+    \hline
+    plot of the thrust force vs abs chamber pressure nozzle 1 & y/n
+    \\
+    \hline
+    table of the thrust force vs abs chamber pressure nozzle 3 & y/n
+    \\
+    \hline
+    plot of the thrust force vs abs chamber pressure nozzle 3 & y/n
+    \\
+    \hline
+    table of theoretical thrust force F & --
+    \\
+    \hline
+    a. for the critical pressure ratio & y/n
+    \\
+    \hline
+    b. for the condition where a normal shock is predicted at exit & y/n
+    \\
+    \hline
+    c. design pressure ratio & y/n
+    \\
+    \hline
+    calculate experimental isentropic efficiency of nozzle 1 for crit pressure ratio & y/n
+    \\
+    \hline
+    calculate experimental isentropic efficiency of nozzle 1 for crit pressure ratio & y/n
+    \\
+    \hline
+    calculate experimental isentropic efficiency of nozzle 3 for crit pressure ratio & y/n
+    \\
+    \hline
+    calculate experimental isentropic efficiency of nozzle 3 for crit pressure ratio & y/n
+    \\
+    \hline
+  \end{tabular}
+\end{center}
+\subsection{Theoretical mass flow rate}
+Governing eq: $$\dot{m} = \rho A V$$
+The mass flow rate of a converging nozzle can be determined at exit state where:
+\\
+$\rho = \frac{P_{\text{exit}}}{RT}$
+\\
+$A = A_{\text{exit}}$
+\\
+$V = $
 \section*{Results}
 \section*{Closing}
 \newpage
