@@ -1,0 +1,100 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\graphicspath{{../../Screenshots/}}
+\begin{document}
+\section*{Question 2}
+$\Delta G^\circ$ of relevant reactions:
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        $C+O_2 \leftrightarrow CO_2$ & $-394(10)^3 - 0.836T$
+        \\
+        \hline
+        $CO \leftrightarrow C+\frac{1}{2}O_2$ & $-112.9(10)^3 - 86.5T$
+        \\
+        \hline
+        $ Fe_3O_{4,(s)} \leftrightarrow 3Fe_{(s)} + 2O_{(g)}$ & $-(-1103.1(10)^3 + 307.4T)$
+        \\
+        \hline
+        $FeO \leftrightarrow Fe + \frac{1}{2}O_2$ & $-(264(10)^3 +64.6T)$
+        \\
+        \hline
+        $3Fe_2O_3 \leftrightarrow Fe + 3O_2$ & $-(-815(10)^3 + 251.1T)$
+        \\
+        \hline
+    \end{tabular}
+\end{center}
+\begin{enumerate}
+    \item $\mathbf{\frac{1}{4}Fe_3O_4+CO\leftrightarrow \frac{3}{4}Fe+CO_2}$;  $\Delta G_{rxn}^\circ = -231.125(10)^3-164.186T$ J
+    \\~\\
+    $\frac{1}{4}\big[ Fe_3O_{4,(s)} \leftrightarrow 3Fe_{(s)} + 2O_{(g)} \big]$ 
+    \\~\\
+    $C+O_2 \leftrightarrow CO_2$
+    \\~\\
+    $CO \leftrightarrow C+\frac{1}{2}O_2$
+    \item $\mathbf{FeO + CO \leftrightarrow Fe + CO_2}$; $\Delta G_{rxn}^\circ = -545.1(10)^3+150.264T$ J
+    \\~\\
+    $FeO \leftrightarrow Fe + \frac{1}{2}O_2$
+    \\~\\
+    $C+O_2 \leftrightarrow CO_2$
+    \\~\\
+    $CO \leftrightarrow C+\frac{1}{2}O_2$
+    \item $\mathbf{Fe_3O_4 + CO \leftrightarrow FeO + CO_2}$; $\Delta G_{rxn}^\circ = -592.2(10)^3+199.264T$ J
+    \\~\\
+    $Fe_3O_4 \leftrightarrow 3Fe +2O_2$
+    \\~\\
+    $3\big[Fe + \frac{1}{2}O_2\leftrightarrow FeO\big]$
+    \\~\\
+    $C+O_2 \leftrightarrow CO_2$
+    \\~\\
+    $CO \leftrightarrow C+\frac{1}{2}O_2$
+    \item $\mathbf{3Fe_2O_3 + CO \leftrightarrow 2Fe_3O_4 + CO_2}$; $\Delta G_{rxn}^\circ = -360.7(10)^3+131.831T$ J
+    \\~\\
+    $3Fe_2O_3 \leftrightarrow Fe + 3O_2$
+    \\~\\
+    $\frac{2}{3}\big[3Fe +2O_2 \leftrightarrow Fe_3O_4\big]$
+    \\~\\
+    $C+O_2 \leftrightarrow CO_2$
+    \\~\\
+    $CO \leftrightarrow C+\frac{1}{2}O_2$
+\end{enumerate}
+\newpage
+\subsection*{Plotting}
+$\Delta G = -RT \ln k$
+\\
+$k = \exp{\frac{-\Delta G^\circ}{RT}} = \frac{P_{CO_2}}{P_{CO}}$
+\\~\\
+Let the vertical axis be: $\frac{P_{CO}}{P_{CO}+P_{CO_2}}$
+\\~\\
+vertical axis in terms of k: $\frac{P_{CO}}{P_{CO}+kP_{CO}} = \frac{1}{1+k}$
+\subsection*{equations for phase boundary curves}
+
+For each reaction $i=1\ldots4$:
+\[
+\Delta G_i^\circ(T)=a_i+b_iT \quad\Rightarrow\quad
+K_i(T)=\exp\!\left(\frac{-\Delta G_i^\circ(T)}{RT}\right)
+\]
+and the plotted ordinate is
+\[
+\%{\rm CO}_i(T)=100\cdot\frac{1}{1+K_i(T)}.
+\]
+Use $R=8.314462618\ \mathrm{J\,mol^{-1}\,K^{-1}}$ and the coefficients
+(in J/mol, $T$ in K):
+\[
+\begin{aligned}
+&\Delta G_1^\circ=-231.125\times10^3-164.186\,T,\\
+&\Delta G_2^\circ=-545.1\times10^3+150.264\,T,\\
+&\Delta G_3^\circ=-592.2\times10^3+199.264\,T,\\
+&\Delta G_4^\circ=-360.7\times10^3+131.831\,T.
+\end{aligned}
+\]
+\begin{center}
+    \includegraphics[width=\textwidth]{EMS160HW2plot.png}
+\end{center}
+
+
+\end{document}
