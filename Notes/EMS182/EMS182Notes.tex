@@ -2,11 +2,14 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{verbatim}
 \graphicspath{{../Screenshots/}}
 
 \begin{document}
 LAB AT KEMPER 1120
-\section{Objectives}
+\tableofcontents
+\section{Creep}
+Objectives:
 \begin{enumerate}
     \item Explain stages of environmental fracture
     \item Explain mechanisms of crack growth in SCC
@@ -225,15 +228,288 @@ Disadvantages:
 \end{itemize}
 \subsection{}
 
+\section{NDT (II)}
+Objectives:
+\begin{enumerate}
+    \item Principles of ultrasound inspection
+    \item principles of radiography inspection
+    \item advantages and disadvantage of NDTs
+\end{enumerate}
+
+\subsection{Advantages and disadvantages of NDT}
+
+Advantages:
+\begin{itemize}
+    \item part not changed or altered after examination. (can be reused)
+    \item can be examined for conditions internal and at the surface
+    \item parts can be examined while in service
+    \item many NDT methods are portable 
+    \item cost effective
+\end{itemize}
+
+Disadvantages:
+\begin{itemize}
+    \item operator dependent
+    \item do not generally provide quantitative data
+    \item orientation of discontinuities must be considered
+    \item evaluation of some test results are subjective and subject to dispute
+    \item some are expensive(radiography)
+    \item defined procedures
+\end{itemize}
+\section{NDT SUMMARY}
+Summary of methods:
+\begin{itemize}
+    \item Visual testing
+    \begin{itemize}
+        \item Working principles: Direct observation of the surface with or without optical aids to detect visible defects
+        \item Detects Surface discontinuity
+        \item Advantages: Simple, low cost, quick process.
+        \item Limitations: Limited to visible surface defects. Dependence on inspector skill. No quantitative data.
+    \end{itemize}
+    \item Penetrant testing
+    \begin{itemize}
+        \item Working principles: Low-viscosity liquid die applied to a clean surface. Seeps through surface cracks and flaws via capillary action. Developer draws out dye.
+        \item Surface or internal discontinuity? Surface 
+        \item Advantages: Inexpensive, Can be applied to complex shape, High sensitivity to very fine surface cracks
+        \item Limitations: Does not work with porous materials, post-cleaning, chemicals can be hazardous 
+    \end{itemize}
+    \item Magnetic particle testing
+    \begin{itemize}
+        \item Working principles: Part is magnetized; surface or near-surface discontinuities affect magnetic flux which attracts fine ferromagnetic particles forming an indication
+        \item Surface or internal discontinuity? Surface and near-surface
+        \item Advantages: Effective in detecting surface and shallow subsurface cracks
+        \item Limitations: 
+    \end{itemize}
+    \item Radiographic testing
+    \begin{itemize}
+        \item Working principles:
+        \item Surface or internal discontinuity?
+        \item Advantages:
+        \item Limitations: 
+    \end{itemize}
+    \item Ultrasonic testing
+    \begin{itemize}
+        \item Working principles:
+        \item Surface or internal discontinuity?
+        \item Advantages:
+        \item Limitations: 
+    \end{itemize}
+\end{itemize}
+
+
+\begin{verbatim}
+   1. Visual Testing (VT)
+
+Orientation effects
+
+- VT relies on reflected light reaching the eye.
+
+- Cracks that are perpendicular to the viewing/lighting direction cast small shadows or specular highlights → easier to see.
+
+- Cracks parallel to the line of sight (very tight, in the same direction as brushing or machining marks) may “blend in” and be missed.
+
+- Inspectors often change viewing angle and use oblique lighting (flashlight at a low angle) to make narrow surface-breaking defects stand out.
+
+Why the limitations?
+
+- Surface only: visible light cannot penetrate opaque solids, so internal defects do not affect surface appearance.
+
+- Human-eye resolution: the eye typically cannot reliably resolve features below ~0.1–0.2 mm without magnification; very fine cracks will not be seen.
+
+- Access and line of sight: if the surface cannot be seen directly (internal bores, complex weld roots), VT cannot be applied or requires aids (mirrors, borescopes).
+
+- Operator dependence: fatigue, eyesight, experience, and lighting strongly influence detection probability.
+
+
+---
+
+2. Penetrant Testing (PT)
+
+Orientation effects
+
+- PT detects any surface-breaking discontinuity, largely independent of crack direction, as long as there is an open path to the surface.
+
+- Very tight, closed, or oxidized cracks limit capillary penetration → weak or no indication.
+
+- Gravity can slightly affect performance (penetrant may drain out of upward-facing openings), so parts may be oriented to keep penetrant in the flaws during dwell.
+
+Why the limitations? (e.g., porous materials)
+
+- Doesn’t work on porous/rough materials:
+	- Penetrant is drawn by capillary action into every small pore and surface cavity, not just cracks.
+
+	- During development, dye seeps back out from everywhere, creating a uniformly stained background. True defect indications are masked → no contrast, no interpretation.
+
+
+- Surface-breaking flaws only:
+	- Penetrant must physically enter the defect; subsurface flaws have no open path to the surface, so there is no way for penetrant to reach them.
+
+
+- Requires clean, non-contaminated surfaces:
+	- Oil, paint, scale, or dirt can block crack mouths, preventing penetrant ingress.
+
+	- Residual penetrant left on the surface after removal will bleed out everywhere, creating false or smeared indications.
+
+
+- Post-cleaning and environmental issues:
+	- Chemicals (solvents, emulsifiers, developers) must be removed to avoid corrosion/contamination and to meet environmental and safety regulations.
 
 
 
+---
+
+3. Magnetic Particle Testing (MT)
+
+Orientation effects
+
+- Sensitivity depends strongly on the angle between the magnetic field lines and the discontinuity.
+
+- A flaw is detected when it interrupts or distorts the magnetic flux, creating leakage fields that attract particles.
+
+- Maximum indication occurs when the discontinuity is approximately perpendicular to the magnetic field direction.
+
+- If a crack is parallel to the field, flux lines bypass it with minimal leakage → the crack may be invisible.
+
+- In practice, parts are often magnetized in two or more directions (e.g., longitudinal and circular) to cover flaws of different orientations.
+
+Why the limitations?
+
+- Only ferromagnetic materials:
+	- MT relies on a strong difference between the high permeability of the component and the surrounding air.
+
+	- Non-ferromagnetic metals (aluminum, austenitic stainless, copper alloys) do not concentrate flux, so leakage fields are too weak to pull particles and form sharp indications.
+
+
+- Limited depth of detection:
+	- Magnetic leakage fields decay rapidly with depth; deep internal flaws do not produce strong surface leakage, so they are not detected.
+
+
+- Geometry and accessibility:
+	- Sharp corners, varying thicknesses, and holes distort the magnetic field and create non-relevant indications (flux crowding) that can obscure real flaws.
+
+
+- Residual magnetization:
+	- After testing, components can retain magnetism, which may cause problems (e.g., attracting debris, affecting machining or instruments), so demagnetization is often required.
 
 
 
+---
+
+4. Radiographic Testing (RT)
+
+Orientation effects
+
+- RT records material thickness and density along the X‑ray/gamma‑ray beam path.
+
+- Volumetric defects (voids, porosity, inclusions) show clearly due to path length or density differences.
+
+- Planar defects (cracks, lack of fusion) are best detected when the crack plane is nearly perpendicular to the beam, so the defect removes noticeable thickness from the beam path.
+
+- If a crack is parallel or almost parallel to the beam, the beam passes along the crack with almost no extra attenuation or thickness change → the crack can be essentially invisible.
+
+- To mitigate this, inspectors may use multiple exposure angles.
+
+Why the limitations?
+
+- Radiation safety:
+	- X‑rays and gamma rays are ionizing; exposure can cause serious health effects. Extensive shielding, exclusion zones, and strict procedures are required, raising cost and limiting where RT can be used.
+
+
+- Need access to both sides (conventional RT):
+	- Source on one side and detector/film on the other → thick or inaccessible structures (e.g., buried pipelines, large castings) can be difficult to set up.
+
+
+- Poor sensitivity to very tight, planar cracks:
+	- If a crack does not produce a significant change in either thickness or density along the beam, film/detector contrast is minimal, so detection probability is low.
+
+
+- Thickness and material limitations:
+	- Very thick or dense materials require high-energy sources to penetrate; this reduces image contrast and sharpness and increases exposure times.
+
+
+- Relatively slow and costly:
+	- Requires careful setup, exposure, film processing or digital handling, and interpretation. Equipment, sources, and controls are expensive.
 
 
 
+---
+
+5. Ultrasonic Testing (UT)
+
+Orientation effects
+
+- UT uses specular reflection of sound.
+
+- Planar defects oriented perpendicular to the sound beam act like mirrors and reflect a strong echo back to the probe (in pulse‑echo).
+
+- If the defect plane is tilted, much of the sound is reflected away from the transducer → weaker or missing signal.
+
+- Angle-beam probes are used to steer the beam so that it strikes weld flaws and laminations at a favorable angle.
+
+- Rough, branched, or irregular cracks scatter sound, producing diffuse echoes that can be harder to interpret.
+
+Why the limitations?
+
+- Couplant requirement:
+	- At an air–solid interface, acoustic impedance mismatch is huge; almost all incident energy is reflected at the surface.
+
+	- A liquid or gel couplant is needed to “bridge” the gap; without it, sound cannot effectively enter the part.
+
+
+- Surface condition and geometry:
+	- Rough or curved surfaces scatter and deflect the beam, reducing signal-to-noise ratio and making coupling inconsistent.
+
+
+- Near-surface “dead zone”:
+	- After a transmit pulse, the transducer rings for a short time; echoes from very close to the surface occur while the probe is still ringing and can be masked.
+
+
+- Material structure:
+	- Coarse-grained or highly attenuative materials (e.g., some cast steels, austenitic welds) cause strong scattering and absorption, raising background noise and limiting useful depth.
+
+
+- Operator skill and interpretation:
+	- Raw A‑scan signals require experience to distinguish between backwall echoes, geometry reflections, and real flaws. Incorrect calibration or misinterpretation can lead to false calls.
+
+
+
+---
+
+6. Eddy Current Testing (ECT)
+
+Orientation effects
+
+- Eddy currents flow parallel to the surface in loops beneath and around the probe.
+
+- Defects are best detected when they interrupt many current paths, typically when the crack is perpendicular to the dominant current flow.
+
+- If a crack runs parallel to the current lines, only a small fraction of the currents is disturbed → a smaller impedance change and weaker signal.
+
+- Different coil geometries and scanning directions are used to vary the current flow direction relative to expected flaw orientations.
+
+Why the limitations?
+
+- Only electrically conductive materials:
+	- Eddy currents are induced by changing magnetic fields in conductors. Nonconductive materials cannot support such currents, so no measurable impedance change occurs.
+
+
+- Limited penetration depth (skin effect):
+	- At typical test frequencies, current density decays exponentially with depth (skin depth).
+
+	- Higher frequencies → stronger signals but shallower penetration (good for surface cracks).
+
+	- Lower frequencies → deeper penetration but reduced sensitivity and more susceptibility to noise. Deep internal flaws are therefore hard to detect.
+
+
+- Sensitivity to lift‑off, geometry, and material variations:
+	- Small changes in probe distance (“lift‑off”), edges, thickness variations, and changes in conductivity or permeability can produce signals similar in magnitude to defect signals.
+
+	- This makes interpretation more complex and can require reference standards and sophisticated instruments.
+
+
+- Not ideal for very rough or highly curved surfaces:
+	- Irregular lift‑off and changing geometry cause rapidly varying background signals, masking true discontinuities. 
+\end{verbatim}
 
 
 

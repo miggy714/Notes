@@ -3,23 +3,205 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{pgfplots}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{verbatim}
 \graphicspath{{../Screenshots/}}
+\newcommand{\memoheader}[4]{
+  \noindent
+  \textbf{From:} #2\\ 
+  \textbf{To:} #1\\
+  \textbf{Date:} #3\\
+  \textbf{Subject:} #4\\[1ex]\hrule\vspace{1.5ex}
+}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}   % format
+  {Problem~\thesection}          % label
+  {1em}                          % sep
+  {}                             % before-code
+
+\renewcommand{\thesection}{\arabic{section}}
+
+
+
+
 
 \begin{document}
-\section{Problem 1}
+\memoheader{Prof. Saedi}
+            {Miguel Cuaycong}
+            {\today}
+            {EMS 182 - HW4}
+\section{}
 Data obtained from a series of stress rupture tests:
 \begin{center}
     \includegraphics[width=\textwidth]{Screenshot 2025-11-24 161831.png}
 \end{center}
 \subsection{Make a Larson-Miller plot of the data}
 \begin{center}
-    \includegraphics[width=\textwidth]{LMParameter.png}
+    \includegraphics[width=\textwidth]{LMP.png}
 \end{center}
 This plot is created using R. The Larson-Miller parameter is calculated using the equation:
 $$\text{LMP} = T(20+\log(t))10^{-3}$$
 For example, for the values at the top of the table associated with 650 $C^\circ$:
 \\
-$\text{LMP}=(650+273.15)(20+ \log 0.08)$
+$\sigma = 80$ ksi
+\\
+$\text{LMP}=(650+273.15)(20+ \log 0.08)10^{-3}=17.45$
+\\~\\
+The trendline is created using the highest degree that is statistically valid $(p\leq 0.05)$.
+This recycles a code block I wrote for EME109 in R to fit experimental data points. Gen AI is used to improve plot aesthetics. 
+Code-block is in the appendix with the prompt in the section labelled "Gen AI Code start"
+\\~\\
+Trendline equation: $y=0.531x^2-31.33x+467.92$
 \subsection{Life span when 30 ksi of stress is applied at 600$C^\circ$}
+Using the trendline equation:
+$t = \frac{31.33 \pm \sqrt{31.33^2-4(0.531)(437.92)}}{2(0.531)} = \mathbf{22.74}\text{ hours}$
+\section{}
+Effect of service temperature on useable stress levels for various metals
+\subsection{Tungsten has a melting point of 3,400$C^\circ$. Why is it not considered for use in jet engines?}
+\begin{center}
+    \includegraphics[width = \textwidth]{Screenshot 2025-11-24 215213.png}
+\end{center}
+When looking up common material properties for tungsten(Tm), the following are the reasons why its not considered for jet engines:
+\begin{itemize}
+    \item Low ductility
+    \item High density ($19.3 g/cm^3$)
+    \item Tungsten oxides that develop as a protective film melts at a lower temperature than Tm
+\end{itemize}
+\subsection{Advantages of aluminum alloys over refractory materials at operating temperatures of 400$F^\circ$}
+As seen in the graph above, Aluminum alloys have a bigger range and a higher allowable stress compared to refractory materials at that range.
+\section{}
+Creep mechanisms:
+\begin{enumerate}
+    \item Dislocation-controlled
+    \item Diffusion-controlled
+    \begin{enumerate}
+        \item Grain boundary Diffusion
+        \item Lattice Diffusion
+    \end{enumerate}
+\end{enumerate}
+For Dislocation creep, strain rate is determined by vacancy motion. It is dependent on the stress and independent of grain size. 
+For Lattice diffusion, grain size decreases strain as well as temperature. 
+For grain boundary diffusion, grain size is cubed which means it more sensitive to grain size.
+\\~\\
+\begin{tabular}{|c|c|c|}
+    \hline
+    - & low T & high T
+    \\
+    \hline
+    high $\sigma$ & Dislocation controlled & Dislocation controlled
+    \\
+    \hline
+    low $\sigma$ & GB diffusion & Lattice diffusion
+    \\
+    \hline
+
+\end{tabular}
+\section{compare abrasive wear and adhesion wear mechanisms}
+Abrasive wear occurs when two materials pressed against one another have different hardness. 
+Plowing, cutting, and/or fracture can occur. Wear rate decreases as fracture toughness increases. Adhesion wear occurs when two metals are soluble to each other.
+When in contact, the two metals bond and if that adhesive bond is stronger than the cohesion within a metal, wear occurs.
+\section{}
+During the cold rolling of stainless steel, tribological interactions between the work rolls and the strip surface can lead to surface defects such as scratches.
+\subsection{What operational or material factors can be adjusted to minimize these defects, and how does each factor contribute to their reduction?}
+The use of proper lubrication during the cold rolling process can maintain separation of the surface and reduce heat generated. 
+Making the roller be less than or at the same surface toughness as the steel will lessen the wear on the manufactured material. 
+Properly isolated and sanitized processes to avoid three body abrasion will reduce abrasive wear.
+\subsection{Which factors are inherent to the process or materials and therefore cannot be easily changed?}
+Cold rolling will alwyas be a high stress process which will strain hardening to the steel changing the surface properties to be harder and more brittle.
+\section{}
+Extra credit: Explain how microstructural factors such as grain size, dislocation density (cold work), and inclusion content can affect SCC. (3 points)
+\\~\\
+External stress applied to a metal will produce deeper dislocations the higher the grain size. This can help SCC reach deeper depths. Dislocation density makes crack initiation easier which sets the stage for SCC.
+Inclusion content can function like HIC, inclusions can oxidize or have other chemical reactions to the environment which can affect SCC.
+\newpage
+\appendix
+\section*{Appendix: R-code for Stress--LMP plot}
+\begin{verbatim}
+tempC  <- c(650,650,650,650,
+            730,730,730,730,
+            815,815,815,
+            920,920,920,920,
+            1040,1040,1040)
+
+stress <- c(80,65,60,40,
+            60,50,30,25,
+            50,30,20,
+            30,20,15,10,
+            20,10,5)
+
+rlife  <- c(0.08,8.5,28,483,
+            0.2,1.8,127,1023,
+            0.3,3.1,332,
+            0.08,1.3,71,123,
+            0.3,1,28)
+
+d <- data.frame(tempC=tempC, 
+                stress_ksi=stress, 
+                rlife_hr=rlife)
+
+# Compute LMP = 1e-3 * T(K) * (20 + log10(t_hr))
+d$T_K  <- d$tempC + 273.15 #C to K
+d$LMP  <- 1e-3 * d$T_K * (20 + log10(d$rlife_hr))
+
+head(d)
+
+
+#Simple algorithm to determine highest order statistically valid polynomial fit
+bestfit <- function(f, x, p=0.05, maxdeg = 4) {
+  for (d in 1:maxdeg) {
+    fit_d <- lm(f ~ poly(x, d, raw = TRUE)) # builds x1, x1^2, ..., x1^d
+    p_high <- summary(fit_d)$coefficients[d + 1, 4]  # p of x1^d
+    if (p_high <= p) {
+      fit_best <- fit_d
+      best_deg <- d
+    } else {
+      break
+    }
+  }
+  fit_best
+}
+
+Ffit <- bestfit(d$stress_ksi, d$LMP)
+
+# Evaluate an lm fit made with poly(x, d, raw=TRUE) at numeric vector xnew
+eval_poly_fit <- function(fit, xnew) {
+  b <- coef(fit)             # c(b0, b1, ..., bd)
+  d <- length(b) - 1
+  X <- cbind(1, sapply(1:d, function(p) xnew^p))  # columns: 1, x, x^2, ..., x^d
+  as.vector(X %*% b)
+}
+
+LMP_grid <- seq(min(d$LMP), max(d$LMP), length.out = 300) # x axis
+pred_stress <- eval_poly_fit(Ffit, LMP_grid) # trendline
+
+## Gen AI code start-- PROMPT: Use the code above as a base to construct a plot with 
+## datapoints and the trendline
+
+# Base plot: data points
+plot(
+  d$LMP, d$stress_ksi,
+  pch = 19, col = "steelblue",
+  xlab = "LMP (1e-3 * K * (20 + log10(t_hr)))",
+  ylab = "Stress (ksi)",
+  main = "Stress vs LMP with Polynomial Fit"
+)
+
+# Add fitted curve
+lines(LMP_grid, pred_stress, col = "firebrick", lwd = 2)
+
+# Optional: annotate polynomial degree and R^2
+deg <- length(coef(Ffit)) - 1
+R2 <- summary(Ffit)$r.squared
+legend(
+  "topright",
+  legend = c("Data", sprintf("Fit: degree %d (R^2 = %.3f)", deg, R2)),
+  col = c("steelblue", "firebrick"),
+  pch = c(19, NA),
+  lty = c(NA, 1),
+  lwd = c(NA, 2),
+  bty = "n"
+) 
+\end{verbatim}
 \end{document}
 
