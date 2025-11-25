@@ -41,6 +41,8 @@ INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\tools\verbatim.sty
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\tools\verbatim.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT .\EMS182Notes.aux
@@ -52,28 +54,15 @@ INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pd
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\grfext\grfext.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\grfext\grfext.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
+INPUT .\EMS182Notes.toc
+INPUT .\EMS182Notes.toc
+INPUT EMS182Notes.toc
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
@@ -85,15 +74,18 @@ INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+OUTPUT EMS182Notes.toc
 OUTPUT EMS182Notes.pdf
 INPUT C:\Users\mcuay\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
 INPUT ..\Screenshots\Screenshot 2025-11-24 134628.png
 INPUT ..\Screenshots\Screenshot 2025-11-24 134628.png
 INPUT ..\Screenshots\Screenshot 2025-11-24 134628.png
 INPUT ..\Screenshots\Screenshot 2025-11-24 134628.png
 INPUT ..\Screenshots\Screenshot 2025-11-24 134628.png
 INPUT ..\Screenshots\Screenshot 2025-11-24 134628.png
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT ..\Screenshots\Screenshot 2025-11-18 105916.png
 INPUT ..\Screenshots\Screenshot 2025-11-18 105916.png
 INPUT ..\Screenshots\Screenshot 2025-11-18 105916.png
@@ -136,7 +128,11 @@ INPUT ..\Screenshots\Screenshot 2025-11-18 125439.png
 INPUT ..\Screenshots\Screenshot 2025-11-18 125439.png
 INPUT ..\Screenshots\Screenshot 2025-11-18 125439.png
 INPUT ..\Screenshots\Screenshot 2025-11-18 125439.png
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tctt1095.tfm
 INPUT EMS182Notes.aux
+INPUT C:\Users\mcuay\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tctt1095.pk
+INPUT C:\Users\mcuay\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tctt1095.pk
 INPUT C:\Users\mcuay\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
 INPUT C:\Users\mcuay\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
@@ -153,3 +149,5 @@ INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb

@@ -1,0 +1,36 @@
+\contentsline {section}{\numberline {1}Creep}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Stages of environmental fracture}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Mechanisms of crack growth in SCC}{3}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Two types of SCC Mechanisms}{3}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Stages of SCC}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Hydrogen induced cracking (HIC)}{5}{}%
+\contentsline {subsection}{\numberline {1.4}Stages of creep}{6}{}%
+\contentsline {subsubsection}{\numberline {1.4.1}Dislocation-controlled Creep mechanism}{7}{}%
+\contentsline {section}{\numberline {2}Wear}{8}{}%
+\contentsline {subsection}{\numberline {2.1}Three types of wear}{8}{}%
+\contentsline {subsection}{\numberline {2.2}Abrasive Wear}{8}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Abrasive wear mechanisms}{8}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Types of Abrasive Wear}{8}{}%
+\contentsline {subsection}{\numberline {2.3}Adhesive Wear}{8}{}%
+\contentsline {subsection}{\numberline {2.4}Fretting}{8}{}%
+\contentsline {section}{\numberline {3}Non destructive testing(NDT)}{8}{}%
+\contentsline {subsection}{\numberline {3.1}Objectives}{8}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}NDT Technique: Visual Inspection}{9}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}NDT Technique: Penetrant testing (PT)}{9}{}%
+\contentsline {subsubsection}{\numberline {3.1.3}NDT Technique: Magnetic-Particle Inspection}{10}{}%
+\contentsline {subsubsection}{\numberline {3.1.4}NDT Technique: Eddy-Current inspection}{10}{}%
+\contentsline {subsection}{\numberline {3.2}Destructive testing}{10}{}%
+\contentsline {subsection}{\numberline {3.3}}{10}{}%
+\contentsline {section}{\numberline {4}NDT (II)}{10}{}%
+\contentsline {subsection}{\numberline {4.1}Advantages and disadvantages of NDT}{10}{}%
+\contentsline {section}{\numberline {5}NDT SUMMARY}{11}{}%
+\contentsline {section}{\numberline {6}Slide 1}{17}{}%
+\contentsline {section}{\numberline {7}Slide 2 - Environmental Fracture}{17}{}%
+\contentsline {subsection}{\numberline {7.1}example: Rolled up plastic hoses}{17}{}%
+\contentsline {section}{\numberline {8}Slide 3 - Stages of Environmental Fracture}{17}{}%
+\contentsline {section}{\numberline {9}Slide 4 - Creep}{17}{}%
+\contentsline {section}{\numberline {10}Stress corrosion cracking (SCC) Mechanism}{17}{}%
+\contentsline {section}{\numberline {11}SCC Mechanisms}{17}{}%
+\contentsline {subsection}{\numberline {11.1}Stress corrosion cracking SCC}{17}{}%
+\contentsline {subsection}{\numberline {11.2}SCC - Effect of Microstructure}{17}{}%
+\contentsline {subsection}{\numberline {11.3}Example problem}{17}{}%
