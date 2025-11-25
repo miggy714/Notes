@@ -1,0 +1,25 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\graphicspath{{../Screenshots/}}
+
+\begin{document}
+\section{Problem 1}
+Data obtained from a series of stress rupture tests:
+\begin{center}
+    \includegraphics[width=\textwidth]{Screenshot 2025-11-24 161831.png}
+\end{center}
+\subsection{Make a Larson-Miller plot of the data}
+\begin{center}
+    \includegraphics[width=\textwidth]{LMParameter.png}
+\end{center}
+This plot is created using R. The Larson-Miller parameter is calculated using the equation:
+$$\text{LMP} = T(20+\log(t))10^{-3}$$
+For example, for the values at the top of the table associated with 650 $C^\circ$:
+\\
+$\text{LMP}=(650+273.15)(20+ \log 0.08)$
+\subsection{Life span when 30 ksi of stress is applied at 600$C^\circ$}
+\end{document}
+
