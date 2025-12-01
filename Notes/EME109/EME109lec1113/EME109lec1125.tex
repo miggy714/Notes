@@ -16,31 +16,47 @@ Two approaches will be used:
     -Purely computatuinal approach (Preferred)
 \end{enumerate}
 \subsection{Kline-McClintock}
-Suppose: $$r = f(x_1,x_2,x_3,x_L)$$
+Suppose r is a function of L random variables: $$r = f(x_1,x_2,x_3,x_L)$$
 Then an uncertainty interval for r is:
-$$r = \bar{r} \pm k_r u_r (P\text{percent sign})$$
+$$r = \bar{r} \pm k_r u_r (P\%)$$
 $k_r \equiv coverage factor = \lim_{\text{v to infinity}}t_{v,p}$
 \\
 $\bar{r} = f(\bar{x_1},\bar{x_2},\dots, \bar{x}_L)$
-\\$u_r = \sum_{i=1}^{L}((\phi_{x_i}u_{x_i})^2)^{1/2}$ = std uncertainty in R
+\\$u_r = \sum_{i=1}^{L}((\phi_{x_i}u_{x_i})^2)^{1/2}$ = standard uncertainty in r (sum of the square root of the variance) 
 \\
-$\phi_{x_i}=\frac{df}{dx_i}\bigg|_{x_i=\bar{x_i}}=$sensitivity index
-\subsection{}
-For the project, need to calculate $\dot{m}$ UI's for three cases
-\\using NEED REFERENCE HERE
-\subsection{Example}
-$r = r(x_1,x_2,x_3)$
-\\
-$u_{\dot{m}}=[(\phi_z u_z)^2+(\phi_{v_d} u_{v_d})^2+(\phi_c u_c)^2]^{1/2}$
+$\phi_{x_i}=\frac{df}{dx_i}\bigg|_{x_i=\bar{x_i}}=$ sensitivity index
+\subsubsection{Check with other notes}
+For the project, need to calculate $\dot{m}$ UI's(uncertainty interval) for three cases
+\begin{enumerate}
+    \item Manufacturer's correlation
+    \item Psychrometric chart reading error
+    \item Obstruction meter theory
+\end{enumerate}
+(Maybe he was just talking about the three random variables affecting mass flow in the next section)
+\subsubsection{Example}
+\begin{center}
+    \includegraphics[width=\textwidth]{LecE.png}
+\end{center}
+from the general form: 
+\begin{align*}
+   r &= f(x_1,x_2,x_3)
+    \\
+   u_{r}&=[(\phi_{x_1} u_{x_1})^2+(\phi_{x_2} u_{x_2})^2+(\phi_{x_3} u_{x_3})^2]^{1/2}
+\end{align*}
+when applied to mass flow rate:
+\begin{align*}
+    \dot{m} &= f(Z, v_d, C)
+     \\
+    u_{\dot{m}}&=[(\phi_z u_z)^2+(\phi_{v_d} u_{v_d})^2+(\phi_c u_c)^2]^{1/2}
+\end{align*} 
+Where: 
 \\
 $\phi_{x_1} = \frac{df}{dx_i} = \frac{df}{dz} = \frac{d}{dz}[cz^{1/2}v_d^{-1/2}] = \phi_z$
 \\
 $\phi_{z} = 1/2cz^{-1/2}v_d^{-1/2}\bigg|_{z = \bar{z}, v_d = \bar{v_d}, c=\bar{c}} = 1/2\bar{c}\frac{1}{\bar{z}^{1/2}\bar{v_d}^{1/2}}$
 \begin{center}
-    \includegraphics[width=\textwidth]{LecA.png}
-    \includegraphics[width=\textwidth]{LecB.png}
-    \includegraphics[width=\textwidth]{LecC.png}
-    \includegraphics[width=\textwidth]{LecD.png}
+    \includegraphics[width=\textwidth]{LecF.png}
+
 \end{center}
 
 \section{Psychrometric chart reading error}

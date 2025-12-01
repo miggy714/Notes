@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.19)  1 DEC 2025 13:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.19)  1 DEC 2025 00:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/mcuay/Documents/Notes/Notes/EME109/EME109lec1113/EME109lec1125.tex
-(c:/Users/mcuay/Documents/Notes/Notes/EME109/EME109lec1113/EME109lec1125.tex
+**c:/Users/mcuay/Documents/Notes/Notes/EME109/EME109review/EME109Review.tex
+(c:/Users/mcuay/Documents/Notes/Notes/EME109/EME109review/EME109Review.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
 (C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -148,8 +148,8 @@ Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 tex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count298
-) (EME109lec1125.aux)
-\openout1 = `EME109lec1125.aux'.
+) (EME109Review.aux)
+\openout1 = `EME109Review.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
@@ -226,57 +226,54 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Underfull \hbox (badness 10000) in paragraph at lines 9--12
+<../../Screenshots/Screenshot 2025-12-01 002556.png, id=1, 531.48563pt x 195.73
+125pt>
+File: ../../Screenshots/Screenshot 2025-12-01 002556.png Graphic file (type png
+)
+<use ../../Screenshots/Screenshot 2025-12-01 002556.png>
+Package pdftex.def Info: ../../Screenshots/Screenshot 2025-12-01 002556.png  us
+ed on input line 10.
+(pdftex.def)             Requested size: 200.0pt x 73.65587pt.
+<../../Screenshots/Screenshot 2025-12-01 002540.png, id=3, 275.52937pt x 185.19
+188pt>
+File: ../../Screenshots/Screenshot 2025-12-01 002540.png Graphic file (type png
+)
+<use ../../Screenshots/Screenshot 2025-12-01 002540.png>
+Package pdftex.def Info: ../../Screenshots/Screenshot 2025-12-01 002540.png  us
+ed on input line 12.
+(pdftex.def)             Requested size: 200.0pt x 134.43161pt.
+<../../Screenshots/Screenshot 2025-12-01 003406.png, id=4, 231.11343pt x 131.74
+219pt>
+File: ../../Screenshots/Screenshot 2025-12-01 003406.png Graphic file (type png
+)
+<use ../../Screenshots/Screenshot 2025-12-01 003406.png>
+Package pdftex.def Info: ../../Screenshots/Screenshot 2025-12-01 003406.png  us
+ed on input line 14.
+(pdftex.def)             Requested size: 200.0pt x 114.00768pt.
+ [1
 
- []
-
-<../../Screenshots/LecE.png, id=1, 4015.0pt x 3011.25pt>
-File: ../../Screenshots/LecE.png Graphic file (type png)
-<use ../../Screenshots/LecE.png>
-Package pdftex.def Info: ../../Screenshots/LecE.png  used on input line 38.
-(pdftex.def)             Requested size: 469.75502pt x 352.28267pt.
-[1
-
-{C:/Users/mcuay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<../../Screenshots/LecF.png, id=15, 875.9124pt x 1299.4146pt>
-File: ../../Screenshots/LecF.png Graphic file (type png)
-<use ../../Screenshots/LecF.png>
-Package pdftex.def Info: ../../Screenshots/LecF.png  used on input line 58.
-(pdftex.def)             Requested size: 469.75502pt x 696.8752pt.
- [2 <../../Screenshots/LecE.png>]
-Overfull \vbox (46.44519pt too high) has occurred while \output is active []
-
-
-[3 <../../Screenshots/LecF.png>] [4] (EME109lec1125.aux)
+{C:/Users/mcuay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <../../Screen
+shots/Screenshot 2025-12-01 002556.png> <../../Screenshots/Screenshot 2025-12-0
+1 002540.png> <../../Screenshots/Screenshot 2025-12-01 003406.png>]
+(EME109Review.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2637 strings out of 467870
- 41271 string characters out of 5418354
- 454413 words of memory out of 5000000
- 31520 multiletter control sequences out of 15000+600000
- 632652 words of font info for 57 fonts, out of 8000000 for 9000
+ 2615 strings out of 467870
+ 41740 string characters out of 5418354
+ 448411 words of memory out of 5000000
+ 31509 multiletter control sequences out of 15000+600000
+ 628021 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,288b,209s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,5n,65p,286b,184s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mcuay/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/mcuay/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mcuay/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mcuay/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/
-mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
-/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb>
-Output written on EME109lec1125.pdf (4 pages, 19224117 bytes).
+cmr10.pfb>
+Output written on EME109Review.pdf (1 page, 45849 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 18 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
