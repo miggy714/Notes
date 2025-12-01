@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\graphicspath{{../Screenshots/}}
+\newcommand{\memoheader}[4]{
+  \noindent
+  \textbf{From:} #2\\ 
+  \textbf{To:} #1\\
+  \textbf{Date:} #3\\
+  \textbf{Subject:} #4\\[1ex]\hrule\vspace{1.5ex}
+}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}   % format
+  {Problem~\thesection}          % label
+  {1em}                          % sep
+  {}                             % before-code
+
+\renewcommand{\thesection}{\arabic{section}}
+
+
+
+
+
+\begin{document}
+\memoheader{Prof. Saedi}
+            {Miguel Cuaycong}
+            {\today}
+            {EMS 182 - HW5}
+
+\section{}
+You are an engineer working on the quality control team for a company that manufactures thin-walled aluminum beverage cans. Detecting minute defects like pinholes or cracks in the cans is crucial to prevent leaks and maintain product integrity. Traditional visual inspection is not sufficient due to the small size of these defects. 
+\begin{enumerate}
+    \item Choose an appropriate non-destructive testing technique to detect small defects in thin-walled aluminum cans and explain why you selected this method over others. (4 points)
+    \begin{itemize}
+        \item \textbf{The appropriate NDT is liquid penetrant testing(PT). The surface conditions that are ideal for PT are present like a smooth surface and since the walls are thin, all cracks will be surface cracks. Magnetic particle testing would not be ideal since aluminum if non-ferromagnetic. Radiographic testing can work but is more costly and complicated. Ultrasonic testing will be ineffective when a surface is curved due to bad contact.} 
+    \end{itemize}
+    \item Describe the basic principles behind the chosen NDT method and explain how it interacts with aluminum material to reveal defects. (5 points)
+    \begin{itemize}
+        \item \textbf{Liquid penetrant testing interacts with the aluminum material via capillary action. The liquid seeps into flaws and drawn out by a developer, making the damaged area darker.}
+    \end{itemize}
+    \item Are there any limitations that should be considered when applying this method? (3 points)
+    \begin{itemize}
+        \item \textbf{Any paint or branding in the surface needs to be removed, or the tests need to be done in a separate controlled environment without the paint. Also, since the part needs to be food grade, the fact that this test uses chemicals renders the tested material non reusable}
+    \end{itemize}
+\end{enumerate}
+\section{}
+A railway company needs to ensure the safety of its tracks, particularly after several heavy rain seasons that might have caused erosion or other damage. The tracks are made of steel, and the defects to look for include cracks in the rail head, or base, as well as potential corrosion or material loss. Select the best NDT method(s) to find defects and explain your choice. (4 points)
+\begin{itemize}
+    \item \textbf{The best testing method is Radiographic testing (RT) followed up by Liquid penetrant testing(PT). The track cross-section resembles an I beam. 
+    This indicates that cracks can form within the volume and surface tests will be insufficient. 
+    RT detects volumetric defects(voids, porosities, and inclusions), any corrosion defects like SCC and HIC will be detected. 
+    For surface defects, simple PT tests can be employed to detect surface cracks from fatigue and creep.}
+\end{itemize}
+\section{}
+For each of the manufacturing processes listed below, name three possible defects that can occur. For one defect from each process, find a micrograph in a peer-reviewed journal and provide a link to the publication.
+\begin{enumerate}
+    \item Casting
+    \begin{itemize}
+        \item Blowholes
+        \item Shrinkage
+        \item Sand inclusion
+    \end{itemize}
+    \begin{center}
+        \includegraphics[width = 250pt]{Screenshot 2025-11-29 210032.png}
+        \\
+        Fig 1. Example of Blowholes during casting
+        \\
+        \href{https://d1wqtxts1xzle7.cloudfront.net/53205503/2445-libre.pdf?1495268963=&response-content-disposition=inline%3B+filename%3DA_Critical_Review_on_Casting_Types_and_D.pdf&Expires=1764480071&Signature=GuRYmgmc~hOIwiMa8EEyhSWBMME0Wsh4uiIP6zLQiVwEObAAsHi3JcY~iQkdjp1WGhXNuxNXJjeFCr4tm8-tdugW9Hj1WnANGHwn98suPjkIm3RRZEtNqeG-enh3tEGlJ0DEtxXYsQT4dcImarsFMsOxsXnLfO4~nZzWBBdz4-rvKCgMrzuC8J~0XzlQc-c3tAbg8o3C8nLVy4bNbJ2AKPyW5gLa2uJc~x6iGWaZsXWsO2cS8R7tDvX5MRBAMxtDgBVqnFmqZ-BRCB94LfX-APDCn4sm0umQ1PfpkJ0IGqZAFJ1M9nMLb3MYSldmj00Bk86xcTWqtPM3p49vtaUoRg__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA}{Article Link}\\
+
+    \end{center}
+    \newpage
+    \item Metal forming
+    \begin{itemize}
+        \item localized necking and fracture
+        \item Grain size and morphology-related defects
+        \item Strain localization and roping
+    \end{itemize}
+    \begin{center}
+        \includegraphics[width = 250pt]{Screenshot 2025-11-29 231934.png}
+        \\
+        Fig 2. Example of Grain size and morphology-related defects
+        \\
+        \href{https://pdf.sciencedirectassets.com/271474/1-s2.0-S0890695525X00031/1-s2.0-S0890695525000239/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBQaCXVzLWVhc3QtMSJHMEUCIQD7GrEiFKrfgLGSUg0%2BOTfYs9Z%2By0nWcf34%2B1Dhkam7twIgTC9MVt1yrPajxWkUCs9Es%2FB2nvK12z2KpyejjacKR7UquwUI3f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDJNrJ5UX1IXeixO3gCqPBVMeQalxIVZ2Nbv%2B%2FJLMY%2FrTbMKPET%2Btnc2VTAs7XnlILl8F%2Bq2S0UR1vx%2FwrY9FEsmKX9bCtDp9Eti6sI%2FcLiCs%2B2U%2FNCiq%2FcNsaKO56iw4uQxsJQQosYSntLx9tqgHn3MTunHB8Y9vUAdAFKDiI9H7sTZe4rGhxKma3%2BM%2FO4x%2FO%2FklChlihzCgGxvsVn4J%2BQ%2BSFdT0dgglpCeAiesWJfC%2FrauBKw6AeqB002vDTWd2zoYVKjqrBKcpigaC%2Fa%2Fcv4GQHCR6sz7shZknXVDdiPdOASf3RerERV3PzgN%2BXuitFFxHuD1IZ%2BxRc66z1R6G7Xw2X1pDmb%2Bc8OtsprqtRx8Z2FWKqk3vgj%2Fwfi9rgdtk6nQF%2BEPEFUo3o96eaWELVRRegM884b0nQeH52%2FNaAaB3O%2FyHWsLQFBfue1KGKj%2BPKxQm8sGV6LC4npB8Ai4MAs7bvT8Bjqa72tFXWmQt6LEM2EJ4uhkzAt3erVyqS735%2BKJGact6WsWxC3yX4oPukeDNeGNRD2fxg8PCagKsD31BDz0IG4QweJsCOn5FWUnWUxWLIFTA3hFBn5zHfYwdLaCB1FyR%2BGBLLoPOkH%2FWsax8PXHMXKRbbwJOSbADOOFG0jTUMZTrt3kKKNl63Ro%2F0fAb%2BXjM%2FQoUaXZK60ZkSN0%2BAe4ID3OlUbIZJv3UccMlbhBtJzq2h05DZRg9ANjTXvYdqSPxGL93G%2BkX4wX7O0pNiyliAhjvLZZ53CQcYIK1dYkva8oyyPe5r0kIKjrz2eD9h9Z2cjbFekvEPq8Nhp8%2BSD6mYbUauKXOLVL%2FhKnpXCQGRfVLeJSKnUx8cA21Bbm4%2BrYsoS5vLITcHh1waEScgGnSCUQSZY8O5YumGaQw2%2FKuyQY6sQHC0OcgLS1yoPJbKp2udbmLgzWUXaYvpxM%2BRUMi6ZHHDahFssHPxr5CqEL1s33auaxyYocn6pCNybg%2Fk4e8kN9S4oO%2FIc4c917KKO4mKSvz4fUdEfveFhmldspfltd0KeSQSdzBBP7WSmYuSewl30gJbfht8nhw5kg3fXsmVG2UtJBH75OVX6XUA1D%2B1qmiaWWaWUNPnolMR88yUMtiuLQL%2BNYOTmYSayRX2XKfGsL4RJo%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251130T050720Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYQDOO5QIM%2F20251130%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a9f7a2e0c66a7b3e27cd7b52b8490554f6aa54facdd73c38d5a1a0809ee04f25&hash=ba775637b5fe609bb51ad90500b878a0a6064a306328276001f99f0af3ffb81f&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0890695525000239&tid=spdf-4039a7c2-9a11-4560-a421-b118a66d1246&sid=0334b1af1b46e14edc5a1d197ea7e1301438gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=0f155f05545404545552&rr=9a67d2176c41fca9&cc=us}{Article Link}
+        \\
+
+    \end{center}
+    \newpage
+    \item Welding
+    \begin{itemize}
+        \item Lack of fusion
+        \item Porosity
+        \item Weld crack
+    \end{itemize}
+    \begin{center}
+        \includegraphics[width = 250pt]{Screenshot 2025-11-30 014812.png}
+        \\
+        Fig 3. Example of porosity defect
+        \\
+        \href{https://www.researchgate.net/publication/345274687_Welding_defects_Causes_and_their_Remedies_A_Review}{Article Link}
+        \\
+
+    \end{center}
+\end{enumerate}
+\end{document}

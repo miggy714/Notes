@@ -49,32 +49,28 @@ x     y      label
 1.600 1080   {CFRP}
 };
 
-% Lines: log10(E)=log10(rho)+C  =>  E = 10^C * rho
+% Lines: log10(E) = 2*log10(rho) + C  =>  E = 10^C * rho^2
 \pgfplotsinvokeforeach{-1,0,1,2,3}{
   \addplot[
     domain=1e-2:1e1, samples=2,
     dashed, thick, color=blue!60
-  ] ({x},{(10^(#1))*x});
+  ] ({x},{(10^(#1))*(x^2)});
   \addlegendimage{no markers, dashed, thick, color=blue!60}
-  \addlegendentry{$\log_{10}E=\log_{10}\rho + #1$}
+  \addlegendentry{$\log_{10}E=2\log_{10}\rho + #1$}
 }
 
 \end{axis}
 \end{tikzpicture}
 \\
 \newpage
-Objective(Maximize): 
+Objective (Maximize):
 \\
 \begin{align*}
- \text{Bending stiffnes per mass of material} &= \frac{EI}{m}; \text{    Where }m = \rho V
- \\
-   &=\frac{EI}{\rho V}
-    \\\text{This results in a material index M} &= \frac{E}{\rho}
-    \\
-    \log(M)&=\log(E) - log(\rho)
-    \\
-    \text{Material index loci in the form of: }  \log(E) &= \log(\rho) +\log(M)
+ \text{Bending stiffness per mass of material} &= \frac{EI}{m}, \quad m = \rho V \\
+   &= \frac{EI}{\rho V} \\
+   \text{Material index } M &= \frac{E}{\rho} \\
+   \log(M) &= \log(E) - \log(\rho) \\
+   \text{Alternative loci: } \log(E) &= 2\log(\rho) + \log(\text{const})
 \end{align*}
-
 
 \end{document}

@@ -1,6 +1,6 @@
-PWD C:\Users\mcuay\OneDrive\Documents\codesC++\UCD\Notes\EMS160\Lecture
+PWD C:\Users\mcuay\Documents\Notes\Notes\EMS160\Lecture
 INPUT C:\Users\mcuay\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\mcuay\OneDrive\Documents\codesC++\UCD\Notes\EMS160\Lecture\EMS160Notes4A.tex
+INPUT c:\Users\mcuay\Documents\Notes\Notes\EMS160\Lecture\EMS160Notes4A.tex
 OUTPUT EMS160Notes4A.log
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -165,16 +165,22 @@ INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstop
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 OUTPUT EMS160Notes4A.pdf
 INPUT C:\Users\mcuay\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT ..\..\Screenshots\Screenshot 2025-11-27 110755.png
+INPUT ..\..\Screenshots\Screenshot 2025-11-27 110755.png
+INPUT ..\..\Screenshots\Screenshot 2025-11-27 110755.png
+INPUT ..\..\Screenshots\Screenshot 2025-11-27 110755.png
+INPUT ..\..\Screenshots\Screenshot 2025-11-27 110755.png
+INPUT ..\..\Screenshots\Screenshot 2025-11-27 110755.png
 INPUT EMS160Notes4A.aux
 INPUT C:\Users\mcuay\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\mcuay\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk

@@ -3,10 +3,14 @@
 \usepackage{tikz}
 \usepackage{enumerate}
 \usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\graphicspath{{../../Screenshots/}}
 \usetikzlibrary{arrows.meta, positioning}
 \begin{document}
 
-\section{review}
+Review:
+\\~\\
 Boltzmann probability: $$S = -k \sum p_i \ln p_i$$
 Entropy of mixing: $$S = R \sum x_i \ln x_i$$
 Standard Entropy: $$S^\circ = \int_{0}^{298}\frac{Cp}{T}dT$$ 
@@ -74,10 +78,46 @@ temperature and pressure
 \end{center}
 \subsection{Gibbs: Standard State}
 $$\Delta G^\circ = \Delta H^\circ - \Delta S^\circ T$$
-\section{First order Homogenous functions}
+\section{Section 4B}
+Objectives:
+\begin{enumerate}
+    \item Identify and appreciate other thermodynamic ensembles and their Auxiliary functions
+    \item Define thermodynamic parameters based on partial derivatives of their associated ensembles
+    \item Outline experiments in different ensembles
+    \item Discuss and utilize the Legendre transform to convert between Auxiliary functions
+\end{enumerate}
+\subsection{First order Homogenous functions}
 $$F(x_1, ..., x_i) = \frac{dF}{dx_1}x_1 + \frac{dF}{dx_2}x_2 + ... + \frac{dF}{dx_i}x_i$$
 
-Applying this theorem to Thermodynamic equations: $$G(P, T, n) = \frac{dG}{dP}P + \frac{dG}{dT}T + \frac{dG}{dn}n$$
-W
-\section{Legendre Transform}
+Applying this theorem to Thermodynamic equations: 
+$$G(P, T, n) = \frac{dG}{dP}P + \frac{dG}{dT}T + \frac{dG}{dn}n$$
+$$dG(P, T, n) = \frac{dG}{dP}dP + \frac{dG}{dT}dT + \frac{dG}{dn}dn$$
+\subsection{Auxillary functions(Ensembles)}
+\begin{center}
+    \includegraphics[width=\textwidth]{Screenshot 2025-11-27 110755.png}
+\end{center}
+\subsubsection{Micro-canonical ensemble}
+$$U(S,V,n)=\frac{dU}{dS}S+\frac{dU}{dV}V+\frac{dU}{dn}n$$
+Where:
+\\
+$\frac{dU}{dS}=T$, $\frac{dU}{dV}=-P$, $\frac{dU}{dn}=\mu$
+\subsubsection{Canonical ensemble}
+$$F(T,V,n)=U-TS=\frac{dF}{dT}T+\frac{dF}{dV}V+\frac{dF}{dn}n$$
+Where:
+\\
+$\frac{dF}{dT}=-S$, $\frac{dF}{dV}=-P$, $\frac{dU}{dn}=\mu$
+\subsubsection{Enthalpic ensemble}
+$$H(S,P,n)=U+PV=\frac{dH}{dS}S+\frac{dH}{dP}P+\frac{dH}{dn}n$$
+Where:
+\\
+$\frac{dH}{dS}=-T$, $\frac{dH}{dP}=V$, $\frac{dH}{dn}=\mu$
+\subsubsection{Gibbsian ensemble}
+$$G(T,P,n)=H-TS=\frac{dG}{dT}T+\frac{dG}{dP}P+\frac{dG}{dn}n$$
+Where:
+\\
+$\frac{dG}{dT}=-S$, $\frac{dG}{dP}=V$, $\frac{dH}{dn}=\mu$
+\subsection{Legendre Transform}
+Consider: $$f(x,y)=\frac{df}{dx}x+\frac{df}{dy}y$$ $$df = \frac{df}{dx}dx+\frac{df}{dy}dy$$
+Tangent line of $df$:
+$$$$
 \end{document}
