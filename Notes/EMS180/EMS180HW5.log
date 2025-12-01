@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.29)  25 NOV 2025 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.29)  25 NOV 2025 23:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/mcuay/OneDrive/Documents/codesC++/UCD/Notes/EMS182/EMS182CA.tex
-(c:/Users/mcuay/OneDrive/Documents/codesC++/UCD/Notes/EMS182/EMS182CA.tex
+**c:/Users/mcuay/OneDrive/Documents/codesC++/UCD/Notes/EMS180/EMS180HW5.tex
+(c:/Users/mcuay/OneDrive/Documents/codesC++/UCD/Notes/EMS180/EMS180HW5.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-10-09>
 (C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -383,23 +383,23 @@ Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 ) (C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count326
-) (EMS182CA.aux)
-\openout1 = `EMS182CA.aux'.
+) (EMS180HW5.aux)
+\openout1 = `EMS180HW5.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -456,30 +456,55 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 10.
+ on input line 29.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+
+ []
+
+
+Overfull \hbox (189.50433pt too wide) in paragraph at lines 74--75
+[]\OT1/cmr/m/n/10.95 HOONLY web-site $\OT1/cmtt/m/n/10.95 https : / / haluminium . com / Product / analysis-[]on-[]production-[]process-[]of-[]6063-[]alloy-[]extruded-[]profiles/$ 
+ []
+
+
+Overfull \hbox (98.4816pt too wide) in paragraph at lines 75--76
+[]\OT1/cmr/m/n/10.95 Profile Pre-ci-sion Ex-tru-sion web-site $\OT1/cmtt/m/n/10.95 https : / / profileprecisionextrusions . com / common-[]questions-[]answered/$ 
+ []
 
 
 
 [1
 
-{C:/Users/mcuay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (EMS182CA.aux)
+{C:/Users/mcuay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+<../Screenshots/Rplot01.png, id=18, 432.11438pt x 264.08662pt>
+File: ../Screenshots/Rplot01.png Graphic file (type png)
+<use ../Screenshots/Rplot01.png>
+Package pdftex.def Info: ../Screenshots/Rplot01.png  used on input line 99.
+(pdftex.def)             Requested size: 469.75502pt x 287.10323pt.
+
+
+[2 <../Screenshots/Rplot01.png>]
+
+[3] (EMS180HW5.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-10-09>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 23371 strings out of 468080
- 612391 string characters out of 5425771
- 1143205 words of memory out of 5000000
- 51699 multiletter control sequences out of 15000+600000
- 628021 words of font info for 41 fonts, out of 8000000 for 9000
+ 23423 strings out of 468080
+ 613281 string characters out of 5425771
+ 1152206 words of memory out of 5000000
+ 51739 multiletter control sequences out of 15000+600000
+ 632820 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,5n,105p,785b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on EMS182CA.pdf (1 page, 23622 bytes).
+ 99i,9n,105p,786b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on EMS180HW5.pdf (3 pages, 157944 bytes).
 PDF statistics:
- 14 PDF objects out of 1000 (max. 8388607)
+ 67 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
