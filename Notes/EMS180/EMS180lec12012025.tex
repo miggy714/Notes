@@ -1,0 +1,85 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\graphicspath{{../Screenshots/}}
+\begin{document}
+\section{MSDS: Materials Safety Data Sheets}
+\begin{enumerate}
+    \item standard documents that provide safety info on Materials
+    \item provided by suppliers
+    \item include info on:
+    \begin{itemize}
+        \item composition
+        \item handling + PPE (Personal protective equipment)
+        \item hazards
+        \item shipping regulations
+    \end{itemize}
+\end{enumerate}
+\section{Legislation}
+\begin{itemize}
+    \item can support all 3 capitals
+    \item includes state, national, and internation standards+agreements
+\end{itemize}
+\section{EV case study}
+People:
+\begin{itemize}
+    \item range anxiety
+    \item 
+\end{itemize}
+Planet:
+\begin{itemize}
+    \item Concerns over the carbon emission of energy grid
+    \item are carbon emissions better for EVs?
+    \item legislation in EU requires battery recycling
+\end{itemize}
+Prosperity:
+\begin{itemize}
+    \item Li only produced by 2 major countries
+    \item current Li production does not meet anticipated demand
+    \item Nd production too low
+    \item 95\% of Nd from one country(China)
+\end{itemize}
+\newpage
+\section{Final presentation material index}
+Objective - Minimize deflection $\delta$: $$\delta =\frac{F_fL^3}{C_1EI}$$
+\\~\\
+Constraints - Failure force $F_f$: $$F_f = Z\frac{\sigma_y}{L}$$
+\\~\\
+Since $F_f$, $L$, and $C_1$ are constants, $\delta \propto EI$
+\\~\\
+Recover density term from Inertia:
+
+\begin{center}
+    \includegraphics[width=200pt]{Screenshot 2025-12-01 170823.png}
+\end{center}
+From $m = \rho V$:
+$$b^4=\bigg[\frac{m}{\rho (1-\gamma^2)L}\bigg]^2$$
+expanding Inertia term:
+\begin{align*}
+    I &= \frac{b^4}{12}-\frac{\gamma^4 b^4}{12}
+    \\
+    I &= \frac{(1-\gamma)^4}{12}b^4
+\end{align*}
+combining inertia and mass equations:
+$$I = \frac{(1-\gamma)^4}{12(1-\gamma^2)^2}\frac{m^2}{\rho^2L^2}$$
+Plug inertia term back into objective function:
+$$\delta =\frac{F_fL^3}{C_1E}\frac{12(1-\gamma^2)^2}{(1-\gamma)^4}\frac{\rho^2L^2}{m^2} = \frac{F_fL^3}{C_1}\frac{12(1-\gamma^2)^2}{(1-\gamma)^4}\frac{L^2}{m^2}\bigg(\frac{\rho^2}{E}\bigg)$$
+\newpage
+material index M:
+\begin{align*}
+    M &= \frac{\rho^2}{E}
+    \\
+    \log M &= 2\log \rho - \log E
+    \\
+    \log E &= 2\log \rho - \log M
+\end{align*}
+\begin{center}
+    \includegraphics[width = 250pt]{Screenshot 2025-12-01 173111.png}
+\end{center}
+\end{document}
