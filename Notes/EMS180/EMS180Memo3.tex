@@ -3,6 +3,9 @@
 \usepackage{titlesec}
 \usepackage{url}
 \usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{enumitem} % in preamble
+\setlist[itemize]{leftmargin=*, nosep, topsep=0pt, partopsep=0pt}
 
 \newcommand{\memoheader}[4]{
   \noindent
@@ -17,24 +20,179 @@
             {Miguel Cuaycong}
             {\today}
             {EMS 180: Memo 3 - Sustainability of Wind Farms}
-\noindent This document summarizes the the results of a fact-finding research on the three sustainability capitals (People, Planet, and Prosperity) of Wind Farms. 
+\noindent This document summarizes the the results of a fact-finding research on the three sustainability capitals (People, Planet, and Prosperity) of Wind Farms. The purpose is to have an up to date idea on the state of the three capitals from Ashby's considerations back in 2016.
 \\~\\
-To begin the investigationThe current growth average forecasted from 2025 to 2030 is 8 \% per year according to \href{https://www.gwec.net/gwec-news/wind-industry-installs-record-capacity-in-2024-despite-policy-instability}{[1]}. 
-This is notably less than the growth rate number from Ashby's chapter on Wind Farms which was 25 \% per year.
+To begin the investigation, the general objective needs to be updated to today's numbers. The current growth average forecasted from 2025 to 2030 is 8 \% or 170 GW per year according to \href{https://www.gwec.net/gwec-news/wind-industry-installs-record-capacity-in-2024-despite-policy-instability}{[1]}. 
+That is approximately 28300 turbines per year assuming a single onshore turbine produces 6MW of power \href{https://www.gwec.net/gwec-news/wind-turbine-suppliers-deliver-new-record-volume-despite-difficult-year-full-of-diverse-challenges}{[2]}. 
+This is notably less than the growth rate number from Ashby's chapter on Wind Farms which was 25 \% per year, and 50000 turbines. 
+Neodymium figures per MW capacity of an onshore turbine has also changed. There is 105 kg/MW of Nd magnet in a modern onshore turbine \href{https://cdn.ceps.eu/wp-content/uploads/2023/07/CEPS-In-depth-analysis-2022-07_Supply-chain-for-recycled-rare-earth-permanent-magnets-1.pdf}{[3]}.
+ Assuming the same weight\%, this would result to 31.5 kgNd/MW or \textbf{189kg of Nd for a single turbine}. Accounting for 28300 turbines, the weight of Nd needed to keep up with current projected growth rate is 5348700 kg or \textbf{5348.7 metric tonnes of Nd per year}.
 \\~\\
--
+Now that the scale of the objective is clear, the implication it has towards the first sustainability capital (People) can be considered.
+According to this MSDS\href{https://www.vacuumschmelze.com/03_Documents/Quality/Material%20Safety%20Data%20Sheets/SDS%2056%20%20(GB).pdf}{[4]}
+of Nd based permanent magnet, the part has no reactivity, no known hazardous decomposition products, acute toxicity(Water hazard class I - slightly hazardous for water). 
+Another consideration is the area intensity. Ashby's figure for Area intensity of a land-based Wind power system was 150-400 $m^2/kW_p$. This is still a reasonable estimate according to recent calculations\href{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0270155#pone-0270155-t001}{[5]}.
+Converting the units in table 1 of that reference, an updated figure can be worked out to be ~368 $m^2/kW$. This is a considerable amount of area consumed by wind farms that can exacerbate danger to bird life and visual/acoustic interference.
+As far as legislation goes, there are guidlines provided by US Fish and Wildlife Service on wind farms such as \href{https://www.fws.gov/sites/default/files/documents/land-based-wind-energy-guidelines.pdf}{"U.S. Fish and Wildlife Service
+Land-Based Wind Energy Guidelines"} .
 \\~\\
--
-\\~\\
--
+The next sustainability capital to consider is Planet. With the scale of the objective being 5348.7 metric tonnes of Nd per year, the availability of this resource needs to be considered.
+According to USGS data\href{https://pubs.usgs.gov/periodicals/mcs2025/mcs2025.pdf}{[6]}, the global production per year of rare earths is 390000 metric tonnes. Preserving Ashby's 15\% of Nd in rare earths yielding 58500 metric tonnes of Nd per year globally.
+The current demand of the objective is less than 10\% of the global Nd production. Another consideration is the life cycle of the turbine, in particular recycling. 
+According to a webinar conducted by the National Renewable Energy Laboratory (NREL)\href{https://docs.nrel.gov/docs/fy24osti/89658.pdf}{[7]}, the components of a wind turbine have many options and methods of recycling. Depending on the method the percantage of mass recycled range from 55\% to $>$90\%.
 \\~\\ 
--
-\newpage
-\section*{References}
+Finally, sustainability capital for Prosperity. For this consider the HHI from USGS[6]. 
+To calculate, HHI = $\sum 100(\text{fraction of share})^2$ resulting to an \textbf{HHI of 4989}. This means the production of Nd is highly concentrated in a few countries. China has most production of rare earths at 69.23\% of the world total followed by 11.54\% for the United States.  
+Next to consider are the Government indicators of these two countries according to worldbank.org\href{https://www.worldbank.org/en/publication/worldwide-governance-indicators/interactive-data-access}{[7]}. A summary of this is provided in table 2 in the appendix.
+\\~\\
+\section*{Synthesis}
+\begin{table}[h]
+\centering
+\small
+\caption{Synthesis: Influence of the facts on the three capitals for wind farms}
+\begin{tabular}{p{0.16\textwidth} p{0.26\textwidth} p{0.26\textwidth} p{0.26\textwidth}}
+\hline
+ & \textbf{Human and social capital – People} & \textbf{Natural capital – Planet} & \textbf{Manufactured capital – Prosperity} \\
+\hline
+\textbf{Materials} &
+% People cell
+% e.g., impacts on workers/communities, safety
 
-\noindent[1] H. F. Rush, ``Cryogenic Materials Selection, Availability, and Cost Considerations,'' in \textit{Cryogenic Technology}, NASA Conference Publication CP-2122, NASA Langley Research Center, Hampton, VA, 1982. [Online]. Available: \url{https://ntrs.nasa.gov/citations/19830010491}
-\\~\\
-\noindent[2] M. F. Ashby, \textit{Materials Selection in Mechanical Design}, 5th ed. Oxford, U.K.: Butterworth-Heinemann (Elsevier), 2017. ISBN: 978-0-08-100599-6.
-\\~\\
-\noindent[3] Nickel Institute and International Molybdenum Association (IMOA), \textit{Practical Guidelines for the Fabrication of Austenitic Stainless Steels}, 2019. [Online]. Available: \url{https://www.imoa.info/download_files/stainless-steel/Austenitic_Stainless_Steel_Fabrication_Guidelines.pdf}. [Accessed: Nov. 18, 2025]
+&
+% Planet cell
+% e.g., critical elements, recyclability, emissions from materials
+\begin{itemize}[label={}]
+  \item (-)Large demand for Nd (10\% of global production)
+\end{itemize}
+&
+% Prosperity cell
+% e.g., supply dependence, infrastructure needs
+\begin{itemize}[label={}]
+  \item (-)Dependence on rare-earth producing nations still the same
+  \item (-)HHI of 4989
+\end{itemize}
+\\
+\hline
+\textbf{Energy} &
+% People (energy access, local benefits)
+
+&
+% Planet (renewable generation, emissions impact)
+\begin{itemize}[label={}]
+  \item (+)less carbon based fuel dependence
+\end{itemize}
+&
+% Prosperity (local autonomy, jobs)
+\\
+\hline
+\textbf{Environment} &
+% People (visual, acoustic, health, amenity)
+\begin{itemize}[label={}]
+  \item (+)minimally hazardous wastes
+  \item (-)Large area intensity
+\end{itemize}
+&
+% Planet (carbon footprint, wildlife, land/sea area)
+\begin{itemize}[label={}]
+  \item (+)Improved recycling methods with high yield (beyond 90 \%)
+\end{itemize}
+&
+% Prosperity (environmental compliance costs/risks)
+\\
+\hline
+\textbf{Legislation} &
+% People (emission targets, community protections)
+\begin{itemize}[label={}]
+  \item (+)support for Wildlife
+  \item (+)reduces emission
+\end{itemize}
+&
+% Planet (LCA, recycling/EPR, decommissioning)
+\begin{itemize}[label={}]
+  \item (+)Guidelines provided by government bodies improve life-cycle and recycling
+\end{itemize}
+&
+% Prosperity (market design, subsidies, auctions)
+($\pm$)Subsidized
+\\
+\hline
+\textbf{Economics} &
+% People (bills, affordability, equity)
+&
+% Planet (costs of mitigation, externalities)
+&
+% Prosperity (LCOE, capex/financing, crowding-in/out)
+\\
+
+\textbf{Society} &
+% People (acceptance, jobs/skills)
+&
+% Planet (stewardship, conservation co-benefits)
+&
+% Prosperity (industrial development, supply chain)
+\begin{itemize}[label={}]
+  \item (+)Creates jobs
+  \item (+)Stimulates industry
+\end{itemize}
+\\
+
+\textbf{Synthesis} &
+% Key takeaways for People
+\begin{itemize}[label={}]
+  \item (+) Waste hazard low and good legislative support for wildlife and emissions
+  \item (-) current area intensity is in the higher range of Ashby's estimate of 100-400 $m^2/kW$
+\end{itemize}
+&
+% Key takeaways for Planet
+\begin{itemize}[label={}]
+  \item (+)High yield for modern recycling methods and good support from governing bodies
+  \item (-)Current growth rate demands 10\% of global yearly production of Nd
+\end{itemize}
+&
+% Key takeaways for Prosperity
+\begin{itemize}[label={}]
+  \item (-)Two of the biggest producers of Nd are political rivals (China and US).
+  \item (-)HHI of 4989
+  \item (-)The largest producer have low scores regarding governance indicators
+\end{itemize}
+
+
+\\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\newpage
+\section*{Appendix}
+\begin{table}[h]
+\centering
+\small
+\caption{Worldwide Governance Indicators (scores: $-2.5$ to $+2.5$, percentile in \%).}
+\begin{tabular}{lrrrrrr}
+\hline
+ & \multicolumn{3}{c}{China (2023)} & \multicolumn{3}{c}{United States (2023)} \\
+Indicator & Sources & Score & Percentile & Sources & Score & Percentile \\
+\hline
+Voice and Accountability                 & 10 & -1.50 & 7.35  & 11 & 0.88 & 75.49 \\
+Political Stability/Absence of Violence  &  8 & -0.51 & 25.12 &  8 & 0.03 & 47.39 \\
+Government Effectiveness                 &  7 &  0.68 & 73.58 &  6 & 1.22 & 87.74 \\
+Regulatory Quality                       &  8 & -0.36 & 38.68 &  7 & 1.39 & 90.57 \\
+Rule of Law                              & 10 & -0.04 & 52.83 & 10 & 1.33 & 88.68 \\
+Control of Corruption                    &  9 & -0.01 & 54.25 & 10 & 1.12 & 83.02 \\
+\hline
+\end{tabular}
+\end{table}
+\section*{References}
+\begin{itemize}
+  \item[{[1]}] Global Wind Energy Council (GWEC). ``Wind industry installs record capacity in 2024 despite policy instability.'' News release, 16 May 2025. \href{https://www.gwec.net/gwec-news/wind-industry-installs-record-capacity-in-2024-despite-policy-instability}{Link}
+  \item[{[2]}] Global Wind Energy Council (GWEC). ``Wind turbine suppliers deliver new record volume despite difficult year full of diverse challenges.'' Supply Side Data 2024, 16 May 2025. \href{https://www.gwec.net/gwec-news/wind-turbine-suppliers-deliver-new-record-volume-despite-difficult-year-full-of-diverse-challenges}{Link}
+  \item[{[3]}] Reimer, F., Carrara, S., et al. ``Developing a supply chain for recycled rare earth permanent magnets in the EU.'' CEPS In‑Depth Analysis, 2022. Appendix Table A1 (p.~47). \href{https://cdn.ceps.eu/wp-content/uploads/2023/07/CEPS-In-depth-analysis-2022-07_Supply-chain-for-recycled-rare-earth-permanent-magnets-1.pdf}{PDF}
+  \item[{[4]}] VACUUMSCHMELZE GmbH \& Co. KG. ``Safety Data Sheet: VACODYM \\(Sintered Neodymium‑Iron‑Boron Magnets), SDS 56 (GB).'' \href{https://www.vacuumschmelze.com/03_Documents/Quality/Material%20Safety%20Data%20Sheets/SDS%2056%20%20(GB).pdf}{SDS}
+  \item[{[5]}] Lovering, J. R., Yip, A., and Nordhaus, T. ``Land‑use intensity of electricity production and tomorrow's energy landscape.'' PLOS ONE 17(6): e0270155, 2022. \href{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0270155}{Article}
+  \item[{[6]}] U.S. Geological Survey. ``Mineral Commodity Summaries 2025: Rare Earths.'' U.S. Department of the Interior, 2025. \href{https://pubs.usgs.gov/periodicals/mcs2025/mcs2025.pdf}{PDF}
+  \item[{[7]}] National Renewable Energy Laboratory (NREL). ``End‑of‑Life Management of Wind Energy Materials: 2024 Update.'' NREL/TP‑6A20‑89658, 2024. \href{https://docs.nrel.gov/docs/fy24osti/89658.pdf}{PDF}
+  \item[{[8]}] World Bank. ``Worldwide Governance Indicators (WGI): Interactive Data Access.'' \href{https://www.worldbank.org/en/publication/worldwide-governance-indicators/interactive-data-access}{Portal}
+\end{itemize}
 \end{document}

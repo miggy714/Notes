@@ -24,6 +24,7 @@
 \contentsline {section}{\numberline {4}NDT (II)}{10}{}%
 \contentsline {subsection}{\numberline {4.1}Advantages and disadvantages of NDT}{10}{}%
 \contentsline {section}{\numberline {5}NDT SUMMARY}{11}{}%
+\contentsline {subsection}{\numberline {5.1}Contrast vs Sharpness}{12}{}%
 \contentsline {section}{\numberline {6}Slide 1}{17}{}%
 \contentsline {section}{\numberline {7}Slide 2 - Environmental Fracture}{17}{}%
 \contentsline {subsection}{\numberline {7.1}example: Rolled up plastic hoses}{17}{}%

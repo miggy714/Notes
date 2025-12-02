@@ -1,6 +1,6 @@
-PWD c:\Users\mcuay\OneDrive\Documents\codesC++\UCD\Notes\EMS182
+PWD c:\Users\mcuay\Documents\Notes\Notes\EMS182
 INPUT C:\Users\mcuay\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\mcuay\OneDrive\Documents\codesC++\UCD\Notes\EMS182\EMS182Notes.tex
+INPUT c:\Users\mcuay\Documents\Notes\Notes\EMS182\EMS182Notes.tex
 OUTPUT EMS182Notes.log
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -74,9 +74,9 @@ INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-OUTPUT EMS182Notes.toc
 OUTPUT EMS182Notes.pdf
 INPUT C:\Users\mcuay\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+OUTPUT EMS182Notes.toc
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
