@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.19)  3 DEC 2025 14:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.19)  3 DEC 2025 15:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/mcuay/Documents/Notes/Notes/EME109/EME109lec1113/EME109lec1202.tex
-(c:/Users/mcuay/Documents/Notes/Notes/EME109/EME109lec1113/EME109lec1202.tex
+**c:/Users/mcuay/Documents/Notes/Notes/EME109/Project/EME109Project.tex
+(c:/Users/mcuay/Documents/Notes/Notes/EME109/Project/EME109Project.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
 (C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -138,33 +138,39 @@ LaTeX Info: Redefining \Relbar on input line 970.
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
-(C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
-Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks24
-\verbatim@line=\toks25
-\verbatim@in@stream=\read2
+(C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box55
+\beforetitleunit=\skip54
+\aftertitleunit=\skip55
+\ttl@plus=\dimen168
+\ttl@minus=\dimen169
+\ttl@toksa=\toks24
+\titlewidth=\dimen170
+\titlewidthlast=\dimen171
+\titlewidthfirst=\dimen172
 )
 (C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count298
-) (EME109lec1202.aux)
-\openout1 = `EME109lec1202.aux'.
+) (EME109Project.aux)
+\openout1 = `EME109Project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -205,16 +211,16 @@ LaTeX Font Info:    ... okay on input line 7.
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count299
-\scratchdimen=\dimen168
-\scratchbox=\box55
+\scratchdimen=\dimen173
+\scratchbox=\box56
 \nofMPsegments=\count300
 \nofMParguments=\count301
-\everyMPshowfont=\toks26
+\everyMPshowfont=\toks25
 \MPscratchCnt=\count302
-\MPscratchDim=\dimen169
+\MPscratchDim=\dimen174
 \MPnumerator=\count303
 \makeMPintoPDFobject=\count304
-\everyMPtoPDFconversion=\toks27
+\everyMPtoPDFconversion=\toks26
 )
 (C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -226,96 +232,48 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-4.
- (C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
-<../../Screenshots/Screenshot 2025-12-03 135441.png, id=1, 305.64188pt x 234.12
-47pt>
-File: ../../Screenshots/Screenshot 2025-12-03 135441.png Graphic file (type png
-)
-<use ../../Screenshots/Screenshot 2025-12-03 135441.png>
-Package pdftex.def Info: ../../Screenshots/Screenshot 2025-12-03 135441.png  us
-ed on input line 18.
-(pdftex.def)             Requested size: 200.0pt x 153.20096pt.
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--25
+
+ []
 
 [1
 
-{C:/Users/mcuay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <../../Screen
-shots/Screenshot 2025-12-03 135441.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 71--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--83
-
- []
-
-<../../Screenshots/Screenshot 2025-12-03 140130.png, id=15, 469.755pt x 373.395
-pt>
-File: ../../Screenshots/Screenshot 2025-12-03 140130.png Graphic file (type png
+{C:/Users/mcuay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+<../../Screenshots/Screenshot 2025-12-03 154029.png, id=9, 725.71124pt x 587.19
+376pt>
+File: ../../Screenshots/Screenshot 2025-12-03 154029.png Graphic file (type png
 )
-<use ../../Screenshots/Screenshot 2025-12-03 140130.png>
-Package pdftex.def Info: ../../Screenshots/Screenshot 2025-12-03 140130.png  us
-ed on input line 84.
-(pdftex.def)             Requested size: 200.0pt x 158.9728pt.
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 88--91
-
- []
-
-<../../Screenshots/Screenshot 2025-12-03 140632.png, id=20, 1289.56781pt x 358.
-33875pt>
-File: ../../Screenshots/Screenshot 2025-12-03 140632.png Graphic file (type png
-)
-<use ../../Screenshots/Screenshot 2025-12-03 140632.png>
-Package pdftex.def Info: ../../Screenshots/Screenshot 2025-12-03 140632.png  us
-ed on input line 94.
-(pdftex.def)             Requested size: 469.75502pt x 130.53284pt.
-[3 <../../Screenshots/Screenshot 2025-12-03 140130.png> <../../Screenshots/Scre
-enshot 2025-12-03 140632.png>]
-<../../Screenshots/Screenshot 2025-12-03 140911.png, id=29, 559.33969pt x 437.3
-8406pt>
-File: ../../Screenshots/Screenshot 2025-12-03 140911.png Graphic file (type png
-)
-<use ../../Screenshots/Screenshot 2025-12-03 140911.png>
-Package pdftex.def Info: ../../Screenshots/Screenshot 2025-12-03 140911.png  us
-ed on input line 112.
-(pdftex.def)             Requested size: 250.0pt x 195.49289pt.
- [4 <../../Screenshots/Screenshot 2025-12-03 140911.png>] (EME109lec1202.aux)
+<use ../../Screenshots/Screenshot 2025-12-03 154029.png>
+Package pdftex.def Info: ../../Screenshots/Screenshot 2025-12-03 154029.png  us
+ed on input line 30.
+(pdftex.def)             Requested size: 469.75502pt x 380.10344pt.
+ [2 <../../Screenshots/Screenshot 2025-12-03 154029.png>] (EME109Project.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2686 strings out of 467870
- 43235 string characters out of 5418354
- 456413 words of memory out of 5000000
- 31564 multiletter control sequences out of 15000+600000
- 633161 words of font info for 59 fonts, out of 8000000 for 9000
+ 2871 strings out of 467870
+ 44092 string characters out of 5418354
+ 456149 words of memory out of 5000000
+ 31760 multiletter control sequences out of 15000+600000
+ 629275 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,65p,288b,235s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,5n,65p,282b,184s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\mcuay\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1095.pk><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mcuay/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mcuay/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mcuay/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/mc
-uay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/U
-sers/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmtt10.pfb>
-Output written on EME109lec1202.pdf (4 pages, 1342511 bytes).
+ype1/public/amsfonts/cm/cmr10.pfb>
+Output written on EME109Project.pdf (2 pages, 256981 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
+ 32 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

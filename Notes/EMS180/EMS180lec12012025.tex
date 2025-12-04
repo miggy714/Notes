@@ -1,13 +1,55 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
-\usepackage{amsmath}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+
 \usepackage{pgfplots}
 \usepackage{titlesec}
 \usepackage{url}
 \usepackage{verbatim}
 \usepackage{hyperref}
+\usetikzlibrary{calc}
 \graphicspath{{../Screenshots/}}
+
+% compact spacing
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+% Draw solid square with side label b (size is parameter in cm)
+\newcommand{\DrawSolidBox}[1]{%
+  \begin{tikzpicture}[scale=#1]
+    \draw[line width=0.6pt] (0,0) rectangle (3,3);
+    \draw[<->,line width=0.5pt]
+      (0,1.5) -- node[above] {$b$} (3,1.5);
+  \end{tikzpicture}%
+}
+
+% Hollow square with separated arrows
+\newcommand{\DrawHollowBox}[2]{%
+  % #1 = scale, #2 = gamma
+  \begin{tikzpicture}[scale=#1]
+    \def\L{3}%
+    \pgfmathsetmacro{\g}{#2}
+    \pgfmathsetmacro{\inset}{(3-3*\g)/2}
+    \draw[line width=0.6pt] (0,0) rectangle (\L,\L);
+    \draw[line width=0.6pt]
+      (\inset,\inset) rectangle (\inset+3*\g,\inset+3*\g);
+
+    % Outer b arrow slightly above center (y = 1.95)
+    \draw[<->,line width=0.5pt]
+      (0,1.95) -- node[above] {$b$} (3,1.95);
+
+    % Inner gamma b arrow slightly below center (y = 1.05)
+    \draw[<->,line width=0.5pt]
+      (\inset,1.05) --
+      node[below] {$\gamma b$}
+      (\inset+3*\g,1.05);
+  \end{tikzpicture}%
+}
+
+
+
 \begin{document}
 \section{MSDS: Materials Safety Data Sheets}
 \begin{enumerate}
@@ -45,16 +87,104 @@ Prosperity:
     \item Nd production too low
     \item 95\% of Nd from one country(China)
 \end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \newpage
 \section{Final presentation material index}
 Objective - Minimize deflection $\delta$: $$\delta =\frac{F_fL^3}{C_1EI}$$
 \\~\\
-Constraints - Failure force $F_f$: $$F_f = Z\frac{\sigma_y}{L}$$
-\\~\\
 Since $F_f$, $L$, and $C_1$ are constants, $\delta \propto EI$
 \\~\\
-Recover density term from Inertia:
+\begin{center}
+\begin{minipage}[t]{0.47\textwidth}
+\centering
+\DrawSolidBox{0.9}
 
+\smallskip
+$A_s$ (solid square)
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\textwidth}
+\centering
+\DrawHollowBox{0.9}{0.55}
+
+\smallskip
+$A_h$ (hollow square)
+\end{minipage}
+\end{center}
+
+For the solid square section ($A_s$) with side \(b\):
+\[
+I_s=\frac{b^{4}}{12},\qquad
+\text{and since } A_s=b^{2},\quad
+I_s=\frac{A_s^{2}}{12}.
+\]
+
+For the hollow square section ($A_h$) with outer side \(b\) and inner side \(\gamma b\):
+\[
+I_h=\frac{b^{4}-\gamma^{4}b^{4}}{12}
+=\frac{(1-\gamma^{4})\,b^{4}}{12}.
+\]
+Using the solid reference area \(A_s=b^{2}\),
+\[
+I_h=\frac{(1-\gamma^{4})\,A_s^{2}}{12}.
+\]
+
+Introduce the bending shape factor \(\phi\) (normalized so a solid square gives \(\phi=1\)):
+\[
+\phi=\frac{12\,I}{A_s^{\,2}}
+\quad\Longrightarrow\quad
+\begin{cases}
+\phi_s=\dfrac{12\,I_s}{A_s^{2}}=1, \\[1.0ex]
+\phi_h=\dfrac{12\,I_h}{A_s^{2}}=1-\gamma^{4}.
+\end{cases}
+\]
+
+Thus,
+\[
+\boxed{\ \phi=\dfrac{12\,I}{A_s^{2}}\ }
+\]
+encapsulates bending efficiency; it equals \(1\) for the solid square and decreases with hollowness for fixed reference area \(A_s\).
+\\~\\
+Mass as a constraint:
 \begin{center}
     \includegraphics[width=200pt]{Screenshot 2025-12-01 170823.png}
 \end{center}
@@ -64,16 +194,20 @@ expanding Inertia term:
 \begin{align*}
     I &= \frac{b^4}{12}-\frac{\gamma^4 b^4}{12}
     \\
-    I &= \frac{(1-\gamma)^4}{12}b^4
+    I &= \frac{(1-\gamma^4)}{12}b^4
 \end{align*}
 combining inertia and mass equations:
-$$I = \frac{(1-\gamma)^4}{12(1-\gamma^2)^2}\frac{m^2}{\rho^2L^2}$$
+$$I = \frac{(1-\gamma^4)}{12(1-\gamma^2)^2}\frac{m^2}{\rho^2L^2}$$
 Plug inertia term back into objective function:
-$$\delta =\frac{F_fL^3}{C_1E}\frac{12(1-\gamma^2)^2}{(1-\gamma)^4}\frac{\rho^2L^2}{m^2} = \frac{F_fL^3}{C_1}\frac{12(1-\gamma^2)^2}{(1-\gamma)^4}\frac{L^2}{m^2}\bigg(\frac{\rho^2}{E}\bigg)$$
+$$\delta =\frac{F_fL^3}{C_1E}\frac{12(1-\gamma^2)^2}{(1-\gamma^4)}\frac{\rho^2L^2}{m^2} = \frac{F_fL^3}{C_1}\frac{12(1-\gamma^2)^2}{(1-\gamma^4)}\frac{L^2}{m^2}\bigg(\frac{\rho^2}{E}\bigg)$$
 \newpage
 material index M:
 \begin{align*}
     M &= \frac{\rho^2}{E}
+    \\
+    M_h &= \frac{(1-\gamma^2)^2}{(1-\gamma^4)}\frac{\rho^2}{E}
+    \\
+    M_h &= \phi\frac{\rho^2}{E}
     \\
     \log M &= 2\log \rho - \log E
     \\
@@ -82,4 +216,5 @@ material index M:
 \begin{center}
     \includegraphics[width = 250pt]{Screenshot 2025-12-01 173111.png}
 \end{center}
+\url{https://hal.science/jpa-00251707/document}
 \end{document}

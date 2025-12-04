@@ -1,6 +1,6 @@
-PWD C:\Users\mcuay\OneDrive\Documents\codesC++\UCD\Notes\EMS180
+PWD c:\Users\mcuay\Documents\Notes\Notes\EMS180
 INPUT C:\Users\mcuay\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\mcuay\OneDrive\Documents\codesC++\UCD\Notes\EMS180\EMS180lec12012025.tex
+INPUT c:\Users\mcuay\Documents\Notes\Notes\EMS180\EMS180lec12012025.tex
 OUTPUT EMS180lec12012025.log
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -41,13 +41,10 @@ INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\pgfplots\pgfplots.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\pgfplots\pgfplots.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.revision.tex
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.revision.tex
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.revision.tex
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-luatex.def
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-luatex.def
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\pgf\basiclayer\pgf.sty
@@ -152,6 +149,13 @@ INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgf
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgf\modules\pgfmodulematrix.code.tex
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\pgfplots\pgfplots.sty
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\pgfplots\pgfplots.sty
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.revision.tex
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.revision.tex
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.revision.tex
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-luatex.def
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-luatex.def
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.code.tex
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplotscore.code.tex
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\sys\pgfplotssysgeneric.code.tex
@@ -256,6 +260,8 @@ INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\reru
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT .\EMS180lec12012025.aux
@@ -293,6 +299,18 @@ INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT ..\Screenshots\Screenshot 2025-12-01 170823.png
 INPUT ..\Screenshots\Screenshot 2025-12-01 170823.png
 INPUT ..\Screenshots\Screenshot 2025-12-01 170823.png
@@ -305,6 +323,7 @@ INPUT ..\Screenshots\Screenshot 2025-12-01 173111.png
 INPUT ..\Screenshots\Screenshot 2025-12-01 173111.png
 INPUT ..\Screenshots\Screenshot 2025-12-01 173111.png
 INPUT ..\Screenshots\Screenshot 2025-12-01 173111.png
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT EMS180lec12012025.aux
 INPUT .\EMS180lec12012025.out
 INPUT .\EMS180lec12012025.out
@@ -324,3 +343,5 @@ INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb

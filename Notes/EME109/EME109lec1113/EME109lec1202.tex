@@ -11,11 +11,12 @@ $$r = f(x_1, x_2, \dots, x_L)$$
 \begin{itemize}
     \item Generate random values for each of the inputs
     \item For each set of random values, evaluate random
-    \item This generates a set of values r=$\brace r_1, r_2, /dots , r_m$
+    \item This generates a set of values r=\{$r_1, r_2, \dots , r_m$\}
     \item Then evaluate the statistics of the set r
 \end{itemize}
-INSERT Air diagram
-\\
+\begin{center}
+    \includegraphics[width = 200pt]{Screenshot 2025-12-03 135441.png}
+\end{center}
 After you perform uncertainty analyses on the measured T and P value, calculate an uncertainty interval for density $$\rho = \frac{P}{R_{air}T}$$
 \section{MC analysis}
 \begin{align*}
@@ -26,14 +27,15 @@ After you perform uncertainty analyses on the measured T and P value, calculate 
 \end{align*}
 Suppose:
 \\
+$\bar{T}=298$, $U_t=2k$\\
 $T = 298\pm 2k (95\%)$\\
 $P = \bar{P}\pm U_pk (95\%)$\\
-$P = 100\pm 1k (95\%)$\\
-Where:\\
+$P = 100\pm 1k (95\%)$
 
-\section{code}
+\newpage
+\subsection{the code for this is:}
 \begin{verbatim}
-    m<-2e5 # of MC replicates
+m<-2e5 # of MC replicates
 
 P <- numeric(M)
 
@@ -42,12 +44,7 @@ t <- numeric(M)
 rho <- numeric(M)
 
 Rair <- 287
-\end{verbatim}
-Where:
-\\
-$\bar{T}=298$
-\\
-\begin{verbatim}
+
 for (m in 1:M) {
     p[m] <- rnorm(n=1, mean=1e5, sd = 500)
     t[m] <- rnorm(n=1, mean=298, sd = 1)
@@ -83,7 +80,9 @@ $$r=x_1(x_2x_3)^{1/2}$$
     -&-&-&-
 \end{tabular}
 \\~\\
-INSERT OBSTR Meter Theory image
+\begin{center}
+    \includegraphics[width = 200pt]{Screenshot 2025-12-03 140130.png}
+\end{center}
 \section{Numerical Integration}
 $$\dot{m}=2\pi\int_{0}^{R}\rho rvdr$$
 $$\dot{m}=2\pi\rho\int_{0}^{R}rvdr$$
@@ -91,25 +90,25 @@ Where: $v=\big(\frac{2\Delta P}{\rho_0}\big)^{1/2}$ Bernoulli Eqn.
 \\
 $$\dot{m}=2\pi\rho\int_{0}^{R}r\big(\frac{2\Delta P}{\rho_0}\big)^{1/2}dr$$
 $$\dot{m}=2\pi\rho\big(\frac{2}{\rho_0}\big)^{1/2}\int_{0}^{R}r\Delta P^{1/2}dr$$
-INSERT table and plot for delta P and r
+\begin{center}
+    \includegraphics[width=\textwidth]{Screenshot 2025-12-03 140632.png}
+\end{center}
 \subsubsection{algorithm}
 \begin{itemize}
-    \item generate a random value for $\rho_o$
-    \begin{itemize}
-        \item rhoD $<-$ rnorm(n=1,mean=$\bar{\rho}_0$, sd = $u_{\rho_0}$)
-    \end{itemize}
+    \item generate a random value for $\rho_o$:
+    \\rhoD $<-$ rnorm(n=1,mean=$\bar{\rho}_0$, sd = $u_{\rho_0}$)
+    
     \item Generate one random value for each of the r values
-    \begin{itemize}
-        \item 
-        \begin{verbatim}
-            r1<-rnomr(n=1,mean=rbar1, sd ur1)
-            r2<-rnomr(n=1,mean=rbar2, sd ur2)
-        \end{verbatim}
-    \end{itemize}
+    \begin{verbatim}
+    r1<-rnomr(n=1,mean=rbar1, sd = ur1)
+    r2<-rnomr(n=1,mean=rbar2, sd = ur2)
+    \end{verbatim}
     \item Generate one random value for each of the $\Delta P$s
     \\
     dP1$<$-rnorm(n=1, mean = 54, sd = $U_{\Delta P_1})$
     
 \end{itemize}
-INSERT code photo
+\begin{center}
+    \includegraphics[width=250pt]{Screenshot 2025-12-03 140911.png}
+\end{center}
 \end{document}

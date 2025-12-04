@@ -1,7 +1,7 @@
-PWD c:\Users\mcuay\Documents\Notes\Notes\EME109\EME109lec1113
+PWD c:\Users\mcuay\Documents\Notes\Notes\EME109\Project
 INPUT C:\Users\mcuay\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\mcuay\Documents\Notes\Notes\EME109\EME109lec1113\EME109lec1202.tex
-OUTPUT EME109lec1202.log
+INPUT c:\Users\mcuay\Documents\Notes\Notes\EME109\Project\EME109Project.tex
+OUTPUT EME109Project.log
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\base\size11.clo
@@ -41,14 +41,14 @@ INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\tools\verbatim.sty
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\tools\verbatim.sty
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\titlesec\titlesec.sty
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\EME109lec1202.aux
-INPUT .\EME109lec1202.aux
-INPUT EME109lec1202.aux
-OUTPUT EME109lec1202.aux
+INPUT .\EME109Project.aux
+INPUT .\EME109Project.aux
+INPUT EME109Project.aux
+OUTPUT EME109Project.aux
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -57,73 +57,24 @@ INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstop
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 135441.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 135441.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 135441.png
-OUTPUT EME109lec1202.pdf
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 135441.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 135441.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 135441.png
-INPUT C:\Users\mcuay\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140130.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140130.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140130.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140130.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140130.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140130.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140632.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140632.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140632.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140632.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140632.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140632.png
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140911.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140911.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140911.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140911.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140911.png
-INPUT ..\..\Screenshots\Screenshot 2025-12-03 140911.png
-INPUT EME109lec1202.aux
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
+OUTPUT EME109Project.pdf
+INPUT C:\Users\mcuay\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT ..\..\Screenshots\Screenshot 2025-12-03 154029.png
+INPUT ..\..\Screenshots\Screenshot 2025-12-03 154029.png
+INPUT ..\..\Screenshots\Screenshot 2025-12-03 154029.png
+INPUT ..\..\Screenshots\Screenshot 2025-12-03 154029.png
+INPUT ..\..\Screenshots\Screenshot 2025-12-03 154029.png
+INPUT ..\..\Screenshots\Screenshot 2025-12-03 154029.png
+INPUT EME109Project.aux
 INPUT C:\Users\mcuay\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
 INPUT C:\Users\mcuay\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
-INPUT C:\Users\mcuay\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
