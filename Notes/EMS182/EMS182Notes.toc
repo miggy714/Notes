@@ -25,13 +25,17 @@
 \contentsline {subsection}{\numberline {4.1}Advantages and disadvantages of NDT}{10}{}%
 \contentsline {section}{\numberline {5}NDT SUMMARY}{11}{}%
 \contentsline {subsection}{\numberline {5.1}Contrast vs Sharpness}{12}{}%
-\contentsline {section}{\numberline {6}Slide 1}{17}{}%
-\contentsline {section}{\numberline {7}Slide 2 - Environmental Fracture}{17}{}%
-\contentsline {subsection}{\numberline {7.1}example: Rolled up plastic hoses}{17}{}%
-\contentsline {section}{\numberline {8}Slide 3 - Stages of Environmental Fracture}{17}{}%
-\contentsline {section}{\numberline {9}Slide 4 - Creep}{17}{}%
-\contentsline {section}{\numberline {10}Stress corrosion cracking (SCC) Mechanism}{17}{}%
-\contentsline {section}{\numberline {11}SCC Mechanisms}{17}{}%
-\contentsline {subsection}{\numberline {11.1}Stress corrosion cracking SCC}{17}{}%
-\contentsline {subsection}{\numberline {11.2}SCC - Effect of Microstructure}{17}{}%
-\contentsline {subsection}{\numberline {11.3}Example problem}{17}{}%
+\contentsline {section}{\numberline {6}Course Roadmap}{17}{}%
+\contentsline {subsection}{\numberline {6.1}Design Methodology Root cause}{17}{}%
+\contentsline {subsection}{\numberline {6.2}5 main failure types}{17}{}%
+\contentsline {subsection}{\numberline {6.3}Other}{19}{}%
+\contentsline {section}{\numberline {7}Slide 1}{20}{}%
+\contentsline {section}{\numberline {8}Slide 2 - Environmental Fracture}{20}{}%
+\contentsline {subsection}{\numberline {8.1}example: Rolled up plastic hoses}{20}{}%
+\contentsline {section}{\numberline {9}Slide 3 - Stages of Environmental Fracture}{20}{}%
+\contentsline {section}{\numberline {10}Slide 4 - Creep}{20}{}%
+\contentsline {section}{\numberline {11}Stress corrosion cracking (SCC) Mechanism}{20}{}%
+\contentsline {section}{\numberline {12}SCC Mechanisms}{20}{}%
+\contentsline {subsection}{\numberline {12.1}Stress corrosion cracking SCC}{20}{}%
+\contentsline {subsection}{\numberline {12.2}SCC - Effect of Microstructure}{20}{}%
+\contentsline {subsection}{\numberline {12.3}Example problem}{20}{}%

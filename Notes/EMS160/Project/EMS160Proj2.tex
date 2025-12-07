@@ -1,0 +1,143 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\graphicspath{{../../Screenshots/}}
+
+\title{
+UC Davis
+\\~\\EMS 160 Project 2
+\\~\\
+Prof. Scott McCormack}
+
+\author{Xiaokun Yang\\Miguel Cuaycong\\ Jonathan Mases}
+\date{\today}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Abstract}
+Phase equilibria plays a critical role in mechanical properties 
+of steel alloys. As steel industry technology increases with 
+multiple alloying elements, a tool that efficiently predicts 
+material behavior is required. In this report, we examine the 
+suitability of the academic version of Thermo-Calc for a small 
+casting company in Washington by Constructing Fe-C binary phase 
+diagram at first in Thermo-Calc with carbon content expressed 
+in mass percent and temperature ranging from 500 to 2000 kelvin. 
+The evaluation was then extended to pseudo binary Fe-C-X systems
+ (X=Ni, Cr, and Si) to determine the influence of alloying 
+ elements on phase stability. During the evaluation, several 
+ limitations of the free academic package were observed, 
+ including restricted database and UI display issues. 
+ Based on these findings, the free version fits better with the 
+ purpose of educational use, but insufficient for industrial 
+ design. For the company’s long-term needs, a commercial steel 
+ database such as TCFE14 is recommended. 
+\section{Problem statement, Aim, and Objectives}
+A small casting company in Washington State is expanding its operations to include the development of new steel alloys. In the past, the company relied on external contractors for alloy design. As the company grows, it is now considering the use of Thermo-Calc by themselves to assist with design and optimization of multicomponent steel alloys. However, the company currently lacks experience in computational thermodynamics and in the practical use of Thermo-Calc software.
+The Aim of this project is to evaluate the potential of the free academic version of Thermo-calc for the design and analysis of multicomponent steel alloys relevant to the company’s operations in order for further adaption. 
+\\~\\
+To achieve this aim, the following objectives have been defined:
+\begin{enumerate}
+    \item Conduct thermodynamic calculations on a multicomponent steel system consisting of Fe, C, Ni, Si, and Cr using Thermo-Calc.
+    \item Generate and analyze the Fe–C binary phase diagram.
+    \item Extend the system to Fe–C–Ni, Fe–C–Si, and Fe–C–Cr pseudo-binary phase diagrams.
+    \item Provide step-by-step procedures for performing these calculations using the academic version of Thermo-Calc.
+    \item Evaluate the advantages and limitations of using the academic Thermo-Calc database for multicomponent steel design.
+
+\end{enumerate}
+\section{Literature review}
+\noindent Phase equilibria describes a state in which different states such as solid, liquid, and gas coexist in a stable system without net change over time under fixed temperature, pressure, and compositions of materials. Steel alloy, for example, is one of the most well-studied metals; and its phase equilibria determines its formation of phases such as ferrite, austenite, cementite, and various different alloy carbides which directly affect the mechanical properties including strength, hardness, and ductility. Therefore, understanding phase equilibria is essential for materials design and processing.
+\\~\\
+\noindent From a thermodynamic point of view, phase equilibrium occurs when the Gibbs free energy of a system at fixed temperature and pressure reaches a minimum, and the chemical potential of each element is the same in all coexisting phases. This condition ensures there is no driving force for mass transfer between phases. These equilibrium conditions are commonly demonstrated in the form of a phase diagram, which represents phase stability as functions of temperature and composition. The phase boundaries are separated by the coexisting lines and correspond to conditions where the Gibbs free energies of phases are equal.
+\\~\\
+\noindent Phase diagrams therefore serve as thermodynamic maps that describe the change of phase stability with temperature and composition. Critical information such as melting points and phase transformation temperatures can be directly read off from the diagram. Traditional phase diagrams, such as the Fe–C binary phase diagram, provide a fundamental understanding of steel behavior as they illustrate essential transformations between ferrite, austenite, and cementite and serve as the foundation for most steel heat-treatment processes [2]. However, practical materials can be far more complicated because they usually contain multiple components, making binary phase diagrams alone insufficient to describe the system as a whole. The number of possible interactions increases significantly with each element added.
+\\~\\
+\noindent To overcome these limitations, the CALPHAD method (Calculation of Phase Diagrams) was developed. CALPHAD is a computational thermodynamic approach used to predict phase equilibria in multicomponent systems by constructing mathematical models for the Gibbs free energy of each phase as functions of temperature and composition [1]. Once thermodynamic parameters are set, equilibrium between multiple phases is determined through minimization of the Gibbs free energy of the system, which allows construction of binary, ternary, and higher-order phase diagrams that would be impractical to obtain solely through experimental methods [3].
+\\~\\
+\noindent As a practical implementation of this methodology, the Thermo-Calc software was developed as a general database and equilibrium calculation tool [4]. Because modern engineering alloys commonly contain multiple alloying elements whose interactions strongly influence phase stability, CALPHAD enables quantitative prediction of stable phase assemblages, solubility limits, and transformation behavior—all critical characteristics for alloy design and optimization [1,3].
+
+
+\section{Thermo-Calc Tutorial}
+\begin{enumerate}
+    \item Launch the Software
+    \\
+    -After launching Thermo-Calc, the [My Project] workspace will appear on the left side of the screen.
+    \item Create a Phase Diagram Project 
+    \\
+    -Double-click on [Phase Diagram]. This will automatically create a new project branch containing the following three modules:
+    \begin{itemize}
+        \item System Definer
+        \item Equilibrium Calculator
+        \item Plot Renderer
+    \end{itemize}
+    \item Select the Thermodynamic Database and Components
+    -In the System Definer, select the free academic database FEDEMO: Iron Demo Database v4.0. Then choose iron (Fe)and carbon (C) as the only components in the system.
+    \item Adjust Plot Settings
+    \\
+    -Navigate to the [Plot Renderer] module and click [Show More].
+    \\
+    -Uncheck [Automatic Scaling] for both the x-axis and y-axis.
+    \item Define Axis Limits and Run Calculation
+    \\
+    -Manually input the desired axis limits for:
+    \begin{itemize}
+        \item Composition (x-axis)
+        \item Temperature (y-axis)
+    \end{itemize}
+    -Once the limits are set, click [Perform] to execute the calculation and generate the Fe–C phase diagram.
+
+\end{enumerate}
+\begin{center}
+    (Images that demonstrate the steps)
+\end{center}
+
+\noindent The literature defines low, medium, high carbon content steel and they have maximum carbon contents of 0.25\%, 0.25\%-0.5\%, and 0.5\%-1.25\%. To better demonstrate the plot, we set the max carbon contents to be 7\%. [5]
+\\~\\
+From fig. 1, the stable phase at low carbon content and low temperatures is BCC$_{A2}$. As temperature increases, a transition into the FCC$_{A1}$ phase occurs, representing the ferrite to austenite transformation. With higher temperature, the system enters the liquid and FCC$_{A1}$ mixture and liquid and BCC$_{A2}$ mixture regions, indicating the process of melting.
+\\~\\
+Furthermore, at middle to high carbon contents, the diagram shows a wide FCC$_{A1}$ with graphite$_{A9}$ region at intermediate temperatures and BCC$_{A2}$ with graphite$_{A9}$ region at lower temperatures. At a high temperature and high carbon content, the system enters the liquid with graphite$_{A9}$ region, and will become fully melted with temperature increase or decrease in carbon content.
+\\~\\
+Two horizontal invariant lines are around 1000K and 1400K, indicating invariant equilibrium reactions between solid phases and graphite predicted by the database. These invariant reactions represent equilibria where phases coexist at constant temperature.
+
+\begin{center}
+    INSERT Figure 1: Fe-C phase diagram with phases labeled. 
+\end{center}
+
+
+\subsection{Creating Fe-C-X pseudo-binary phase diagram in Thermo-Calc}
+\begin{enumerate}
+    \item Launch Thermo-Calc, locate and open [My Project]
+    \item Double click [Phase Diagram] to create a new calculation branch. 
+    \item Open [System Definer]. Select the FEDEMO, choose Fe, C and one additional alloying element of interest. 
+    \item Define the fixed composition for Fe, C, and X and keep other conditions at default value, unless otherwise required. 
+    \item Step 7. Set the x-axis to Mass Percent C, since this is the standard metallurgical convention for steel phase diagrams.
+    \item Set the x-axis range according to your study (e.g., 0–100 wt\% C).
+    \item Set the y-axis to Temperature (K) and adjust the range as needed (e.g., 500–3000 K).
+    \item Step 8. After confirming all axis limits and compositions, click [Perform] to generate the Fe–C–X pseudo-binary phase diagram.
+    \item Step 9. Repeat the same procedure with different fixed X compositions (e.g., varying Ni, Cr, or Si) to compare the effect of alloying elements on phase stability.
+
+\end{enumerate}
+
+\subsection{Effect on the binary Fe-C phase diagram by the addition of Ni, Si and Cr 
+separately (i.e. Fe-C-X where X = Ni, or Si, or Cr).
+}
+Adding 1 wt\% Ni has a small effect on the overall shape of the phase diagram. It does however add a small region of BCC$_{A2}$+FCC$_{A1}$+GRAPHITE$_{A9}$ which was not present on the Fe-C diagram
+\section{Validity of Thermo-Calc database}
+In this project, the free version of Thermo-calc and the FEDEMO: Iron Demo Database v4.0 was used to evaluate the suitability for steel design. However, FEDEMO is intended for educational purposes as suggested in the package name "Free Educational Package." The FEDEMO contains a limited selection of materials relevant to iron based alloys. One observation is that silicon is not included in the demo database, which then became a road blocker of Fe-C-Si calculation and plotting. We were able to plot it using OXDEMO, but still this restricts its application for realistic steel design where Si is a common alloying element. Furthermore, several phases in phase diagrams appeared as undefined in the output results. We suspect this is due to the UI displaying glitches in the demo version. In conclusion, although general phase diagrams can be obtained, the limitations still need to be taken into consideration. 
+As a result, the free academic Thermo-Calc package is only suitable for training and educational demonstrations. It is not good enough for the steel casting company that is looking for alloy development or optimization. It is recommended that the company get the TCFE14 database as it is designed for a wide variety of steels and Fe-based alloys and provides fully thermodynamic descriptions necessary for phase equilibria prediction and plotting.  If kinetic simulation is required, the MOBFE8 mobility database is recommended for use as well. [6]
+
+The TCFE database has proven reliance on many aspects. It produces results with strong correlation between calculated values for carbide equilibrium compositions shown in figures 2 to 4 in its official documentation ([x] in the reference). According to the TCFE documentation, the data is applicable to Fe-rich alloys with a minimum wt\% of 50. The document also tabulates the assessed binary and ternary systems of which $Fe-C-X \epsilon \{Cr, Ni, Si\}$ are all assessed. This means the systems for the alloys of interest are not extrapolated and are accurate.
+\section{Conclusions}
+\section{References}
+It is recommended that the free software package 
+“Mendeley” is used for references.
+
+
+\end{document}
