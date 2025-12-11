@@ -6,71 +6,282 @@
 
 \begin{document}
 \pagestyle{empty}
-
 \begin{tikzpicture}
 \begin{axis}[
   width=\textwidth, height=400pt, scale only axis,
   xmode=log, ymode=log,
-  xmin=5e-2, xmax=1e1,
-  ymin=1e0,  ymax=5e3,
+  xmin=1e1, xmax=1e5,
+  ymin=1e-1, ymax=1e4,
   grid=both,
   major grid style={line width=0.6pt, draw=gray!50},
   minor grid style={line width=0.3pt, draw=gray!25},
-  xlabel={Density, $\rho\;(\mathrm{Mg}/\mathrm{m}^{3})$},
+  xlabel={Density, $\rho\;(\mathrm{kg}/\mathrm{m}^{3})$},
   ylabel={Young's Modulus, $E$ (GPa)},
   legend style={draw=none, fill=none, font=\small},
   legend pos=south east,
   axis on top,
+  clip=false,
 ]
 
-% numeric points
+% numeric points - using exact values from table
 \addplot[only marks, mark=*, mark size=2.5pt, color=black] table {
 x     y
-0.550 12
-4.430 113.8
-2.810 71.7
-2.100 39
-1.600 1080
+550   12
+4430  113.8
+2810  71.7
+2000  50
+1750  202
 };
-\addlegendentry{Materials}
 
-% labels
+% labels positioned to the right of points
+\node[anchor=west, font=\small] at (axis cs:1800,202) {CFRP};
+\node[anchor=west, font=\small] at (axis cs:4600,113.8) {Ti alloys};
+\node[anchor=west, font=\small] at (axis cs:2900,71.7) {Al alloys};
+\node[anchor=west, font=\small] at (axis cs:2100,50) {GFRP};
+\node[anchor=west, font=\small] at (axis cs:580,12) {Wood};
+
+% Loci: E = C * rho^2 / 1e9 (C in Pa·m^6/kg^2, E in GPa)
+% Line 1: C = 10000 (through Ti/Al/GFRP group)
 \addplot[
-  only marks, mark=none,
-  nodes near coords,
-  point meta=explicit symbolic,
-  every node near coord/.style={anchor=west, font=\small}
-] table[meta=label]{
-x     y      label
-0.550 12     {Wood}
-4.430 113.8  {Ti alloys}
-2.810 71.7   {Al alloys}
-2.100 39     {GFRP}
-1.600 1080   {CFRP}
-};
+  domain=100:31600, samples=100,
+  dashed, thick, color=blue!60,
+  forget plot
+] {10000*x^2/1e9};
 
-% Lines: log10(E) = 2*log10(rho) + C  =>  E = 10^C * rho^2
-\pgfplotsinvokeforeach{-1,0,1,2,3}{
-  \addplot[
-    domain=1e-2:1e1, samples=2,
-    dashed, thick, color=blue!60
-  ] ({x},{(10^(#1))*(x^2)});
-  \addlegendimage{no markers, dashed, thick, color=blue!60}
-  \addlegendentry{$\log_{10}E=2\log_{10}\rho + #1$}
-}
+% Line 2: C = 65000 (through CFRP)
+\addplot[
+  domain=40:12400, samples=100,
+  dashed, thick, color=blue!60
+] {65000*x^2/1e9};
+
+% Legend entry
+\addlegendimage{only marks, mark=*, mark size=2.5pt, color=black}
+\addlegendentry{Materials}
+\addlegendimage{no markers, dashed, thick, color=blue!60}
+\addlegendentry{$\log_{10}E=2\log_{10}\rho + \log_{10}C$}
 
 \end{axis}
 \end{tikzpicture}
-\\
-\newpage
-Objective (Maximize):
-\\
-\begin{align*}
- \text{Bending stiffness per mass of material} &= \frac{EI}{m}, \quad m = \rho V \\
-   &= \frac{EI}{\rho V} \\
-   \text{Material index } M &= \frac{E}{\rho} \\
-   \log(M) &= \log(E) - \log(\rho) \\
-   \text{Alternative loci: } \log(E) &= 2\log(\rho) + \log(\text{const})
-\end{align*}
 
+\newpage
+Objective (Maximize): Bending stiffness EI
+
+\begin{align*}
+ \text{Material index } M &= \frac{E}{\rho}, \\
+ \log E &= \log\rho + \log M, \\
+\end{align*}
+\subsection*{Cost model}
+
+The unit manufacturing cost for the blow–moulded CFRP part is written as  
+\begin{equation}
+  C = C_{\text{mat}} + C_{\text{ded}} + C_{\text{cap}}
+      + C_{\text{oh}} + C_{\text{nde}} .
+\end{equation}
+
+Each contribution is
+
+\begin{align}
+  C_{\text{mat}}
+    &= C_m \,\frac{m}{1-f},
+    &&\text{material cost,} \\
+  C_{\text{ded}}
+    &= \frac{C_t}{n}\,
+       \left\lceil \frac{n}{n_t} \right\rceil,
+    &&\text{dedicated tooling cost,} \\
+  C_{\text{cap}}
+    &= \frac{L_f\, C_c}{t_{wo}\,\dot{n}},
+    &&\text{capital cost,} \\
+  C_{\text{oh}}
+    &= \frac{\dot{C}_{oh}}{\dot{n}},
+    &&\text{overhead cost,} \\
+  C_{\text{nde}}
+    &= \frac{C_{c,\text{NDE}}}{n} + C_{\text{coup}},
+    &&\text{ultrasonic NDE cost per part.}
+\end{align}
+
+Here
+
+\begin{itemize}
+  \item \(C_m\) : material price (USD/kg),
+  \item \(m\) : component mass (kg),
+  \item \(f\) : material waste fraction (\(1-f\) is the utilisation),
+  \item \(C_t\) : tooling cost (USD),
+  \item \(n\) : batch size (number of parts),
+  \item \(n_t\) : tool life (parts per tool),
+  \item \(L_f\) : load factor,
+  \item \(C_c\) : machine capital cost (USD),
+  \item \(t_{wo}\) : capital write–off time (years),
+  \item \(\dot{n}\) : production rate (parts/hr),
+  \item \(\dot{C}_{oh}\) : overhead rate (USD/hr),
+  \item \(C_{c,\text{NDE}}\) : capital cost of the ultrasonic NDE equipment (USD),
+  \item \(C_{\text{coup}}\) : ultrasonic couplant cost per part (USD/part).
+\end{itemize}
+%==========================
+% Table 1: Batch size parameters
+%==========================
+\begin{table}[h]
+\centering
+\caption{Batch Size Parameters}
+\begin{tabular}{@{}lccc@{}}
+\multicolumn{4}{c}{Material Cost \(= 10\) USD/kg \quad
+Component Mass \(= 1\) kg \quad
+Overhead Rate \(= 110\) USD/hr} \\
+\multicolumn{4}{c}{Time \(= 5\) yrs \quad
+Load Factor \(= 0.5\)} \\
+\hline
+Parameter & Low & High & Average \\
+\hline
+Capital cost (USD)            & \(4.92 \times 10^{3}\) & \(4.92 \times 10^{4}\) & \(2.46 \times 10^{4}\) \\
+Material utilization fraction & 0.5                    & 0.8                    & 0.65                   \\
+Production rate (units/hr)    & 30                     & 300                    & 165                    \\
+Tooling cost (USD)            & \(4.92 \times 10^{3}\) & \(1.64 \times 10^{4}\) & \(1.065 \times 10^{4}\) \\
+Tool life (units)             & \(1 \times 10^{5}\)    & \(1 \times 10^{7}\)    & \(5.05 \times 10^{6}\) \\
+\hline
+\end{tabular}
+\end{table}
+
+%==========================
+% NDE cost section
+%==========================
+\subsection*{Taking into account Non-Destructive Evaluation (NDE)}
+
+Estimated Ultrasonic Test equipment cost: \textbf{USD 3700} \\
+Estimated couplant cost with a rate of \(2\,\text{mL}\) per part:
+\textbf{0.03 USD/part}
+
+\vspace{0.5em}
+Cost of NDE per part (for a batch size \(n = 2500\)) is
+given by
+$$
+C_{\text{nde}}
+  = \frac{C_{c,\text{NDE}}}{n} + C_{\text{coup}}
+  = \frac{3700}{2500} + 0.03
+  = 1.51~\text{USD/part}.
+$$
+
+The manufacturing cost per part without NDE is
+$$
+C_{\text{base}} = 35.22~\text{USD/part}.
+$$
+
+Including NDE, the total cost per part is
+$$
+C_{\text{total}}
+  = C_{\text{base}} + C_{\text{nde}}
+  = 35.22 + 1.51
+  = \mathbf{36.73~USD/part}.
+$$
+
+\newpage
+\subsection*{Cost model as a function of batch size}
+
+The unit cost \(C\) as a function of batch size \(n\) is
+\begin{equation}
+  C(n)
+  = C_{\text{mat}}
+  + C_{\text{ded}}(n)
+  + C_{\text{cap}}
+  + C_{\text{oh}}
+  + C_{\text{nde}}(n).
+\end{equation}
+
+With the CES-type model the individual terms are
+\begin{align}
+  C_{\text{mat}}
+    &= C_m \,\frac{m}{1-f}, \\[2pt]
+  C_{\text{ded}}(n)
+    &= \frac{C_t}{n}\,
+       \left\lceil \frac{n}{n_t} \right\rceil, \\[2pt]
+  C_{\text{cap}}
+    &= \frac{L_f\,C_c}{\dot{n}\,t_{wo}}, \\[2pt]
+  C_{\text{oh}}
+    &= \frac{\dot{C}_{oh}}{\dot{n}}, \\[2pt]
+  C_{\text{nde}}(n)
+    &= \frac{C_{c,\text{NDE}}}{n} + C_{\text{coup}}.
+\end{align}
+
+Using the average values from Table~1 and the NDE assumptions
+\[
+\begin{aligned}
+  &C_m = 10~\text{USD/kg},  &&m = 1~\text{kg}, &&1-f = 0.65,\\
+  &C_t = 1.065\times10^{4}~\text{USD}, &&n_t = 5.05\times10^{6},\\
+  &C_c = 2.46\times10^{4}~\text{USD}, &&L_f = 0.5,\\
+  &\dot{n} = 165~\text{parts/hr}, &&t_{wo} = 5~\text{yr},\\
+  &\dot{C}_{oh}=110~\text{USD/hr},\\
+  &C_{c,\text{NDE}} = 3700~\text{USD}, &&C_{\text{coup}} = 0.03~\text{USD/part},
+\end{aligned}
+\]
+the cost function used to generate the \emph{Cost vs Batch Size} plot is
+\begin{equation}
+  C(n)
+  = 10\,\frac{1}{0.65}
+    + \frac{1.065\times10^{4}}{n}
+      \left\lceil \frac{n}{5.05\times10^{6}} \right\rceil
+    + \frac{0.5\,(2.46\times10^{4})}{165\times 5}
+    + \frac{110}{165}
+    + \frac{3700}{n}
+    + 0.03.
+  \label{eq:Cn_numeric}
+\end{equation}
+Numerically, the constant part of \eqref{eq:Cn_numeric} is
+\[
+C_{\text{const}}
+  = 10\frac{1}{0.65}
+  + \frac{0.5\,(2.46\times10^{4})}{165\times 5}
+  + \frac{110}{165}
+  + 0.03
+  \approx 30.99~\text{USD/part},
+\]
+so that
+\[
+C(n) \approx 30.99
+       + \frac{1.065\times10^{4}}{n}
+         \left\lceil \frac{n}{5.05\times10^{6}} \right\rceil
+       + \frac{3700}{n}.
+\]
+
+\subsection*{Base manufacturing cost \(C_{\text{base}}\) for \(n=2500\)}
+
+The base cost (excluding NDE) is
+\begin{equation}
+  C_{\text{base}}(n)
+  = C_{\text{mat}} + C_{\text{ded}}(n) + C_{\text{cap}} + C_{\text{oh}}.
+\end{equation}
+For a batch size \(n = 2500\),
+\begin{align}
+  C_{\text{mat}}
+    &= 10\,\frac{1}{0.65}
+     \approx 15.38~\text{USD/part}, \\[2pt]
+  C_{\text{ded}}(2500)
+    &= \frac{1.065\times10^{4}}{2500}
+       \left\lceil \frac{2500}{5.05\times10^{6}} \right\rceil
+     = \frac{1.065\times10^{4}}{2500}
+     \approx 4.26~\text{USD/part}, \\[2pt]
+  C_{\text{cap}}
+    &= \frac{0.5\,(2.46\times10^{4})}{165\times 5}
+     \approx 14.91~\text{USD/part}, \\[2pt]
+  C_{\text{oh}}
+    &= \frac{110}{165}
+     \approx 0.67~\text{USD/part}.
+\end{align}
+Thus
+\begin{align}
+  C_{\text{base}}(2500)
+    &= 15.38 + 4.26 + 14.91 + 0.67 \\
+    &\approx \mathbf{35.22~\text{USD/part}}.
+\end{align}
+
+Including NDE for \(n = 2500\),
+\[
+C_{\text{nde}}(2500)
+  = \frac{3700}{2500} + 0.03
+  \approx 1.51~\text{USD/part},
+\]
+and the total cost is
+\[
+C(2500)
+  = C_{\text{base}}(2500) + C_{\text{nde}}(2500)
+  \approx 35.22 + 1.51
+  = \mathbf{36.73~\text{USD/part}}.
+\]
 \end{document}

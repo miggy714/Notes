@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.19)  3 DEC 2025 10:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.19)  8 DEC 2025 13:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -848,81 +848,58 @@ Package hyperref Info: Link coloring OFF on input line 53.
  [1
 
 {C:/Users/mcuay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 133
+LaTeX Font Info:    Trying to load font information for U+msa on input line 135
 .
 
 (C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 133
+LaTeX Font Info:    Trying to load font information for U+msb on input line 135
 .
 
 (C:\Users\mcuay\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 133--137
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--137
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--137
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--188
-
- []
-
-<../Screenshots/Screenshot 2025-12-01 170823.png, id=33, 913.16156pt x 685.8122
-pt>
-File: ../Screenshots/Screenshot 2025-12-01 170823.png Graphic file (type png)
-<use ../Screenshots/Screenshot 2025-12-01 170823.png>
-Package pdftex.def Info: ../Screenshots/Screenshot 2025-12-01 170823.png  used 
-on input line 189.
-(pdftex.def)             Requested size: 200.0pt x 150.19894pt.
-[2] [3 <../Screenshots/Screenshot 2025-12-01 170823.png>]
-<../Screenshots/Screenshot 2025-12-01 173111.png, id=49, 989.94844pt x 906.3862
+<../Screenshots/Screenshot 2025-12-01 173111.png, id=29, 989.94844pt x 906.3862
 5pt>
 File: ../Screenshots/Screenshot 2025-12-01 173111.png Graphic file (type png)
 <use ../Screenshots/Screenshot 2025-12-01 173111.png>
 Package pdftex.def Info: ../Screenshots/Screenshot 2025-12-01 173111.png  used 
-on input line 217.
+on input line 211.
 (pdftex.def)             Requested size: 250.0pt x 228.89183pt.
- [4 <../Screenshots/Screenshot 2025-12-01 173111.png>] (EMS180lec12012025.aux)
+
+[2] [3 <../Screenshots/Screenshot 2025-12-01 173111.png>]
+(EMS180lec12012025.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
 Package rerunfilecheck Info: File `EMS180lec12012025.out' has not changed.
-(rerunfilecheck)             Checksum: 4ACBF7F6B156FB9B0F67EB7C8467290B;654.
+(rerunfilecheck)             Checksum: 390A8709AB3F7BC056110E60F58A6A8F;437.
  ) 
 Here is how much of TeX's memory you used:
- 31028 strings out of 467870
- 731163 string characters out of 5418354
+ 31014 strings out of 467870
+ 730598 string characters out of 5418354
  1211925 words of memory out of 5000000
- 59432 multiletter control sequences out of 15000+600000
- 633483 words of font info for 62 fonts, out of 8000000 for 9000
+ 59419 multiletter control sequences out of 15000+600000
+ 633791 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,9n,104p,778b,769s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,8n,104p,778b,769s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\mcuay\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1095.pk><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mcuay/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mcuay/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/mcuay/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mc
-uay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on EMS180lec12012025.pdf (4 pages, 1803347 bytes).
+ts/cm/cmbx10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb><C:/Users/mcuay/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mcuay/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mcuay/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mcuay/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/mc
+uay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/Users/mcuay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt1
+0.pfb>
+Output written on EMS180lec12012025.pdf (3 pages, 329383 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
- 55 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 94 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
+ 42 words of extra memory for PDF output out of 10000 (max. 10000000)
 

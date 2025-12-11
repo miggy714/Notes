@@ -129,11 +129,6 @@ Prosperity:
 
 
 \newpage
-\section{Final presentation material index}
-Objective - Minimize deflection $\delta$: $$\delta =\frac{F_fL^3}{C_1EI}$$
-\\~\\
-Since $F_f$, $L$, and $C_1$ are constants, $\delta \propto EI$
-\\~\\
 \begin{center}
 \begin{minipage}[t]{0.47\textwidth}
 \centering
@@ -150,69 +145,68 @@ $A_s$ (solid square)
 $A_h$ (hollow square)
 \end{minipage}
 \end{center}
+% Objective: maximize EI for a thin-walled square tube
+\textbf{Objective:} Maximize \(EI\)
 
-For the solid square section ($A_s$) with side \(b\):
 \[
-I_s=\frac{b^{4}}{12},\qquad
-\text{and since } A_s=b^{2},\quad
-I_s=\frac{A_s^{2}}{12}.
-\]
-
-For the hollow square section ($A_h$) with outer side \(b\) and inner side \(\gamma b\):
-\[
-I_h=\frac{b^{4}-\gamma^{4}b^{4}}{12}
-=\frac{(1-\gamma^{4})\,b^{4}}{12}.
-\]
-Using the solid reference area \(A_s=b^{2}\),
-\[
-I_h=\frac{(1-\gamma^{4})\,A_s^{2}}{12}.
+A_s = b^2
 \]
 
-Introduce the bending shape factor \(\phi\) (normalized so a solid square gives \(\phi=1\)):
 \[
-\phi=\frac{12\,I}{A_s^{\,2}}
-\quad\Longrightarrow\quad
-\begin{cases}
-\phi_s=\dfrac{12\,I_s}{A_s^{2}}=1, \\[1.0ex]
-\phi_h=\dfrac{12\,I_h}{A_s^{2}}=1-\gamma^{4}.
-\end{cases}
+A_{\text{gap}} = (b-2t)^2 \quad \text{where } t \text{ is thickness}
 \]
 
-Thus,
+Thin-wall assumption: \(t \ll b\)
+
 \[
-\boxed{\ \phi=\dfrac{12\,I}{A_s^{2}}\ }
+A_s - A_g = A_h = 4 b t
 \]
-encapsulates bending efficiency; it equals \(1\) for the solid square and decreases with hollowness for fixed reference area \(A_s\).
-\\~\\
-Mass as a constraint:
-\begin{center}
-    \includegraphics[width=200pt]{Screenshot 2025-12-01 170823.png}
-\end{center}
-From $m = \rho V$:
-$$b^4=\bigg[\frac{m}{\rho (1-\gamma^2)L}\bigg]^2$$
-expanding Inertia term:
-\begin{align*}
-    I &= \frac{b^4}{12}-\frac{\gamma^4 b^4}{12}
-    \\
-    I &= \frac{(1-\gamma^4)}{12}b^4
-\end{align*}
-combining inertia and mass equations:
-$$I = \frac{(1-\gamma^4)}{12(1-\gamma^2)^2}\frac{m^2}{\rho^2L^2}$$
-Plug inertia term back into objective function:
-$$\delta =\frac{F_fL^3}{C_1E}\frac{12(1-\gamma^2)^2}{(1-\gamma^4)}\frac{\rho^2L^2}{m^2} = \frac{F_fL^3}{C_1}\frac{12(1-\gamma^2)^2}{(1-\gamma^4)}\frac{L^2}{m^2}\bigg(\frac{\rho^2}{E}\bigg)$$
-\newpage
-material index M:
-\begin{align*}
-    M &= \frac{\rho^2}{E}
-    \\
-    M_h &= \frac{(1-\gamma^2)^2}{(1-\gamma^4)}\frac{\rho^2}{E}
-    \\
-    M_h &= \phi\frac{\rho^2}{E}
-    \\
-    \log M &= 2\log \rho - \log E
-    \\
-    \log E &= 2\log \rho - \log M
-\end{align*}
+
+Expanding \(I\):
+\[
+I = I_s - I_{\text{gap}}
+   = \frac{b^4}{12} - \frac{(b-2t)^4}{12}
+   = \frac{A_s^{\,2} - A_{\text{gap}}^{\,2}}{12}
+   = \frac{(A_s - A_g)(A_s + A_g)}{12}
+\]
+
+\[
+I = \frac{[4 b t]\left(b^2 + (b-2t)^2\right)}{12}
+  = \frac{8 b^3 t - 16 b^2 t^2 + 16 b t^3}{12}
+\]
+
+By the thin-wall assumption: \(b t^3,\; b^2 t^2 \ll b^3 t\)
+
+\[
+I \approx \frac{2}{3} b^3 t
+\]
+
+Mass constraint:
+\[
+m = 4 b t \rho L \quad \Rightarrow \quad
+t = \frac{m}{4 b \rho L}
+\]
+
+Hence
+\[
+I \approx \frac{2}{3} b^3 \!\left(\frac{m}{4 b \rho L}\right)
+= \frac{1}{6}\, \frac{m\, b^2}{\rho L}
+\]
+
+Back to the objective:
+\[
+E\!I \approx E \left(\frac{2}{3} b^3\right)\!\left(\frac{m}{4 b \rho L}\right)
+\]
+
+Define the material index
+\[
+M=\frac{E}{\rho}
+\]
+
+Taking logs for selection charts:
+\[
+\log E = \log \rho + \log M
+\]
 \begin{center}
     \includegraphics[width = 250pt]{Screenshot 2025-12-01 173111.png}
 \end{center}

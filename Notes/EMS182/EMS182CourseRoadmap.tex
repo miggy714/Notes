@@ -1,0 +1,152 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{verbatim}
+\graphicspath{{../Screenshots/}}
+\begin{document}
+\section{Course Roadmap}
+\subsection{Design Methodology Root cause}
+Failure $\rightarrow$ Failure analysis $\rightarrow$ Root cause analysis
+\\~\\
+Root cause can be traced from these processes:
+\begin{itemize}
+    \item Design
+    \item Material
+    \item Manufacturing/Assembly
+    \item Service
+\end{itemize}
+\subsection{5 main failure types}
+\begin{enumerate}
+    \item distortion    
+    \begin{itemize}
+        \item yielding
+        -Stress state\\
+        -Yield criteria (Von mises, Tresca, Rankine)
+        \item Buckling
+        -$F_{buckling}=\frac{n\pi^2EI}{L^2}$
+        \item Creep
+        \item Residual stress/relaxation(not covered much in the course)
+    \end{itemize}
+    \item fracture
+    \begin{itemize}
+        \item Fractography\\
+        -brittle(intragranular - "rock-candy", intergranular - "voids")
+        \\-ductile
+        \\-fatigue(3 regions: crack initiation, crack propagation(beach marks, striations), brittle fracture)
+        \item Stress concentration factor:
+        \\
+        $k_I=\frac{\sigma_{max}}{\sigma_{app}}=2\sqrt{\frac{a}{\rho}}$
+        \item Griffith Criterion
+        \\
+        $\gamma_s\equiv$ Strain energy
+        \\
+        $\sigma_c=\sqrt{\frac{2\gamma_sd}{\pi a}}$
+        \\
+        Compare $k=f\sigma\sqrt{\pi a}$ to $K_{IC}$
+        \item fatigue
+        \begin{itemize}
+            \item $\sigma_{mean}$
+            \item S-N curve (Stress life)
+            \item 3 Stages (What are these?)
+            \item effect of dm?
+            \\
+            Goodman, Soderberg, Gerber
+            \item Paris law
+        \end{itemize}
+    \end{itemize}
+    \item corrosion
+    \begin{itemize}
+        \item EMF and Galvanic Series
+        \\
+        -Anodic(gives away electron) vs Cathodic (takes electron)
+        \\
+        What makes it more anodic?:
+        \\
+            cold work makes it more anodic?
+        \\
+            lower oxygen level?
+        \item General corrosion
+        \item localized corrosion:
+        \begin{itemize}
+            \item Pitting
+            \item Crevice?
+            \item Grain boundary
+            \item Selective leeching
+            \item Stress corrosion cracking
+            \\
+            Review $\frac{da}{dr}$ vs k plot
+        \end{itemize}
+        \item velocity affected
+        \begin{itemize}
+            \item erosion
+            \item impingment?
+            \item cavitation
+        \end{itemize}
+        \item Prevention
+        \begin{itemize}
+            \item databases
+            \item testing
+            \item design
+            \item Cathodic - Using another material to prevent corrosion
+            \item anodic - Using another material to prevent corrosion
+        \end{itemize}
+    \end{itemize}
+    \item Wear
+    Types of Wear:
+    \begin{itemize}
+        \item Abrasive
+        -Hardness difference between two metals in contact causes plowing/cutting/fracture
+        
+        \begin{itemize}
+            \item 2 body
+            \item 3 body\\wear rate can be affected by:\\-particle size $H_a/H_s$\\-microstructure\\environment
+        \end{itemize}
+        \item Adhesive
+        \item Fretting
+        \item Lubrication
+        \\
+        temperature regulation
+        \\
+        increases gap between surface
+        \\
+        \textbf{wear surface can be studied using SEM, MEM, etc.}
+
+    \end{itemize}
+    \item High T(can be included)
+    \begin{itemize}
+        \item creep (Study different stages and the creep rate $\epsilon$ vs t plot) insert table from homework on GB climb etc
+        \begin{itemize}
+            \item Larson Miller Parameter
+            \item Failure mechanisms\\
+            -grain boundary void diffusion
+            \\
+            -if climb is dominant, more plastic deformation?
+        \end{itemize}
+        \item Thermal fatigue
+        \item Thermal mechanical fatigue\\-Think of beam in between two walls
+        \item Thermal shock
+        \\
+        $R \propto \frac{\sigma_fk}{\alpha E}$
+        \\
+        The smaller the thermal expansion the more resistant the material is to thermal shock
+        
+    \end{itemize}
+\end{enumerate}
+\subsection{Other}
+\begin{enumerate}
+    \item NDT
+    remember physical aspect on how these methods reveal failure (e.g capillary action)
+    \\
+    know pros and cons
+    \item Manufacturing
+\end{enumerate}
+\textbf{Focus on welding on the online lecture}
+\\
+\textbf{There will be a question that relates last question on midterm to fatigue}
+
+
+\end{document}
