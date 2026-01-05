@@ -284,4 +284,45 @@ C(2500)
   \approx 35.22 + 1.51
   = \mathbf{36.73~\text{USD/part}}.
 \]
+\begin{table}[h]
+\centering
+\caption{Batch Size Parameters}
+\setlength{\tabcolsep}{6pt} % tighten column spacing
+\renewcommand{\arraystretch}{1.15}
+
+% make a full-width, small header row
+\begin{tabular}{p{0.95\linewidth}}
+\centering
+\small
+Material Cost = 10 USD/kg \quad
+Component Mass = 1 kg \quad
+Overhead Rate = 110 USD/hr \quad
+Time = 5 yrs \quad
+Load Factor = 0.5
+\end{tabular}
+
+\vspace{4pt}
+
+\small % reduce font size to fit within text width
+\begin{tabular}{lccc}
+\hline
+Parameter & Low & High & Average \\
+\hline
+Capital cost (USD) & \(4.92\times10^{3}\) & \(4.92\times10^{4}\) & \(2.46\times10^{4}\) \\
+Material utilization fraction & \(0.5\) & \(0.8\) & \(0.65\) \\
+Production rate (units/hr) & \(30\) & \(300\) & \(165\) \\
+Tooling cost (USD) & \(4.92\times10^{3}\) & \(1.64\times10^{4}\) & \(1.065\times10^{4}\) \\
+Tool life (units) & \(1\times10^{5}\) & \(1\times10^{7}\) & \(5.05\times10^{6}\) \\
+\hline
+\end{tabular}
+\end{table}
+\section*{Taking into account Non-Destructive Evaluation (NDE)}
+Estimated Ultrasonic Test equipment cost: USD 3700
+\\
+Estimated couplant cost with a rate of 2mL per part: 0.03 USD/part 
+\\~\\
+Cost of NDE: $C_{nde}=\frac{3700}{2500}+0.03 = 1.51$ USD per part
+\\~\\
+Total cost per part = \$ 35.22 + $C_{nde}$ = \textbf{36.73 USD per part}
+
 \end{document}

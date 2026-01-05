@@ -3,6 +3,10 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{titlesec}
+% In preamble add:
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{float}
 \graphicspath{{../../Screenshots/}}
 
 \newcommand{\memoheader}[4]{
@@ -18,21 +22,355 @@
             {\today}
             {EME 109 Project}
 
-\section{}
-Identify and quantify, to the extent possible, the elemental random and systematic errors that are
-relevant to this experiment. \\~\\
-Any measurement taken 
+\section{Opening}
+This document summarizes the results of a mass flow experiment from the first lab.
+This experiment is conducted with the P.A. Hilton air conditiong unit. 
+Three methods were used to determine the mass flow rate of air through the duct. 
+        \begin{enumerate}
+          \item Experimental integration of the pitot--measured velocity
+                profile, \( \dot m_{\text{exp}} \).
+          \item Manufacturer correlation, \( \dot m_{\text{man}} \).
+          \item Obstruction--meter (orifice) theory, \( \dot m_{\text{obs}} \).
+        \end{enumerate}
+For the three methods, Klin-McClintock(KM) first-order analytical method and Monte Carlo(MC) are used
+to determine uncertainty propagation.
+
+\section{Summary}
+Experimental integration has the largest relative uncertainty. The rest are very small.
 \begin{itemize}
-    \item Fan speed - systematic
-    \item Fan setting - random
-    \item Compressor - systematic
-    \item Compressor load current - random
-    \item R134a mass flow rate - random
-    \item orifice differential pressure reading -random
-    \item enter/exit voltage of fan motor - random
-    \item WB & DB thermometers a, b, c, and d - random
+  \item Central values from the code (example numbers):
+        \begin{align*}
+          \dot m_{\text{exp}} &\approx 0.20099~\text{kg/s}, \\
+          \dot m_{\text{man}} &\approx 0.15470~\text{kg/s}, \\
+          \dot m_{\text{obs}} &\approx 0.16213~\text{kg/s}.
+        \end{align*}
+  \item KM and MC 95\% half--widths (instrument--only model) are roughly:
+        \begin{align*}
+          U_{95,\text{exp}} &\approx \pm 0.018~\text{kg/s}
+             \quad (\text{about } 9\%),\\
+          U_{95,\text{man}} &\approx \pm 5\times10^{-5}~\text{kg/s}
+             \quad (\text{very small}),\\
+          U_{95,\text{obs}} &\approx \pm 0.0017~\text{kg/s}
+             \quad (\text{about } 1\%).
+        \end{align*}
+
+
 \end{itemize}
+\section{Discussion}
+\subsection*{Methods}
+Before the execution of the experiment, ambient data is taken. The procedure in lab 1 is then followed which will not be discussed here.
+Safety protocol should be followed and operation of the HVAC system is handled by appropriate personnel.
+Important considerations are sources of uncertainty in the methodology: Voltage dial, current dial, mass flow rate measurement, etc.
+These sources of uncertainties are summarized in table 1 which fulfills the first task.
+\\~\\
+The pitot static tube data at the orifice on different radii and the data from psychrometric chart are handled in R to calculate mass flows
+as demanded by the objective. Statistical uncertainties are calculated in R using KM and a structure shown in lecture for MC.
+
+
+\subsection*{Analysis}
+The pitot-statc probe measures dynamic pressures at each radius expressed as: $ \Delta p(r) = P_0(r) - P(r) $.
+Since the speed of the flow is low, incompressible flow theory can be used to calculate the velocity: $
+           V(r) = \sqrt{\frac{2 \Delta p(r)}{\rho}}. $. Moist air is modeled with ideal gas assumption as a mixture of dry air and water vapor: $ E_s(T_{wb}) = 6.112
+                   \exp\!\left(
+                     \frac{17.67\,T_{wb}}{T_{wb} + 243.5}
+                   \right) \times 100
+                   \; \text{Pa}. $, $ P_v = E_s(T_{wb}) -
+                   \gamma P_{\text{atm}}
+                   \bigl(T_{db} - T_{wb}\bigr) $.
+Mass flow is calculated using a (1)trapz version in R of the following inegral: $ \dot m = \iint_A \rho\,V\,dA. $,
+(2) Manufacturer's correlation: $ \dot m_{\text{man}} = C \sqrt{\frac{z}{v}},
+           \qquad C = 0.0504 $, and 
+(3)$ \dot m_{\text{obs}} = \rho Q
+           = C_d E A_2 \sqrt{2\rho \Delta p}. $
+\\~\\
+KM and MC 95\% intervals are very similar for all three mass flow
+estimates. However, both KM and MC only propagate the uncertainties that are
+explicitly included (thermometers, manometers, geometry). Some missing
+systematic components (e.g.\ in \(C_d\), \(C\), pitot coefficient)
+likely explain the lack of overlap between the mean values of
+\( \dot m_{\text{exp}} \), \( \dot m_{\text{man}} \), and
+\( \dot m_{\text{obs}} \).
+\subsection*{Results}
+\subsubsection*{Task 1}
+
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{l l c c l}
+        \toprule
+        Device & Measurement &
+        Resolution (unit) &
+        Std.\ unc. (unit) &
+        Error type/name \\
+        \midrule
+        Tape measure      & Diameter                 & 0.0625 in     & 0.015625 in     & Random, reading      \\
+        Thermometer       & Temp.\ (dry \& wet)      & 0.2 $^\circ$C & 0.05 $^\circ$C  & Random, reading      \\
+        Pressure gauge    & Delta $P$                & 20 kPa        & 5 kPa           & Random, resolution   \\
+        Mass flow meter   & Mass flow rate           & 0.25 kg/s     & 0.0625 kg/s     & Random, reading      \\
+        Psych.\ chart     & Specific volume          & 0.5 ft$^3$/lb & 0.125 ft$^3$/lb & Random, reading      \\
+        Inclined manom.   & mm of water              & 0.01 mm H$_2$O& 0.0025 mm H$_2$O& Random, reading      \\
+        Fan control       & Voltage                  & 10 V          & 2.5 V           & Random, reading      \\
+        Compressor load   & Current                  & 0.2 A         & 0.05 A          & Random, reading      \\
+        Digital manom.    & mm of water (pitot)      & 0.0001 kPa    & 0.0125 kPa      & Systematic, digitiz. \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Instrument resolutions and standard uncertainties.}
+\end{table}
+\subsubsection*{Task 2}
+\begin{center}
+  \includegraphics[width = \textwidth]{Screenshot 2025-12-09 232731.png}
+\end{center}
+\subsubsection*{Task 3}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{l c}
+    \hline
+    Quantity           & Value [kg/s] \\
+    \hline
+    Central value      & 0.20099      \\
+    KM 95\% half-width & $\pm 0.01772$ \\
+    MC 95\% half-width & $\pm 0.01750$ \\
+    \hline
+  \end{tabular}
+  \caption{Experimental mass flow rate summary (Task 3).}
+\end{table}
+
+\subsubsection*{Task 4}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{l c}
+    \hline
+    Quantity           & Value [kg/s] \\
+    \hline
+    Central value      & 0.15470      \\
+    KM 95\% half-width & $\pm 0.00005$ \\
+    MC 95\% half-width & $\pm 0.00005$ \\
+    \hline
+  \end{tabular}
+  \caption{Manufacturer correlation mass flow summary (Task 4).}
+\end{table}
+
+\subsubsection*{Task 5}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{l c}
+    \hline
+    Quantity           & Value [kg/s] \\
+    \hline
+    Central value      & 0.16213      \\
+    KM 95\% half-width & $\pm 0.00166$ \\
+    MC 95\% half-width & $\pm 0.00166$ \\
+    \hline
+  \end{tabular}
+  \caption{Obstruction meter theory mass flow summary (Task 5).}
+\end{table}
+
+\section*{Closing and Recommendation}
+
+The velocity profile integrations has the most experimental errors. Manufacturer's correlation is the best in terms of uncertainty.
+Take more radial pitot measurements (especially near the orifice edge)
+to reduce numerical integration error in \( \dot m_{\text{exp}} \). Repeat measurements on all aspects of the experiment is a good improvement as well.
+
+
+
 \newpage
+\appendix
+\section*{Appendix: Summary of Key Equations}
+
+\subsection*{Thermo–Fluid Relations}
+
+\begin{itemize}
+  \item Saturation vapor pressure at wet–bulb (Tetens fit, \(T\) in \(^\circ\text{C}\)):
+    $$
+      E_s(T_{wb}) =
+      6.112 \exp\!\left(
+        \frac{17.67\,T_{wb}}{T_{wb} + 243.5}
+      \right)\times 100
+      \;\text{Pa}
+    $$
+  \item Psychrometric wet–bulb relation for actual vapor pressure:
+    $$
+      P_v = E_s(T_{wb})
+            - \gamma P_{\text{atm}}
+              \bigl(T_{db} - T_{wb}\bigr)
+    $$
+  \item Dalton's law for dry–air partial pressure:
+    $$
+      P_d = P_{\text{atm}} - P_v
+    $$
+  \item Moist–air density from ideal gas law for each component:
+    $$
+      \rho_d = \frac{P_d}{R_d T_{db}},
+      \qquad
+      \rho_v = \frac{P_v}{R_v T_{db}},
+      \qquad
+      \rho = \rho_d + \rho_v
+      = \frac{P_d}{R_d T_{db}} + \frac{P_v}{R_v T_{db}}
+    $$
+  \item Specific volume:
+    $$
+      v = \frac{1}{\rho}
+    $$
+\end{itemize}
+
+\subsection*{Velocity and Mass Flow}
+
+\begin{itemize}
+  \item Pitot–static velocity (incompressible Bernoulli):
+    $$
+      \Delta p(r) = \tfrac{1}{2}\rho V(r)^2
+      \quad \Rightarrow \quad
+      V(r) = \sqrt{\frac{2\Delta p(r)}{\rho}}
+    $$
+  \item Ideal definition of mass flow:
+    $$
+      \dot m = \iint_A \rho V\,dA
+    $$
+  \item Axisymmetric plane, annular area element:
+    $$
+      dA = 2\pi r\,dr,
+      \qquad
+      d\dot m = \rho V(r)\,2\pi r\,dr
+    $$
+  \item Trapezoidal approximation over slices \(i\):
+    $$
+      V_{\text{avg},i} = \frac{V_i + V_{i+1}}{2},\quad
+      r_{\text{avg},i} = \frac{r_i + r_{i+1}}{2},\quad
+      \Delta r_i = r_{i+1} - r_i
+    $$
+    $$
+      \delta \dot m_i \approx
+      \rho V_{\text{avg},i} 2\pi r_{\text{avg},i} \Delta r_i,
+      \qquad
+      \dot m_{\text{exp}} \approx \sum_i \delta \dot m_i
+    $$
+\end{itemize}
+
+\subsection*{Manufacturer Correlation}
+
+\begin{itemize}
+  \item Given correlation (with \(z\) in mm H\(_2\)O, \(v\) in m\(^3\)/kg):
+    $$
+      \dot m_{\text{man}} = C \sqrt{\frac{z}{v}},
+      \qquad C = 0.0504
+    $$
+  \item Using \(v = 1/\rho\):
+    $$
+      \dot m_{\text{man}} = C \sqrt{z \rho}
+    $$
+\end{itemize}
+
+\subsection*{Orifice (Obstruction–Meter) Theory}
+
+\begin{itemize}
+  \item Beta ratio and velocity–of–approach factor:
+    $$
+      \beta = \frac{d}{D},
+      \qquad
+      E = \frac{1}{\sqrt{1-\beta^4}}
+    $$
+  \item Orifice area:
+    $$
+      A_2 = \frac{\pi d^2}{4}
+    $$
+  \item Volumetric flow rate and mass flow rate:
+    $$
+      Q = C_d E A_2 \sqrt{\frac{2\Delta p}{\rho}},
+      \qquad
+      \dot m_{\text{obs}} = \rho Q
+      = C_d E A_2 \sqrt{2\rho \Delta p}
+    $$
+\end{itemize}
+
+\subsection*{Kline–McClintock (KM) Uncertainty}
+
+\begin{itemize}
+  \item General KM formula for a result
+    \( r = f(x_1,x_2,\dots,x_N) \):
+    $$
+      u_r^2 \approx
+      \sum_{i=1}^{N}
+      \left(
+        \frac{\partial f}{\partial x_i} u_{x_i}
+      \right)^2
+    $$
+  \item 95\% uncertainty interval (Gaussian assumption):
+    $$
+      r \pm 1.96\,u_r
+    $$
+  \item Relative form for multiplicative power laws,
+    \( r = K \prod x_i^{a_i} \):
+    $$
+      \left(\frac{u_r}{r}\right)^2
+      \approx
+      \sum_i
+      \left(
+        a_i \frac{u_{x_i}}{x_i}
+      \right)^2
+    $$
+  \item Slice mass flow
+    \( \delta \dot m_i = \rho V_i 2\pi r_i \Delta r_i \)
+    (approximate relative uncertainty):
+    $$
+      \left(
+        \frac{u_{\delta \dot m_i}}{\delta \dot m_i}
+      \right)^2
+      \approx
+      \left(\frac{u_\rho}{\rho}\right)^2
+      +
+      \left(\frac{u_{V_i}}{V_i}\right)^2
+      +
+      \left(\frac{u_r}{r_i}\right)^2
+    $$
+  \item Manufacturer correlation
+    \( \dot m_{\text{man}} = C (z\rho)^{1/2} \):
+    $$
+      \left(
+        \frac{u_{\dot m_{\text{man}}}}{\dot m_{\text{man}}}
+      \right)^2
+      \approx
+      \frac{1}{4}
+      \left[
+        \left(\frac{u_z}{z}\right)^2
+        +
+        \left(\frac{u_\rho}{\rho}\right)^2
+      \right]
+    $$
+  \item Orifice theory
+    \( \dot m_{\text{obs}} \propto A (\rho z)^{1/2} \),
+    with \( A \propto D^2 \) and \( u_A/A \approx 2 u_D/D \):
+    $$
+      \left(
+        \frac{u_{\dot m_{\text{obs}}}}{\dot m_{\text{obs}}}
+      \right)^2
+      \approx
+      \left(\frac{u_A}{A}\right)^2
+      +
+      \frac{1}{4}\left(\frac{u_\rho}{\rho}\right)^2
+      +
+      \frac{1}{4}\left(\frac{u_z}{z}\right)^2
+    $$
+\end{itemize}
+
+\subsection*{Monte Carlo (MC) Uncertainty}
+
+\begin{itemize}
+  \item Model each input \(x_i\) as a normal random variable:
+    $$
+      x_i^{(m)} \sim \mathcal{N}(\bar x_i, u_{x_i})
+    $$
+  \item For each replicate \(m = 1,\dots,M\):
+    \begin{enumerate}
+      \item Draw random inputs \(x_i^{(m)}\).
+      \item Evaluate the data reduction equation
+            $$ r^{(m)} = f\bigl(x_1^{(m)},x_2^{(m)},\dots,x_N^{(m)}\bigr). $$
+    \end{enumerate}
+  \item Use the empirical distribution of
+    \( \{r^{(m)}\} \) to estimate uncertainty;  
+    the 95\% interval is typically taken as the 2.5\% and 97.5\%
+    quantiles of \(r^{(m)}\).
+\end{itemize}
 \begin{center}
     \includegraphics[width=\textwidth]{Screenshot 2025-12-03 154029.png}
 \end{center}
