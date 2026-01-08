@@ -1,0 +1,39 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{enumitem} % in preamble
+\setlist[itemize]{leftmargin=*, nosep, topsep=0pt, partopsep=0pt}
+
+\newcommand{\memoheader}[4]{
+  \noindent
+  \textbf{From:} #2\\ 
+  \textbf{To:} #1\\
+  \textbf{Date:} #3\\
+  \textbf{Subject:} #4\\[1ex]\hrule\vspace{1.5ex}
+}
+
+\begin{document}
+\memoheader{Prof. Erika La Plante}
+            {Miguel Cuaycong}
+            {\today}
+            {EMS 162: Lec 1}
+\noindent Materials are classified based on the type  of bonding.
+\begin{itemize}
+    \item Metallic bonding - array of ion cores and a sea of valence electrons.
+    -closely packed
+    \begin{itemize}
+        \item FCC, CN = 12
+        \item HCP, CN = 12
+    \end{itemize}
+    \item Ionic bonding - tendency of this bond is based on electronegativity
+    \begin{itemize}
+        \item radius ratio $\rho = \frac{r}{R}$
+        \\
+        -determines the coordination number which determines the crystal structure
+    \end{itemize}
+\end{itemize}
+
+\end{document}
