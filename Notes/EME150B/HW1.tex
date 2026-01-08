@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{enumitem} % in preamble
+\setlist[itemize]{leftmargin=*, nosep, topsep=0pt, partopsep=0pt}
+
+\newcommand{\memoheader}[4]{
+  \noindent
+  \textbf{From:} #2\\ 
+  \textbf{To:} #1\\
+  \textbf{Date:} #3\\
+  \textbf{Subject:} #4\\[1ex]\hrule\vspace{1.5ex}
+}
+
+\begin{document}
+\memoheader{Prof. Barbara Linke}
+            {Miguel Cuaycong}
+            {\today}
+            {EME 150B: HW 1}
+\begin{enumerate}
+    \item A spur gearset has a pitch of 4 teeth/in and a speed ratio of 1/4. The pinion has 16 teeth.
+    Find the number of teeth on the gear, the pitch diameters, and the theoretical center-to-
+    center distance.
+    \\
+    Solution: center-to-center-distance is between 6 – 12 in
+    \\~\\
+    Center-tocenter distance can be expressed as: $\frac{d_{pinion}+d_{gear}}{2}$
+    \begin{itemize}
+        \item Diametral Pitch $\equiv P =\frac{N}{d} =[\frac{teeth}{in}]$ 
+        \begin{itemize}
+            \item $P_{gear}=4$
+            \item $P_{pinion}=?$ by rule 2: $P_{gear}=P_{pinion}$
+            \item $N_{pinion} = 16$
+        \end{itemize}
+        \item Speed Ratio $\equiv S_{ratio} = \frac{n_{out}}{n_{in}} = \frac{d_{pinion}}{d_{gear}}=1/4$
+    \end{itemize}
+    diameter of pinion can be expressed as: $d_{pinion} = d_{gear}/4$ (I)
+    \\
+    by rule 2: $P_{gear}=\frac{N_{pinion}}{d_{pinion}}$ (II)
+    \\
+    combining eq. (I) and (II):
+    \begin{align*}
+        \frac{N_{pinion}}{P_{gear}}&=d_{gear}/4
+        \\
+        d_{gear} &= 4(16/4) = 16 in
+    \end{align*}
+    Speed ratio can be used to calculate $d_{pinion}$: $d_{pinion}=16/4=4in$
+    \\~\\
+    \textbf{Answer: Center-to-center distance $= \frac{d_{pinion}+d_{gear}}{2} = \frac{20}{2} = 10in$}
+
+
+
+
+
+
+    \item Explain the difference between
+    \begin{enumerate}
+        \item internal and external gearsets
+        \item simple and compound gear trains
+    \end{enumerate}
+    
+
+
+
+
+
+
+
+
+    \item Design a compound, 2 stage reverted spur-gear train for an overall train value of 1:20. The
+    module is 4 mm, gear 2 has 23 teeth and gear 5 has 80 teeth.
+    \begin{itemize}
+        \item What are the teeth numbers of gears 3 and 4?
+        \item Please give the pitch diameters of all four gears.
+        \item Draw a sketch of the gear train.
+        \item If gear 2 has an input torque of 2 Nm, how much torque does gear 4 transmit?
+    \end{itemize}
+\end{enumerate}
+\end{document}
