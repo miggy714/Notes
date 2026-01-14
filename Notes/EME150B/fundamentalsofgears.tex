@@ -1,0 +1,98 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{enumitem} % in preamble
+\setlist[itemize]{leftmargin=*, nosep, topsep=0pt, partopsep=0pt}
+
+\newcommand{\memoheader}[4]{
+  \noindent
+  \textbf{From:} #2\\ 
+  \textbf{To:} #1\\
+  \textbf{Date:} #3\\
+  \textbf{Subject:} #4\\[1ex]\hrule\vspace{1.5ex}
+}
+
+\begin{document}
+\memoheader{Prof. Barbara Linke}
+            {Miguel Cuaycong}
+            {\today}
+            {EME 150B: Gear Fundamentals}
+
+\section{Nomenclature}
+\begin{itemize}
+    \item Pitch circle 
+    \item Number of teeth $\equiv$ N
+    \item Pitch diameter $\equiv$ diameter of pitch circle
+    \item Pinion $\equiv$ smaller of the two mating gears
+    \item circular pitch $\equiv$ p; arc length from two adjacent tooth
+    \item Module $\equiv m = \frac{\text{Pitch Diameter}}{N}$ ; ratio of pitch diameter to number of teeth.
+    \item Diametral pitch P $\equiv \frac{1}{m}$
+    \item Addendum $\equiv$ a; radial distance between the top land and the pitch circle
+    \item Dedendum $\equiv$ b; distance between bottom land and pitch circle
+\end{itemize}
+\section{No slip assumption}
+Pitch circles roll into one another without slipping
+\\
+Remember:
+\begin{itemize}
+    \item $\omega$ [rad/s]
+\end{itemize}
+\subsection{pitch line velocity $V$}
+\begin{align*}
+    V_1 = V_2 &\rightarrow |r_1\omega_1| = |r_2\omega_2|
+    \\
+    |\frac{\omega_1}{\omega_2}| &= \frac{r_1}{r_2}
+\end{align*}
+\subsection{Torque}
+$$T = \text{cross product}(r, F) [\text{Nm}]$$
+Torque ratio: $\frac{T_1}{T_2}$; The convention is for the pinion (driving gear) to be gear ?1.
+\subsection{Power}
+$$H = T\omega \rightarrow H(t)=FV$$
+Power ratio: $\frac{H_1}{H_2}$
+\subsection{Involute properties}
+Insert hand-drawn sketches
+\begin{align*}
+    r_{b,i}&=r_i \cos \phi
+    \\
+    p_b &= p_c \cos \phi
+\end{align*}
+Where: $\phi \equiv$ pressure angle
+\section{Interference}
+\begin{align*}
+    N_p=\frac{2k}{3 \sin^2 \phi}\bigg( 1 + \sqrt{1 + 3 \sin^2 \phi} \bigg)
+\end{align*}
+\section{Gear train}
+let $n = \omega = \frac{rev}{time}$
+\\
+Two gears mated have $n$'s that are proportional to each other e.g:
+\\
+$n_1 = An_2$
+\begin{align*}
+    V_1&=V_2
+    \\
+    r_1 \omega_1 &= r_2 \omega_2
+    \\
+    \omega_1 &= \frac{r_2}{r_1} \omega_2
+    \\
+    \omega_1 &= \frac{d_2}{d_1} \omega_2
+    \\
+    \omega_1= n_1 &= \frac{N_2}{N_1} n_2; d = \frac{N}{P} \text{ where by rule 2: P is the same for all mated gears.}  
+\end{align*}
+This mathematical relationship will be the basis of gear train with k amount of gears. the kth gear's radial speed of $n_k$ can be expressed relative to the driving gear $n_1$ as:
+\\~\\
+\begin{align*}
+    n_k = \frac{N_{k-1}}{N_{k}} \frac{N_{k-2}}{N_{k-1}} \dots \frac{N_1}{N_2}n_1
+\end{align*}
+
+\section*{Notes}
+\begin{itemize}
+    \item the overall train value is the product of the gear set train values.
+    \item if one gear set achieves up to $e_{set}=\frac{1}{10}$, then two gear sets achieve $e_{set,1} e_{set,2}$
+    \item Can use $e_{set,1} e_{set,2}$ as a criteria: $e_{set,1} e_{set,2} < e_{desired}$
+    \item Investigate Conjugate action relationship to the Involute curve
+\end{itemize}
+
+\end{document}
