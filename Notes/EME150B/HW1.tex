@@ -5,6 +5,8 @@
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{enumitem} % in preamble
+\usepackage{graphicx}
+\graphicspath{{../Screenshots/}}
 \setlist[itemize]{leftmargin=*, nosep, topsep=0pt, partopsep=0pt}
 
 \newcommand{\memoheader}[4]{
@@ -49,7 +51,7 @@
     \end{align*}
     Speed ratio can be used to calculate $d_{pinion}$: $d_{pinion}=16/4=4in$
     \\~\\
-    \textbf{Answer: Center-to-center distance $= \frac{d_{pinion}+d_{gear}}{2} = \frac{20}{2} = 10in$}
+    \fbox{\textbf{Answer: Center-to-center distance $= \frac{d_{pinion}+d_{gear}}{2} = \frac{20}{2} = 10in$}}
 
 
 
@@ -59,7 +61,11 @@
     \item Explain the difference between
     \begin{enumerate}
         \item internal and external gearsets
+        \\
+        \textbf{Internal gearsets involve a ponion and a gear resembling a ring with the teeth on the inside. External gearsets are the traditional gears mated with teeth on the external perimeter.}
         \item simple and compound gear trains
+        \\
+        \textbf{Simple gear trains involve only one gear per shaft and can easily be modelled with $n_k = \frac{N_{k-1}}{N_{k}} \frac{N_{k-2}}{N_{k-1}} \dots \frac{N_1}{N_2}n_1$ where n is angular speed rad/sec. Compound gear trains have two gears on a shaft which means these gears have the same angular velocity.}
     \end{enumerate}
     
 
@@ -72,11 +78,72 @@
 
     \item Design a compound, 2 stage reverted spur-gear train for an overall train value of 1:20. The
     module is 4 mm, gear 2 has 23 teeth and gear 5 has 80 teeth.
+    \\~\\
+    Governing equations and assumptions:
+    \begin{enumerate}
+        \item Remember train value denoted as e: $e = \frac{\text{Product of driving tooth numbers}}{\text{Product of driven tooth numbers}}$ 
+        
+        \item Note: $n_k = \frac{N_{k-1}}{N_{k}} \frac{N_{k-2}}{N_{k-1}} \dots \frac{N_1}{N_2}n_1$ where n is angular speed rad/sec
+        
+        \item A 2 stage reverted spur-gear train has a total of 4 total gears declared as gear 2 (driving gear), gear 3 and 4 (equal angular velocity), and gear 5 (Output)
+        \item A 2 stage reverted spur-gear is constrained geometrically by having the input and output shafts in-line: $d_2+d_3=d_4+d_5$
+    \end{enumerate}
+    Answers to questions:
     \begin{itemize}
         \item What are the teeth numbers of gears 3 and 4?
+        \\
+        express e in terms of gears in gear train:
+        \begin{align*}
+            n_2 &= \frac{N_3}{N_2}n_3
+            \\
+            n_4 &= \frac{N_5}{N_4}n_5
+        \end{align*}
+        Since gear 3 and 4 have equal angular velocity:
+            $$n_2 = \frac{N_3N_5}{N_2N_4}n_5 \rightarrow n_5 = \frac{N_2N_4}{N_3N_5}n_2 \rightarrow e = \frac{N_2N_4}{N_3N_5}$$
+        So far, 2 unknowns. Need one more equation, the geometric constraint:
+        \\
+        Also, $m = d/N$
+        \begin{align*}
+            d_2+d_3&=d_4+d_5
+            \\
+            N_2+N_3&=N_4+N_5
+        \end{align*}
+        2 equations, 2 unknowns:
+        \begin{enumerate}
+            \item $N_2+N_3=N_4+N_5$
+            \item $e = \frac{N_2N_4}{N_3N_5}$
+        \end{enumerate}
+        \fbox{\textbf{Answer: }$N_3$ = 69 teeth, $N_4$ = 12 teeth}
         \item Please give the pitch diameters of all four gears.
+        \begin{align*}
+            d &= mN
+            \\
+            d_2 &= 0.004(N_2) = 92 mm
+            \\
+            d_3 &= 0.004(N_3) = 276 mm
+            \\
+            d_4 &= 0.004(N_4) = 48 mm
+            \\
+            d_5 &= 0.004(N_5) = 320 mm  
+        \end{align*}
         \item Draw a sketch of the gear train.
+        \begin{center}
+            \includegraphics[width=250pt, angle=90, origin=c]{revertedspurgeartrain.jpg}
+        \end{center}
         \item If gear 2 has an input torque of 2 Nm, how much torque does gear 4 transmit?
-    \end{itemize}
+        \begin{enumerate}
+            \item Force is transmitted perfectly
+            \item $T = F*d/2$
+            \item $N = d/m$
+        \end{enumerate}
+        using (b) and (c): $T = \frac{FNm}{2}$
+        \\
+        \begin{align*}
+            T_2 &= 2 = \frac{FN_2m}{2}
+            \\
+            F &= \frac{1}{N_2m} = \frac{1}{23(0.004)} = 10.87 \text{N}
+        \end{align*}
+        \fbox{\textbf{Answer: }Torque of gear 4: $T_4 = \frac{FN_4m}{2} = \frac{10.87(12)(0.004)}{2} =  0.26 \text{Nm}$}
+        \end{itemize}
 \end{enumerate}
 \end{document}

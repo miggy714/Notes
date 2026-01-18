@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{enumitem} % in preamble
+\setlist[itemize]{leftmargin=*, nosep, topsep=0pt, partopsep=0pt}
+
+\newcommand{\memoheader}[4]{
+  \noindent
+  \textbf{From:} #2\\ 
+  \textbf{To:} #1\\
+  \textbf{Date:} #3\\
+  \textbf{Subject:} #4\\[1ex]\hrule\vspace{1.5ex}
+}
+
+\begin{document}
+\memoheader{Prof. Barbara Linke}
+            {Boston Statics}
+            {\today}
+            {EME 150B: Project HW 1}
+
+\noindent Given:
+\begin{itemize}
+    \item $H_{motor} = 1kW$
+    \item $n_{motor} = 1000 rpm$
+    \item Gear selection:
+    \begin{itemize}
+        \item 2 gears with 10 teeth, diameter 50 mm
+        \item 2 gears with 20 teeth, diameter 100 mm
+        \item 2 gears with 30 teeth, diameter 150 mm
+        \item 2 gears with 40 teeth, diameter 200 mm
+        \item 2 gears with 50 teeth, diameter 250 mm
+    \end{itemize}
+\end{itemize}
+
+\section*{Subtask 1}
+\begin{itemize}
+    \item Let radius of teacup platform be: $R_t$
+    \item Let mass of child be: $m_c$
+    \item let angular speed of platform be: $\omega_t=n_t=1/6$ [rev/sec] 
+\end{itemize}
+
+Calculate the forces and corresponding torques, at least for the four load cases:
+\begin{enumerate}
+    \item momentum of one child in constant motion:
+    \begin{align*}
+        m_cV = m_c(2\pi n_t R_t)
+    \end{align*}
+    Torque of one child in constant motion given angular acceleration of $\dot{n_t}$:
+    \begin{align*}
+        T_t = m_c \dot{n_t} R_t 
+    \end{align*}
+    \item acceleration/deceleration within one revolution = 6 seconds of one child:
+    \begin{align*}
+      \dot{n_t}=\frac{T_t}{m_c R_t}
+    \end{align*}
+    \item momentum of 4 children in constant motion
+    \begin{align*}
+        m_cV = 4m_c(2\pi n_t R_t)
+    \end{align*}
+\end{enumerate}
+
+$$ratio=\frac{(10) (10) (20) (30)}{(50) (50) (40) (40) (30)}$$
+
+
+
+
+
+
+
+\end{document}
