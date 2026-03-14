@@ -1,0 +1,271 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{array}
+\usepackage{pdflscape}
+\usepackage{tabularx}
+\usepackage{subcaption}
+
+\graphicspath{{../Screenshots/}}
+\setlist[itemize]{leftmargin=*, nosep, topsep=0pt, partopsep=0pt}
+
+\newcommand{\memoheader}[4]{
+  \noindent
+  \textbf{From:} #2\\ 
+  \textbf{To:} #1\\
+  \textbf{Date:} #3\\
+  \textbf{Subject:} #4\\[1ex]\hrule\vspace{1.5ex}
+
+
+}
+
+
+
+
+% --- Figure insertion helper ---
+% This command simplifies inserting a figure with a caption and label.
+% Usage: \insertfigure{width}{filename}{caption text}{fig:label}
+%
+% Parameters:
+%   #1 = width relative to text width (e.g., 0.8 for 80%)
+%   #2 = filename (without path if images are in the same directory)
+%   #3 = caption text
+%   #4 = label for cross-referencing (use fig: prefix by convention)
+\newcommand{\insertfigure}[4]{%
+    \begin{figure}[H] % figure in latex is a floating environment, H specifies to place figure specifically "Here"
+        \centering
+        \includegraphics[width=#1\textwidth]{#2}
+        \caption{#3}
+        \label{#4}
+    \end{figure}
+}
+
+
+\newcommand{\bprime} {$\beta'$ }
+
+
+
+\begin{document}
+\memoheader{Prof. Susan Gentry}
+            {Miguel Cuaycong}
+            {\today}
+            {EMS 164: Simulation Memo 2}
+
+
+\section*{Background and Theory}
+In Mg-RE alloys, the \bprime phase has desireable strengthening poperties. 
+These properties are sought after in many fields but particularly in Aerospace and Automotive industries. 
+The study in the paper focuses on Mg-Y and Mg-Gd alloys and how factors like interfacial energy and elastic strain energy anisotropy
+affect the equilibrium shape of \bprime precipitates. The precipitates form a prismatic shape which are stronger than spherical particles and basal plates. 
+Strength is increased when the equilibrium shape is faceted but with high aspect ratio (not equiaxed) because the precipitates become more effective obstacles to dislocation motion. 
+This memo focuses on the Mg-Y alloy and investigates why the \bprime precipitate forms an equiaxed shape given its interfacial and elastic strain energy.
+\section*{Methods}
+\begin{enumerate}
+    \item Experimental:
+    \\
+    Two experimental alloy samples were investigated to compare actual physical precipitate shapes with those predicted by
+    the three other computational methods (Mg-2.32 at.\% Y and Mg-2.66 at.\% Gd). Both alloys was solution-treated at a chosen temperature then 
+    water quenched and aged. Samples were then cut in 3 mm diameter discs with thickness of 0.2mm and observed through a 
+    high-angle annular dark-field scanning transmission electron microscope(HAADF-STEM).
+    This method produced \textbf{high-resolution micrographs} showing real \bprime precipitates embedded in the $\alpha$-Mg matrix.
+    \item First-Principle Calculations:
+    \\
+    Performed using Vienne Ab-initio Sumulation Package. 
+    This method was able to produce \textbf{computed values of the interfacial energy} of the \bprime/$\alpha$-Mg interface. In particular, the specific interfacial energies for the (100), (010), and (001) interfaces of the \bprime precipitate within the matrix.
+    The method also gave the \textbf{equilibrium lattice parameters} (a,b,c) for \bprime-Mg$_7$Y and \bprime-Mg$_7$Gd and the $\alpha$-Mg matrix.
+    \item CALPHAD:
+    \\
+    This method used thermodynamic parameters and data for the two alloys outlined in appendix A, B, and C.
+    CALPHAD method was able to calculate the \textbf{chemical free energy of the matrix} and the total free energy of the system expressed in equation 11 in the paper.
+    \item Phase-Field Method
+    \\
+    This is the core simulation used to describe the shape of \bprime precipitates. 
+    It uses values generated from other methods: stress-free transformation strain (SFTS) tensors calculated from the lattice parameters, 
+    Elastic constants, Bulk chemical free energy density.
+    The Phase-Field method produces the \textbf{equilibrium precipitate shapes} that can be compared to the HAADF-STEM images. 
+    From the equilibrium shapes, the aspect ratio can be computed and the habit planes can be identified. 
+\end{enumerate}
+\section*{Findings}
+The actual shape of the \bprime precipitate in Mg-Y is observed to be equiaxed according to the HAADF-STEM images; \bprime precipitate has a base-centered orthorhombic crystal structure while the $\alpha$-Mg matrix has an HCP crystal structure. 
+First-Principles calculations show strong anisotropy of interfacial energies where 
+$\gamma_{(100)} = 30.16\frac{mJ}{m^2}$ and $\gamma_{(010)} = 4.39\frac{mJ}{m^2}$. 
+SFTS tensors are also calculated using first-principles which gives us the effect of strain energies, 
+$\epsilon_{11}=0.0299$ and $\epsilon_{22}=0.0183$. 
+The paper investigated the equilibrium shape of \bprime precipitate in three cases: interfacial-only vs elastic-only vs both.
+\\~\\
+Strength is found to be directly proportional to aspect ratio for plate like precipitates in Mg. This is because a larger aspect ratio will result to smaller effective inter-plate spacing. 
+Factors that affect the aspect ratio are anisotropy of both interfacial and strain energies (increasing transformation strain in the [100] direction increases aspect ratio). 
+Making the interfacial energy isotropic will also increase the aspect ratio as will be shown in the simulation.
+\\~\\
+The \bprime-Mg$_7$Y precipitates have a \textbf{faceted and equiaxed microstructure} because of the 
+energy balance between interfacial energy and strain energy. Interfacial energy tends to increase the length of (010) plane while the strain energy tends to increase the length of the (100) plane.
+
+\section*{Simulation setup and results}
+To investigate the "tug of war" between interfacial energy and elastic strain energy, three conditions are simulated
+ using the nanohub tool PRISM PF. The effect on equilibrium shape is simulated first with no strain energy, second with both strain and interfacial energy, 
+ and a final time with isotropic interfacial energy to nullify its influence.
+
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabularx}{\textwidth}{
+        |>{\hsize=1.2\hsize}X    % 40% — Simulation Conditions
+        |>{\hsize=0.8\hsize}X    % ~27% — Input Values
+        |>{\hsize=1.0\hsize}X|   % ~33% — Outputs
+    }
+        \hline
+        \textbf{Simulation Conditions}
+        & \textbf{Input Values:}
+        & \textbf{Outputs} \\
+        \hline
+
+        % --- Row 1 ---
+        Misfit strain: None \newline
+        Anisotropic interfacial energy\newline
+        $\gamma(1,1)$: Mg$(11\bar{2}0)$/$\beta'$-Mg$_7$Y$(100)$ \newline
+        $\gamma(2,2)$: Mg$(\bar{1}100)$/$\beta'$-Mg$_7$Y$(010)$
+        &
+        $\epsilon(1,1)$: 0 \newline
+        $\epsilon(2,2)$: 0\newline
+        $\gamma(1,1)$: 30.16 $mJ/m^2$  \newline
+        $\gamma(2,2)$: 4.39 $mJ/m^2$
+        &
+        Length (010): 31.9747 nm      \newline
+        Length (100): 6.4296 nm      \newline
+        Aspect Ratio: 0.2011   \newline
+        Volume Fraction: 0.0157
+        \\
+        \hline
+
+        % --- Row 2 ---
+        Misfit strain: present \newline
+        Anisotropic interfacial energy\newline
+        $\gamma(1,1)$: Mg$(11\bar{2}0)$/$\beta'$-Mg$_7$Y$(100)$ \newline
+        $\gamma(2,2)$: Mg$(\bar{1}100)$/$\beta'$-Mg$_7$Y$(010)$
+        &
+        $\epsilon(1,1)$: 0.0299\newline
+        $\epsilon(2,2)$: 0.0183\newline
+        $\gamma(1,1)$: 30.16 $mJ/m^2$  \newline
+        $\gamma(2,2)$: 4.39 $mJ/m^2$
+        &
+        Length (010): 10.8768 nm      \newline
+        Length (100): 12.7374 nm      \newline
+        Aspect Ratio: 1.1708   \newline
+        Volume Fraction: 0.0129
+        \\
+        \hline
+
+        % --- Row 3 ---
+        Misfit strain: present
+        \newline
+        Isotropic interfacial energy\newline
+        $\gamma(1,1)$: 15 mJ/m$^2$ \newline
+        $\gamma(2,2)$: 15 mJ/m$^2$
+        &
+        $\epsilon(1,1)$: 0.0299\newline
+        $\epsilon(2,2)$: 0.0183\newline
+        $\gamma(1,1)$: 15 mJ/m$^2$ \newline
+        $\gamma(2,2)$: 15 mJ/m$^2$
+        &
+        Length (010): 7.0471 nm      \newline
+        Length (100): 23.9458 nm      \newline
+        Aspect Ratio: 3.398   \newline
+        Volume Fraction: 0.0135
+        \\
+        \hline
+
+    \end{tabularx}
+    \caption{Simulation conditions, inputs, and outputs. 
+    Elastic constants used are assumed to be equal to magnesium values of $E = 45$GPa and $\nu = 0.291$. 
+    Aspect Ratio is calculated with $\frac{\text{length}_{(100)}}{\text{length}_{(010)}}$. Strain values are provided by the SFTS tensors in section 3.3 of the paper}
+    \label{tab:simulation}
+\end{table}
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{precipitateshape1.jpg}
+        \caption{}
+        \label{fig:result-a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{precipitateshape2.jpg}
+        \caption{}
+        \label{fig:result-b}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{precipitateshape3.jpg}
+        \caption{}
+        \label{fig:result-c}
+    \end{subfigure}
+
+    \caption{
+    (a) - Shape influence(s): Anisotropic interfacial energy. 
+    \\(b) - Shape influence(s): Anisotropic interfacial energy, Strain energy. 
+    \\(c) - Shape influence(s): Isotropic interfacial energy, Strain energy}
+    \label{fig:result}
+\end{figure}
+\section*{Simulation conclusion and limitations}
+The conclusion of the paper by H. Liu et. al. stating that the 
+equilibrium shape of \bprime precipitates in both Mg-Y and Mg-Gd 
+alloys is determined by the competition between interfacial energy 
+and elastic strain energy anisotropy is confirmed by the results of the simulation. 
+\textbf{The first simulation corresponds to Fig. 5b} in the paper which only has interfacial anisotropy (the input of the simulation mirrors this with no misfit strain i.e no strain energy).
+\textbf{The second simulation corresponds to Fig. 5d} in the paper which has both factors resulting in a more equiaxed shape.
+\textbf{The third simulation corresponds to Fig. 5c} in the paper which is strain dominated resulting in elongation in (100) plane.
+\bprime-Mg$_7$Y becomes equiaxed because interfacial energy is minimized when the aspect ratio is low like in Fig 1a while strain energy is minimized when aspect ratio is high like in Fig 1b.
+The resulting equilibrium shape is the compramise between the two that minimizes total free energy.
+\\~\\
+The limitations of the PRISM PF simulation:
+\begin{enumerate}
+    \item 2D simplification: the third dimension of SFTS tensor is omitted which can lead to inaccurate aspect ratios. $\gamma_{(001)}$ is also omitted in the simulation.
+    \item E and $\nu$ are also assumed to be isotropic whereas the paper uses anisotropic values.
+    \item The SFTS tensor used in the paper have shear terms which are omitted in the simulation.
+    \item Diffuse interfaces: Results in interface width larger than physical. A thicker interface smears corners and tends to produce round facets
+    which affects the accuracy of measured length and aspect ratio.
+    \item Order parameters: This is a non-atomistic model which wont accurately capture the properties at the interface. Interfaces have discrete steps which are best represented by step functions, however these are not differentiable which is why order parameters are used.
+\end{enumerate}
+\newpage
+\section*{References}
+\noindent [1] H.~Liu, Y.~Gao, J.~Z.~Liu, Y.~M.~Zhu, Y.~Wang, and J.~F.~Nie,
+``A simulation study of the shape of $\beta^\prime$ precipitates in Mg--Y and
+Mg--Gd alloys,'' \emph{Acta Materialia}, vol.~61, no.~2, pp.~453--466, 2013,
+doi: 10.1016/j.actamat.2012.09.044.
+
+\noindent [2] S.~Gentry, ``Simulation Memo 2: Precipitate Morphology,''
+EMS~164 (Winter~2026), course handout/PDF, Mar.~2026.
+
+\noindent [3] S.~DeWitt and K.~Thornton, ``Phase Field Modeling of
+Microstructural Evolution,'' in \emph{Computational Materials System Design},
+2018.
+
+\noindent [4] M.~R.~Tonks and L.~K.~Aagesen, ``The Phase Field Method:
+Mesoscale Simulation Aiding Material Discovery,''
+\emph{Annual Review of Materials Research}, vol.~49, pp.~79--102, 2019,
+doi: 10.1146/annurev-matsci-070218-010151.
+
+\noindent [5] ``PRISMS-PF: Equilibrium Shape for a Misfitting Precipitate,''
+nanoHUB, Purdue University. Online. Available:
+https://nanohub.org/resources/prismspfmisfit. Accessed: Mar.~2, 2026.
+
+\noindent [6] D.~A.~Porter and K.~E.~Easterling,
+\emph{Phase Transformations in Metals and Alloys}, 2nd~ed., 1992, p.~147.
+
+\noindent [7] ``Introduction to Magnesium Alloys,'' in
+\emph{Engineering Properties of Magnesium Alloys}, ASM International, 2017,
+p.~9.
+
+\noindent [8] M.~Meyers and K.~Chawla, \emph{Mechanical Behavior of Materials},
+2nd~ed., 2009, p.~115.
+\end{document}
