@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{enumitem} % in preamble
+\usepackage{graphicx}
+\graphicspath{~/Downloads/}
+\setlist[itemize]{leftmargin=*, nosep, topsep=0pt, partopsep=0pt}
+
+\newcommand{\memoheader}[4]{
+  \noindent
+  \textbf{From:} #2\\ 
+  \textbf{To:} #1\\
+  \textbf{Date:} #3\\
+  \textbf{Subject:} #4\\[1ex]\hrule\vspace{1.5ex}
+}
+
+\begin{document}
+\memoheader{Prof. Jeremy Mason}
+            {Miguel Cuaycong}
+            {\today}
+            {EMS 174: Assignment 2}
+\section{Isotropic system under stress}
+\subsection{$\sigma_{xx} \neq 0$, $\sigma_{yy} = 0$}
+Find expected strains in x and y axes as functions of $\sigma_{xx}$
+\\~\\
+From general elastic equations of stress and strain:
+\begin{align}
+    \epsilon_{yy} &= E^{-1}[\sigma_{yy} - \nu(\sigma_{xx} + \sigma_{zz})] \rightarrow \epsilon_{yy} = -E^{-1}\nu\sigma_{xx} \label{eq1}
+    \\
+    \epsilon_{xx} &= E^{-1}[\sigma_{xx} - \nu(\sigma_{yy} + \sigma_{zz})] \rightarrow \epsilon_{xx} = E^{-1}\sigma_{xx}\label{eq2}
+    \\
+    \epsilon_{zz} &= E^{-1}[\sigma_{zz} - \nu(\sigma_{xx} + \sigma_{yy})] \rightarrow  \epsilon_{zz} = -E^{-1}\nu\sigma_{xx} \label{eq3}
+\end{align}
+\textbf{Answer: 
+\\
+x-direction : $\epsilon_{xx} = E^{-1}\sigma_{xx}$
+\\
+y-direction : $\epsilon_{yy} = -E^{-1}\nu\sigma_{xx}$
+}
+\subsection{$\sigma_{yy} \neq 0$, $\sigma_{xx} = 0$}
+From general elastic equations of stress and strain:
+\begin{align}
+    \epsilon_{yy} &= E^{-1}[\sigma_{yy} - \nu(\sigma_{xx} + \sigma_{zz})] \rightarrow \epsilon_{yy} = E^{-1}\sigma_{yy} \label{eq1}
+    \\
+    \epsilon_{xx} &= E^{-1}[\sigma_{xx} - \nu(\sigma_{yy} + \sigma_{zz})] \rightarrow \epsilon_{xx} = -E^{-1}\nu\sigma_{yy}\label{eq2}
+    \\
+    \epsilon_{zz} &= E^{-1}[\sigma_{zz} - \nu(\sigma_{xx} + \sigma_{yy})] \rightarrow  \epsilon_{zz} = -E^{-1}\nu\sigma_{yy} \label{eq3}
+\end{align}
+\textbf{Answer: 
+\\
+x-direction : $\epsilon_{xx} = -E^{-1}\nu\sigma_{yy}$
+\\
+y-direction : $\epsilon_{yy} = E^{-1}\sigma_{yy}$
+}
+\subsection{$\sigma_{yy} \neq 0$, $\sigma_{xx} \neq 0$}
+x-axis is combination of the last two answers.
+\\
+\textbf{Answer: 
+\\$\epsilon_{xx} = E^{-1}\sigma_{xx}-E^{-1}\nu\sigma_{yy} \rightarrow \epsilon_{xx} = E^{-1}[\sigma_{xx}-\nu\sigma_{yy}]$
+\\$\epsilon_{yy} = -E^{-1}\nu\sigma_{xx}+E^{-1}\sigma_{yy} \rightarrow \epsilon_{yy} = E^{-1}[\sigma_{yy}-\nu\sigma_{xx}]$}
+
+\subsection{$\sigma_{xx} = \sigma_{yy} = \sigma, \epsilon_{xx} = \epsilon_{yy} = \epsilon$}
+both x and y directions are symmetrical algebraically.
+\\
+$\epsilon = E^{-1}[1-\nu]\sigma$; where it has the form $\epsilon = \frac{\sigma}{M}$
+\\
+in this case, $M = \frac{E}{[1-\nu]}$
+\subsection{uniform stress along all directions} 
+Since stress is present in all directions, the stress-strain equation will involve twice the stress terms scaled by poisson's ratio from the perpendicular directions.
+$\epsilon = E^{-1}[\sigma-\nu(2\sigma)]=E^{-1}[1-2\nu]\sigma$. From here, we can algebraically extracct a constant by equating $\frac{1}{3K} = E^{-1}[1-2\nu]$. Following through gives $K = E/[3(1-2\nu)]$
+\section{Elastic constants (E, G, K, $\nu$)}
+\subsection{a}
+A uniaxial compression test is equivalent to a hydrostatic load meaning the expected behavior is $\sigma = k \Delta$. Since $k = \frac{E}{3(1-2\nu)}$, a negative E would imply a poisson's ratio greater than 0.5 which means the material will contract in the y and z directions when compressed in the x direction (or expand when pulled, volume generating!). This does not conform to physical expectations(maybe some composite that is anisotropic).
+\subsection{b}
+Given that hooke's law is $\epsilon = \sigma/E$, the strain energy per volume would be $\sigma \epsilon_e / 2 \rightarrow \frac{\sigma^2}{2E}$. The elastic strain energy per volume would be negative regardless of the direction of stress or strain. The material would prefer to be deformed(lower energy state).
+\subsection{c}
+Use denominator of K as a mathematical justification: $1-2\nu > 0$ as $\nu$ approaches 0.5, the bulk modulus goes to infinity. Volume is conserved (or the material will resist hydrostatic stress perfectly).
+\subsection{d}
+Similarily, denominator of G as a mathematical justification $2(1+\nu) > 0$ aas $\nu$ approaches -1, the shear modulus goes to infinity. The shape is conserved (volume too) since the material resists shear stress perfectly.
+\subsection{e}
+If the elastic strain energy per unit volume is defined as $U = \frac{E\epsilon^2}{2}$, and strain defined as $\epsilon = E^{-1}[1-\nu]\sigma$, A negative $\nu$ would mean greater energy dissipation.
+\section{Voigt composite}
+\end{document}
