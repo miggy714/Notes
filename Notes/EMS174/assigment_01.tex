@@ -1,0 +1,165 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{array}
+\usepackage{pdflscape}
+\usepackage{tabularx}
+\usepackage{subcaption}
+\usepackage{listings}
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    breakatwhitespace=false,
+    columns=fullflexible,
+    frame=single
+}
+
+\graphicspath{{../Screenshots/}}
+\setlist[itemize]{leftmargin=*, nosep, topsep=0pt, partopsep=0pt}
+
+\newcommand{\memoheader}[4]{
+  \noindent
+  \textbf{From:} #2\\ 
+  \textbf{To:} #1\\
+  \textbf{Date:} #3\\
+  \textbf{Subject:} #4\\[1ex]\hrule\vspace{1.5ex}
+
+
+}
+
+
+
+
+% --- Figure insertion helper ---
+% This command simplifies inserting a figure with a caption and label.
+% Usage: \insertfigure{width}{filename}{caption text}{fig:label}
+%
+% Parameters:
+%   #1 = width relative to text width (e.g., 0.8 for 80%)
+%   #2 = filename (without path if images are in the same directory)
+%   #3 = caption text
+%   #4 = label for cross-referencing (use fig: prefix by convention)
+\newcommand{\insertfigure}[4]{%
+    \begin{figure}[H] % figure in latex is a floating environment, H specifies to place figure specifically "Here"
+        \centering
+        \includegraphics[width=#1\textwidth]{#2}
+        \caption{#3}
+        \label{#4}
+    \end{figure}
+}
+
+
+\newcommand{\bprime} {$\beta'$ }
+
+
+
+\begin{document}
+\memoheader{Prof. Jeremy Mason}{Miguel Cuaycong}{\today}{EMS 174: Homework 1}
+\section{Engineering stress–engineering strain data from a tension test on 6061-T6 aluminum are listed
+in the table below. The diameter before testing was 10.00 mm, and after fracture the minimum
+diameter in the necked region was 8 mm.}
+
+\subsection{Plot of engineering stress-strain curve}
+\insertfigure{0.8}{engrstressstrain.png}{Engineering stress vs Engineering strain of 6061-T6 aluminum with strain data divided by 100 (fractional values)}{}
+\subsection{Elasic modulus of material E$_{al}$}
+using the first two data points, E$_{al} = \frac{50-0}{0.069-0} =$ \textbf{72463.7 MPa} 
+\subsection{0.2 \% offset yield strength}
+\insertfigure{0.8}{offset_yieldstrength.png}{Value of offset yield strength is about \textbf{300 MPa}. The equation of the line is $y = E_{al} * (x-0.02)$}{}
+\subsection{Ultimate tensile strength}
+UTS can be estimated by finding the maximum of a curve fit of the data or just the maximum stress value of the data points which is \textbf{323 MPa}
+\subsection{Percent elongation in the plastic region}
+Visually, the elastic region ends at the point (0.00438, 290). Percent elongation can be calculated:
+\begin{equation*}
+    \text{percent elongation} = \text{strain}_{max} - \text{strain}_{elastic} = 14.59-0.438 = \textbf{14.152}
+\end{equation*}
+\subsection{Comparison of percent elongation to percent area reduction}
+percent area reduction can be calculated:
+\begin{equation*}
+    \text{\%}\Delta A = \frac{A_f - A_0}{A_0} * 100 = \frac{(\pi * d_f^2 / 4) - \pi * d_0^2 / 4}{\pi * d_0^2 / 4} * 100 = (\frac{d_f^2}{d_0^2}-1)100 = ((8/10)^2-1)*100 = \textbf{-36\%}
+\end{equation*}
+the percent elongation from the point of fracture is 14.152\% while percent area reduction is 36\% 
+\subsection{True stress strain graph comparison}
+\insertfigure{0.8}{ems174_tss.png}{Shows the engineering stress strain data points and the corresponding true values.}{}
+The engineering stress-strain and the true stress-strain are identical in the elastic region. 
+The similarities end in the plastic region because the approximation made by the engineering values assume the constant initial area throughout the tensile test.
+\newpage
+\section{Consider the same tension test of 6061-T6 aluminum as performed above. You will evaluate
+whether the material response is better described by the Hollomon equation or the Ludwik
+equation in the following.}
+\subsection{Plastic strain}
+The elastic strain calculated from 1e (1.5) is $\epsilon_{elastic}=$0.00438.
+\\
+True plastic strain calculated in python using $\epsilon_{t}-\epsilon_{elastic}$ up to tensile instability which is the true point corresponding to the UTS.
+\begin{table}[h]
+\centering
+\begin{tabular}{cc}
+\hline
+$\epsilon_{t,p}$ & $\sigma_{t}$ (MPa) \\
+\hline
+0.00000 & 291.27 \\
+0.00055 & 299.47 \\
+0.00321 & 304.30 \\
+0.00550 & 308.02 \\
+0.01543 & 315.18 \\
+0.03013 & 326.06 \\
+0.04461 & 335.01 \\
+0.05870 & 342.96 \\
+0.06739 & 347.03 \\
+\hline
+\end{tabular}
+\caption{True Plastic Strain vs.\ True Stress}
+\end{table}
+\insertfigure{0.8}{ems174_tssplastic.png}{}{}
+\subsection{n value}
+true plastic strain in the tensile instablity is \textbf{0.06739} from table 1.
+\subsection{k value}
+From holloman equation, isolate k then use values in the tensile instability:
+\begin{equation*}
+    \sigma_{t} = k\epsilon_{t}^n => k = \frac{\sigma_{t}}{\epsilon_{t}^n} = \frac{347.03}{0.067^{0.067}} = \textbf{415.7 MPa}
+\end{equation*}
+\subsection{Hollomon equation plot}
+\insertfigure{0.8}{ems174_holloman.png}{Shows unsatisfactory behavior of Holloman model due to the plastic deformation starting at 291.27 MPa instead of at 0 from the Holloman}{}
+\subsection{Ludwik equation}
+guessing 291.27 for $\sigma_0$ and picking two points in the true plastic region:
+\begin{align}
+    304.30 &= 291.27 + k0.00321^n => 13.03 = k0.00321^n
+    \\
+    347.03 &= 291.27 + k0.06739^n => 55.76 = k0.06739^n
+\end{align}
+\begin{equation*}
+    \frac{13.03}{55.76} = \frac{0.00321}{0.06739}^n => n = 0.478, k = 202.19 \text{MPa}
+\end{equation*}
+Full Ludwik equation:
+$$\sigma_t = 202.19 \epsilon_{t}^{0.478}$$
+\insertfigure{0.8}{ems174_ludwik.png}{Ludwik model does a better job at fitting experimental data}{}
+\subsection{Considere's criterion}
+Utilizing Considere's criterion we get:
+\begin{equation*}
+    \frac{d\sigma_t}{d \epsilon_t} = \sigma_t = nk\epsilon_t^{n-1} = \sigma_0 + k\epsilon_t^n
+\end{equation*}
+very hard to algebraically solve for n in the equation $nk\epsilon_t^{n-1} = \sigma_0 + k\epsilon_t^n$. It will have to be solved iteratively from here. \textbf{I cannot find a simple equation for n using Ludwik's model even with Considere's criterion}
+
+\section{Material choice: Bamboo}
+Bamboo’s competitive edge compared to other trees is its growth speed and height, 
+both advantages are supported by several mechanical properties like tensile strength and density. The Hitam bamboo for example, 
+has an exceptionally high tensile strength of 602 MPa in the base, 406 in the middle and 682 at the tip. This tensile strength is due to the arrangement of the fibres in its stem. It allows the bamboo to support itself as it goes taller. 
+The stem is anisotropic when it comes to strength though, its shear strength is around 15.32 MPa, however,  its compression strength is around 7 Gpa. The anisotropy allows the bamboo to be flexible and sway in the wind without yielding. Its fibres have a diameter of 20.9 microns while having a density of 1.78 $cm^3/g$. This allows the bamboo to grow very rapidly because compared to its competition, it does not need to invest much energy in order to grow. This also contributes to growth speed. Apparently, the length of a bamboo takes advantage of a rhizome system which is a type of energy storage and distribution and is responsible for the efficiency.
+
+The weaker shear strength is explained by its microstructure which is made up of strands spanning lengthwise. An arrangement such as this is very weak with shear stresses and also easily split lengthwise which is why bamboo furniture are made with lengthwise cuts.
+
+\newpage
+\section{Appendix}
+\subsection{Python code used}
+Gemini was used for plot format template
+\lstinputlisting[language=Python]{assignment_01.py}
+\subsection{References}
+A. H. Iswanto et al., "Characteristics of Three Bamboo Species and Their Potential as Raw Materials for Oriented Strand Board Production," 
+, Nov. 24, 2025. [Online]
+\end{document}
